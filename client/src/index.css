@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img-logo {
+  width: 11rem;
+  height: 3rem;
+  margin-right: 8rem;
+}
+
+.container-btn {
+  /* border: solid 1px white; */
+  display: flex;
+  justify-content: end;
+}
+.btn-login {
+  height: 4rem;
+  width: 8rem;
+  font-weight: 600;
+  color: aliceblue;
+}
+.btn-started {
+  height: 4rem;
+  width: 8rem;
+  color: aliceblue;
+  font-weight: 600;
+}
+
+.btn-started:hover {
+  background-color: #111827;
+  color: rgb(250, 247, 247);
+}
+
+.btn-login:hover {
+  color: rgb(126, 133, 126);
+  font-weight: 700;
+}
+
+.buttonNab {
+  padding-right: 10px;
+}
+.buttonNabi {
+  /* border: solid 1px white; */
+  font-size: 12px;
+  width: 8rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .btn-login {
+    height: 3rem;
+    width: 15.5rem;
+    color: #161d27;
+    background-color: aliceblue;
+    font-weight: 600;
+  }
+  .btn-started {
+    height: 3rem;
+    width: 15.9rem;
+    font-weight: 600;
+  }
+  .btn-started:hover {
+    background-color: #161d27;
+    color: aliceblue;
+  }
+
+  .btn-login:hover {
+    color: #6d809a;
+  }
+}
