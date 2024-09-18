@@ -7,7 +7,7 @@ function PartThree() {
       <h2 className='text-3xl font-semibold text-black-500 pb-3'>Genera Ingresos Extra YA!</h2>
       <h3 className='text-2xl font-medium text-black-500 pt-3 pb-6'>Sin gastos, sin inversion, ¡solo ganancias y mientras haces tus cosas!</h3>
       {/* contenedor de dos columnas */}
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl px-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-14 w-full max-w-4xl px-4'>
         {/* contenedor primer columna columnas */}
         <div className='flex items-center justify-center  border-gray-300 p8'>
           <div className='text-center'>
