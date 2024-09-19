@@ -2,7 +2,15 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('../client/src/assets/Background_header.png')",
+      },
+      fontFamily: {
+        serif: ["gibson", "serif"],
+        sans: ["proxima-nova", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }
