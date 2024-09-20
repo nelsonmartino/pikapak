@@ -17,42 +17,43 @@ function classNames(...classes) {
 
 function NavBar() {
     return (
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="bg-[url('../src/assets/Background_header.png')] bg-cover bg-center bg-no-repeat ">
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div className="relative flex h-16 items-center justify-between  space-x-10">
+                <div className="relative flex  h-16 items-center justify-between  xl:space-x-2  xl:right-8 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                         {/* Mobile menu button*/}
-                        <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-4  text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ">
+                        <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-4  text-gray-400 hover:bg-[#3C047B] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ">
                             <span className="absolute -inset-0.5" />
                             <span className="sr-only">Open main menu</span>
                             <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
                             <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
                         </DisclosureButton>
                     </div>
-                    <div className="flex flex-1 items-center justify-between  sm:items-stretch sm:justify-start  ">
-                        <div className="flex items-center w-[11rem] mr-[8rem]">
-                            <div className=' flex-col items-center h-14 pl-72 xl:pl-0  xl:ml-4  min-w-[27rem] '>
+                    <div className="flex flex-1 items-center justify-between  sm:items-stretch sm:justify-start ">
+                        <div className="flex items-center w-[6rem] xl:mr-[7rem]  ">
+
+                            <div className=' flex-col justify-start items-center h-14 pl-[18rem] xl:pl-0  xl:ml-4 min-w-[30rem] '>
 
                                 <img
                                     alt="logo_Pikapak"
                                     src="../src/assets/logo.png"
-                                    className="h-16 w-auto my-[-14px]  mr-24 "
+                                    className="h-16  my-[-14px] "
                                 />
-                                <p className='flex flex-col w-52  text-white text-xs'>A todos lados, mas rápido</p>
+                                <p className='flex flex-col xl:w-52  pl-7 text-white text-xs justify-start border-solid'>A todos lados, mas rápido</p>
                                 <div>
                                 </div>
                             </div>
                         </div>
-                        <div className="hidden sm:ml-6 sm:block mt-2 ">
-                            <div className="flex  space-x-6 items-center mt-2   buttonNab ">
+                        <div className="hidden sm:ml-6 sm:block mt-2  flex w-[41rem]">
+                            <div className="flex space-x-6  items-center justify-items-center px-18 ml-[6rem] mt-2">
                                 {navigation.map((item) => (
                                     <a
                                         key={item.name}
                                         href={item.href}
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
-                                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                            'rounded-md font-normal px-4 w-[7rem] h-[3rem] flex text-xs items-center justify-center text-center cursor-pointer',
+                                            item.current ? 'bg-[#3C047B] text-white p-2' : 'text-gray-300 hover:border-b-8 hover:border-2 hover:border-[#3C047B] hover:text-white',
+                                            'rounded-md font-normal  w-[7rem] h-[3rem] flex text-xs items-center justify-center text-center cursor-pointer',
                                         )}
                                     >
                                         {item.name}
@@ -60,13 +61,12 @@ function NavBar() {
                                 ))}
                             </div>
                         </div>
-                        <div className=" w-full h-[4rem] flex justify-end items-center mt-[10px]">
-                            <div className='hidden sm:block xl:block md:block 2xl:hidden justify-end' >
-                                <button className='h-[3rem] w-[8rem] font-semibold text-slate-100  hover:font-semibold hover:text-slate-400 '>LOG IN</button>
+                        <div className=" xl:w-[26rem] h-[4rem] flex justify-end items-center mt-[10px]">
+                            <div className='hidden sm:block xl:block md:block 2xl:hidden justify-end ' >
+                                <button className='h-[3rem] w-[8rem] mb-2 text-[14px] font-semibold text-slate-100  hover:font-semibold hover:text-[#7D0DDA]  '>LOG IN</button>
                             </div>
-
-                            <div className='hidden sm:block xl:block md:block  2xl:hidden justify-end'>
-                                <button className='h-[3.7rem] w-[8rem] mt-[-7px] font-semibold text-slate-100 hover:bg-slate-950 hover:text-white'>GET STARTED</button>
+                            <div className='hidden sm:block xl:block md:block  2xl:hidden justify-end '>
+                                <button className=' w-[10rem] text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px] py-[22px] mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white font-sans hover:shadow-lg hover:shadow-indigo-400/60'>GET STARTED</button>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@ function NavBar() {
                             href={item.href}
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
-                                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                item.current ? 'bg-[#3C047B] text-white' : 'text-gray-300 hover:bg-[#3C047B] hover:text-white',
                                 'block rounded-md px-3 py-2 text-base font-medium',
                             )}
                         >
@@ -137,11 +137,10 @@ function NavBar() {
                 </div>
                 <div className="w-full flex ">
                     <div className='sm:hidden xl:block md:block 2xl:block w-full '>
-                        <button className='h-[3rem] w-[15.5rem] font-semibold text-slate-400 hover:text-slate-300'>LOG IN</button>
+                        <button className='h-[3rem] w-[15.5rem]  font-semibold text-slate-100 hover:text-slate-300  hover:font-semibold  '>LOG IN</button>
                     </div>
-
                     <div className='sm:hidden xl:block  md:block 2xl:block w-full'>
-                        <button className='h-[3rem] w-[16.9rem] font-semibold bg-slate-900 text-slate-400 hover:bg-slate-950 hover:text-white'>GET STARTED</button>
+                        <button className='h-[3rem] w-[14.4rem] font-semibold bg-[#3C047B] text-slate-400 hover:bg-[#3C047B] hover:text-white font-sans'>GET STARTED</button>
                     </div>
                 </div>
             </DisclosurePanel>
