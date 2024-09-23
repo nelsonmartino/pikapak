@@ -3,7 +3,6 @@ import { roleInfo } from '../utils/roleInfo'
 
 const PartTwo = () => {
   return (
-    // <div className="text-center text-[#3e047c] ">
     <div className='bg-[url("../src/assets/Background_partTwo.png")] bg-cover bg-center bg-no-repeat text-center text-[#3e047c] py-3'>
       <div className="flex flex-row mb-10">
         <div className="flex flex-col w-1/2">
@@ -19,20 +18,6 @@ const PartTwo = () => {
         <div className="text-xl font-semibold">Unite a Pikapak</div>
         <div>Sumate a nosotros de acuerdo con tu necesidad</div>
       </div>
-      {/* <div className="flex flex-row">
-        <div className="flex flex-col w-2/5 items-center">
-          <RoleCard info={roleInfo[0]} />
-          <RoleCard info={roleInfo[1]} />
-        </div>
-        <div className="flex flex-col w-1/5 justify-center">
-          <div className="text-xl">Unite a Pikapak</div>
-          <div>Elegí tu rol en la cadena y ganá!</div>
-        </div>
-        <div className="flex flex-col w-2/5 items-center">
-          <RoleCard info={roleInfo[2]} />
-          <RoleCard info={roleInfo[3]} />
-        </div>
-      </div> */}
       <div className="flex flex-row justify-center flex-wrap">
         {roleInfo.map((role, index) => (
           <div
