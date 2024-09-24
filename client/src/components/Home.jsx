@@ -31,10 +31,10 @@ const Home = () => {
     }, [text, isDeleting, phraseIndex, phrases]);
 
     return (
-        <div className='bg-[url("../src/assets/Background_header.png")] bg-cover bg-center bg-no-repeat '>
-            <div className=' max-w-[1100px] flex justify-center'>
+        <div className='bg-[url("../src/assets/Background_header.png")] bg-cover bg-center bg-no-repeat ' id='home'>
+            <div className=' max-w-[1100px] flex justify-center '>
 
-                <div className='max-w-[77%] mt-[3%] '>
+                <div className='max-w-[77%] mt-[5rem] xl:mt-[6.5rem] '>
                     <p className='font-sans text-[0.8rem] font-extrabold pt-0 pb-[7px] leading-[15px] tracking-[1px] uppercase text-[#ffb200]'>ENVIA CON PIKAPAK</p>
 
                     <div className=' '>
@@ -44,7 +44,7 @@ const Home = () => {
                     <p className='text-[1rem] leading-[1.5rem] font-normal py-[17px] pr-120px text-white'>Pikapak es una plataforma logística 100% crowdsourced que coordina transportistas y depósitos en una red de movimiento de mercaderías 24x7x365.</p>
 
                     <div className=''>
-                        <button className='xl:text-[16px] text-[14px] bg-transparent text-[#fff] center xl:min-w-[140px] min-w-[140px] py-[12px] xl:py-[18px]  my-[15px] mx-0 leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[16px] py-[18px] no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap border-solid border-2 border-white hover:bg-white hover:text-black' >GET STARTED</button>
+                        <button className='xl:text-[16px] text-[14px] bg-transparent text-[#fff] center xl:min-w-[140px] min-w-[140px] py-[12px] xl:py-[18px]  my-[15px] mx-0 leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[16px] py-[18px] no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap border-solid border-2 border-white hover:bg-white hover:text-black' >EMPEZAR</button>
                     </div>
 
 
