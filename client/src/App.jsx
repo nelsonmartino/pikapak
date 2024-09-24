@@ -6,6 +6,7 @@ import PartFour from './components/PartFour'
 import PartThree from './components/PartThree'
 import PartTwo from './components/PartTwo'
 import PartSix from './components/PartSix'
+import { landingInfo } from './utils/landingInfo'
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
       <Carrussel />
       <PartTwo />
       <PartThree />
-      <PartFour />
-      <PartSix />
+      {landingInfo.map((info, index) => (
+        <PartFour key={index} info={info} />
+      ))}
+      <PartSix/>
       {/* <img src="../src/assets/logo.png" alt="logo_Pikapak" /> */}
     </div>
   )
