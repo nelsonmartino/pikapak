@@ -17,61 +17,6 @@
   }
 }
 
-/* Estilos 1er parrafo envia con pikapak */
-/* .textParraf { */
-/* font-family: "proxima-nova", sans-serif; */
-/* font-size: 1rem; */
-/* line-height: 17px; */
-/* line-height: 1.7rem; */
-/* font-weight: 800; */
-/* letter-spacing: 2px; */
-/* text-transform: uppercase; */
-/* color: #ffb200; */
-/* padding-top: 0;
-  padding-bottom: 7px; */
-/* } */
-
-/* Estilos 2do parrafo envia casi todo */
-/* .textHome {
-  font-family: "gibson", sans-serif;
-  font-size: 4.5rem;
-  line-height: 5.4rem;
-  padding-top: 8px;
-  font-weight: bold;
-  letter-spacing: 0.1px;
-} */
-
-/* Estilos 3er parrafo pikapak es unna plataforma...*/
-/* .textParraf2 { */
-/* font-family: "proxima-nova", sans-serif; */
-/* font-size: 1rem; */
-/* line-height: 1.5rem; */
-/* font-weight: 400; */
-/* padding-bottom: 17px;
-  padding-right: 120px;
-  padding-top: 17px; */
-/* } */
-
-/* Estilos btn get started Home */
-/* .btnGetStarted { */
-/* margin: 15px 0; */
-/* font-size: 16px; */
-/* line-height: 17px; */
-/* line-height: 1.7rem; */
-/* transition: all 0.15s ease; */
-/* display: inline-block; */
-/* padding: 10px 22px; */
-/* background: #0bb; */
-/* border: 2px solid #0bb; */
-/* color: #fff; */
-/* text-decoration: none; */
-/* text-transform: uppercase; */
-/* border-radius: 1px; */
-/* outline: none; */
-/* letter-spacing: 2px; */
-/* font-family: "proxima-nova", sans-serif; */
-/* font-weight: 800; */
-/* text-align: center; */
-/* min-width: 130px; */
-/* white-space: nowrap; */
-/* } */
+html {
+  scroll-behavior: smooth;
+}

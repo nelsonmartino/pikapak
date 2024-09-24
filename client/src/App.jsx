@@ -1,4 +1,5 @@
 import '../src/output.css'
+import Carrussel from './components/Carrussel'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import PartFour from './components/PartFour'
@@ -11,6 +12,7 @@ function App() {
     <div className="app">
       <NavBar />
       <Home />
+      <Carrussel />
       <PartTwo />
       <PartThree />
       <PartFour />
