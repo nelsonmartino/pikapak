@@ -5,7 +5,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('../client/src/assets/Background_header.png')",
+        'hero-pattern': "url('../client/src/assets/Background_header.png')",        
+      },
+      backgroundColor: {
+        'my-custom-color': '#FFBA00',
       },
       fontFamily: {
         serif: ["gibson", "serif"],

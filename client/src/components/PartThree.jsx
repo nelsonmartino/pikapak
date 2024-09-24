@@ -2,14 +2,15 @@
 
 function PartThree() {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen'>
+    <div className='flex flex-col items-center justify-center pt-4 min-h-screen bg-[url("../src/assets/Background_partTwo.png")] bg-cover bg-center bg-no-repeat'>
 
-      <h2 className='text-3xl font-semibold text-black-500 pb-3'>Genera Ingresos Extra YA!</h2>
+      <h2 className='text-[36px] text-3xl canada-type-gibson,sans-serif font-weight-700
+ text-black-700 pb-3 pt-5'>Genera Ingresos Extra YA!</h2>
       <h3 className='text-2xl font-medium text-black-500 pt-3 pb-6'>Sin gastos, sin inversion, ¡solo ganancias y mientras haces tus cosas!</h3>
       {/* contenedor de dos columnas */}
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-14 w-full max-w-4xl px-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-14 w-full  px-4'> {/*max-w-4xl */}
         {/* contenedor primer columna columnas */}
-        <div className='flex items-center justify-center  border-gray-300 p8'>
+        <div className='flex items-center justify-center lg:p-[10%] xl:p-[15%] border-gray-300 p8'>
           <div className='text-center'>
             <h5 className='text-2xl font-medium text-black-400'>Obtene una fuente de ingresos extra transportando paquetes mientras viajas por tus asuntos</h5>
             <br />
@@ -75,7 +76,7 @@ function PartThree() {
 
 
         </div>  {/* fin contenedor primer columna columnas */}
-        <div className='flex justify-center   p8'>
+        <div className='flex justify-center lg:p-[10%] xl:p-[15%] p8'>
           <div className='text-center'>
             <h5 className='text-2xl font-medium text-black-400'>Obtene una fuente de ingresos extra con el espacio disponible que no usas y potencia tu negocio dándole más visibilidad en la web</h5>
             <br />
