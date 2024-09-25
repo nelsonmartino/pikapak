@@ -36,7 +36,7 @@ function NavBar() {
                                 <a href="#home">
                                     <img
                                         alt="logo_Pikapak"
-                                        src="../src/assets/logo.png"
+                                        src="../assets/logo.png"
                                         className="h-16  my-[-14px] "
                                     />
                                     <p className='flex flex-col xl:w-52  pl-7 text-white text-xs justify-start border-solid'>A todos lados, mas rápido</p>
