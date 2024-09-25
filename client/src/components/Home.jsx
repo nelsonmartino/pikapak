@@ -31,7 +31,7 @@ const Home = () => {
     }, [text, isDeleting, phraseIndex, phrases]);
 
     return (
-        <div className='bg-[url("../src/assets/Background_header.png")] bg-cover bg-center bg-no-repeat ' id='home'>
+        <div className='bg-[url("./assets/imgs/Background_header.png")] bg-cover bg-center bg-no-repeat ' id='home'>
             <div className=' max-w-[1100px] flex justify-center '>
 
                 <div className='max-w-[77%] mt-[5rem] xl:mt-[6.5rem] '>

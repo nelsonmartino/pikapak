@@ -1,6 +1,8 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuItem, MenuItems, } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import '../index.css'
+import logo from '../assets/imgs/logo.png';
+
 
 const navigation = [
     { name: 'COMO FUNCIONA', href: '#comoFunciona', current: true },
@@ -17,7 +19,7 @@ function classNames(...classes) {
 
 function NavBar() {
     return (
-        <Disclosure as="nav" className="bg-[url('../src/assets/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  z-50 xl:fixed xl:w-full w-full fixed ">
+        <Disclosure as="nav" className="bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  z-50 xl:fixed xl:w-full w-full fixed ">
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8" >
                 <div className="relative flex  h-16 items-center justify-between  xl:space-x-2  xl:right-8 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
@@ -36,7 +38,7 @@ function NavBar() {
                                 <a href="#home">
                                     <img
                                         alt="logo_Pikapak"
-                                        src="../assets/logo.png"
+                                        src={logo}
                                         className="h-16  my-[-14px] "
                                     />
                                     <p className='flex flex-col xl:w-52  pl-7 text-white text-xs justify-start border-solid'>A todos lados, mas rápido</p>

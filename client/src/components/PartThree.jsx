@@ -2,7 +2,7 @@
 
 function PartThree() {
   return (
-    <div className='flex flex-col items-center justify-center pt-4 min-h-screen bg-[url("../src/assets/Background_partTwo.png")] bg-cover bg-center bg-no-repeat'>
+    <div className='flex flex-col items-center justify-center pt-4 min-h-screen bg-[url("./assets/imgs/Background_partTwo.png")] bg-cover bg-center bg-no-repeat'>
 
       <h2 className='text-[36px] text-3xl canada-type-gibson,sans-serif font-weight-700
  text-black-700 pb-3 pt-5'>Genera Ingresos Extra YA!</h2>
@@ -127,7 +127,7 @@ function PartThree() {
 
               </p>
             </dir>
-            
+
             {/*-------------------------------------------------------- */}
             <div className="flex flex-row justify-evenly pb-4 pt-0 mt-2 w-full">
               <button

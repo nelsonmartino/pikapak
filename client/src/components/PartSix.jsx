@@ -2,20 +2,20 @@
 
 function PartSix() {
   return (
-    <div className='flex flex-col items-center justify-center pt-4 pb-4 min-h-screen bg-[url("../src/assets/Background_partTwo.png")] bg-cover bg-center bg-no-repeat text-[#3e047c]'>
+    <div className='flex flex-col items-center justify-center pt-4 pb-4 min-h-screen bg-[url("./assets/imgs/Background_partTwo.png")] bg-cover bg-center bg-no-repeat text-[#3e047c]'>
       <h2 className='font-extrabold text-3xl text-[#3e047c] pb-3 pt-5'>Quiero Enviar</h2>
       {/*font-semibold text-[#3e047c] text-lg w-[34rem] my-2 */}
       <div className="font-semibold text-lg text-[#3e047c] my-2">Envia paquetes a la velocidad de la luz
       </div>
-      
+
       {/* contenedor de dos columnas */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-14 w-full  px-4'> {/*max-w-4xl */}
         {/* contenedor primer columna columnas */}
         <div className='min-h-screen flex items-center justify-center '> {/*lg:p-[10%] xl:p-[15%] border-gray-300 p8 */}
           <div>
             <div className="w-72 h-36 mt-3 border border-2 border-[#3e047c] p-1 flex justify-center items-center">
-              <p>Si lo haces de vez en cuando y NO TENES un local, 
-              Registrate como Persona</p>
+              <p>Si lo haces de vez en cuando y NO TENES un local,
+                Registrate como Persona</p>
             </div>
 
             {/* Caja 2 */}
@@ -41,7 +41,7 @@ function PartSix() {
           <div>
             <div className="w-72 h-36 mt-3 border border-2 border-[#3e047c] p-1 flex justify-center items-center">
               <p>Si lo haces habitualmente y SI TENES un local,
-              Registrate como Hub Remitente</p>
+                Registrate como Hub Remitente</p>
             </div>
 
             {/* Caja 2 */}
@@ -49,7 +49,7 @@ function PartSix() {
               <p>O completa este simple formulario y te contactamos a la brevedad</p>
             </div>
 
-            
+
           </div>
         </div>
       </div>

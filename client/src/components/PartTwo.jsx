@@ -3,7 +3,7 @@ import { roleInfo } from '../utils/roleInfo'
 
 const PartTwo = () => {
   return (
-    <div className='bg-[url("../src/assets/Background_partTwo.png")] bg-cover bg-center bg-no-repeat text-center text-[#3e047c] py-3'>
+    <div className='bg-[url("./assets/imgs/Background_partTwo.png")] bg-cover bg-center bg-no-repeat text-center text-[#3e047c] py-3'>
       <div className="flex flex-row mb-10">
         <div className="flex flex-col w-1/2">
           <div className="text-xl font-semibold">Pikapak</div>

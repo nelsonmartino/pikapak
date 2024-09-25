@@ -1,7 +1,7 @@
 function PartFour({ info }) {
   return (
     <div
-      className='flex flex-col items-center text-center text-[#3e047c] bg-[url("../src/assets/Background_partTwo.png")] bg-cover bg-center bg-no-repeat'
+      className='flex flex-col items-center text-center text-[#3e047c] bg-[url("./assets/imgs/Background_partTwo.png")] bg-cover bg-center bg-no-repeat'
       id={info.id}
     >
       <div className="font-extrabold text-3xl w-fit p-3">{info.header}</div>

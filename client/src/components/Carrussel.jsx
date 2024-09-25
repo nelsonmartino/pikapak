@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import CardCarrussel from './CardCarrussel';
-import image1 from '../assets/imgs-carroussel/pikapak-24-7-365.png';
-import image2 from '../assets/imgs-carroussel/pikapak-mercaderia-asegurada.png';
-import image3 from '../assets/imgs-carroussel/pikapak-mundo.png';
-import image4 from '../assets/imgs-carroussel/pikapak-rapidisimo.png';
-import image5 from '../assets/imgs-carroussel/pikapak-huella-cabono.png';
-import image6 from '../assets/imgs-carroussel/pikapak-todos.png';
+import image1 from '../assets/imgs/pikapak-24-7-365.png';
+import image2 from '../assets/imgs/pikapak-mercaderia-asegurada.png';
+import image3 from '../assets/imgs/pikapak-mundo.png';
+import image4 from '../assets/imgs/pikapak-rapidisimo.png';
+import image5 from '../assets/imgs/pikapak-huella-cabono.png';
+import image6 from '../assets/imgs/pikapak-todos.png';
 
 function Carrussel() {
 
