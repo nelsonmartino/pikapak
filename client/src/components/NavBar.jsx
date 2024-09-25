@@ -36,7 +36,7 @@ function NavBar() {
                                 <a href="#home">
                                     <img
                                         alt="logo_Pikapak"
-                                        src="../src/assets/logo.png"
+                                        src="../assets/logo.png"
                                         className="h-16  my-[-14px] "
                                     />
                                     <p className='flex flex-col xl:w-52  pl-7 text-white text-xs justify-start border-solid'>A todos lados, mas rápido</p>
@@ -67,7 +67,7 @@ function NavBar() {
                                 <button className='h-[3rem] w-[8rem] mb-2 text-[14px] font-semibold text-slate-100  hover:font-semibold hover:text-[#7D0DDA]  '>INICIO SESION</button>
                             </div>
                             <div className='hidden sm:block xl:block md:block  2xl:hidden justify-end '>
-                                <button className=' w-[10rem] text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px] py-[22px] mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white font-sans hover:shadow-lg hover:shadow-indigo-400/60'>EMPEZAR</button>
+                                <button className=' w-[10rem] text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px] py-[22px] mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white font-sans hover:shadow-lg hover:shadow-indigo-400/60'> <a href="#contact">EMPEZAR</a> </button>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ function NavBar() {
                         <button className='h-[3rem] w-[15.5rem]  font-semibold text-slate-100 hover:text-slate-300  hover:font-semibold  '>INICIO SESION</button>
                     </div>
                     <div className='sm:hidden xl:block  md:block 2xl:block w-full'>
-                        <button className='h-[3rem] w-[14.4rem] font-semibold bg-[#3C047B] text-slate-400 hover:bg-[#3C047B] hover:text-white font-sans'>EMPEZAR</button>
+                        <button className='h-[3rem] w-[14.4rem] font-semibold bg-[#3C047B] text-slate-400 hover:bg-[#3C047B] hover:text-white font-sans'><a href="#contact">EMPEZAR</a></button>
                     </div>
                 </div>
             </DisclosurePanel>
