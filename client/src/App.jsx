@@ -7,6 +7,7 @@ import PartThree from './components/PartThree'
 import PartTwo from './components/PartTwo'
 import PartSix from './components/PartSix'
 import { landingInfo } from './utils/landingInfo'
+import FormContact from './components/FormContact'
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
       {landingInfo.map((info, index) => (
         <PartFour key={index} info={info} />
       ))}
-      <PartSix/>
+      <PartSix />
       {/* <img src="../src/assets/logo.png" alt="logo_Pikapak" /> */}
+      <FormContact />
     </div>
   )
 }
