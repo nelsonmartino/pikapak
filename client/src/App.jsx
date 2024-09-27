@@ -8,6 +8,7 @@ import PartTwo from './components/PartTwo'
 import PartSix from './components/PartSix'
 import { landingInfo } from './utils/landingInfo'
 import FormContact from './components/FormContact'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <PartSix />
       {/* <img src="../src/assets/logo.png" alt="logo_Pikapak" /> */}
       <FormContact />
+      <Footer />
     </div>
   )
 }

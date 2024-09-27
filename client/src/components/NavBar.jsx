@@ -5,11 +5,11 @@ import logo from '../assets/imgs/logo.png';
 
 
 const navigation = [
-    { name: 'COMO FUNCIONA', href: '#comoFunciona', current: true },
-    { name: 'UNIRTE', href: '#unite', current: false },
+    { name: 'UNIRTE', href: '#unite', current: true },
     { name: 'QUIERO TRANSPORTAR', href: '#quieroTransportar', current: false },
     { name: 'QUIERO ENVIAR', href: '#quieroEnviar', current: false },
     { name: 'QUIERO ALMACENAR', href: '#quieroAlmacenar', current: false },
+    { name: 'COMO FUNCIONA', href: '#comoFunciona', current: false },
 ]
 
 function classNames(...classes) {
@@ -19,8 +19,8 @@ function classNames(...classes) {
 
 function NavBar() {
     return (
-        <Disclosure as="nav" className="bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  z-50 xl:fixed xl:w-full w-full fixed ">
-            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8" >
+        <Disclosure as="nav" className="bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  z-50 xl:fixed xl:w-full min-w-full  fixed ">
+            <div className="xl:mx-auto xl:max-w-7xl sm:px-6 lg:px-8" >
                 <div className="relative flex  h-16 items-center justify-between  xl:space-x-2  xl:right-8 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                         {/* Mobile menu button*/}
@@ -31,15 +31,15 @@ function NavBar() {
                             <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
                         </DisclosureButton>
                     </div>
-                    <div className="flex flex-1 items-center justify-between  sm:items-stretch sm:justify-start ">
-                        <div className="flex items-center w-[6rem] xl:mr-[7rem]">
+                    <div className="flex items-center justify-between  sm:items-stretch sm:justify-start">
+                        <div className="flex items-center xl:w-[6rem] xl:mr-[7rem]">
 
-                            <div className=' flex-col justify-start items-center h-14 pl-[18rem] xl:pl-0  xl:ml-4 min-w-[30rem] scroll-smooth'>
+                            <div className=' flex-col justify-start items-center h-14 pl-[16rem]  xl:pl-0  xl:ml-4 scroll-smooth  '>
                                 <a href="#home">
                                     <img
                                         alt="logo_Pikapak"
                                         src={logo}
-                                        className="h-16  my-[-14px] "
+                                        className="h-16  my-[-14px]"
                                     />
                                     <p className='flex flex-col xl:w-52  pl-7 text-white text-xs justify-start border-solid'>A todos lados, mas rápido</p>
                                 </a>
@@ -55,7 +55,7 @@ function NavBar() {
                                         href={item.href}
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
-                                            item.current ? 'bg-[#3C047B] text-white p-2' : 'text-gray-300 hover:border-b-8 hover:border-2 hover:border-[#3C047B] hover:text-white',
+                                            item.current ? 'bg-[#3C047B] p-2 text-[#ffb200]' : 'text-gray-300 hover:border-b-8 hover:border-2 hover:border-[#3C047B] hover:text-white',
                                             'rounded-md font-normal  w-[7rem] h-[3rem] flex text-xs items-center justify-center text-center cursor-pointer',
                                         )}
                                     >
@@ -66,7 +66,7 @@ function NavBar() {
                         </div>
                         <div className=" xl:w-[26rem] h-[4rem] flex justify-end items-center mt-[10px]">
                             <div className='hidden sm:block xl:block md:block 2xl:hidden justify-end ' >
-                                <button className='h-[3rem] w-[8rem] mb-2 text-[14px] font-semibold text-slate-100  hover:font-semibold hover:text-[#7D0DDA]  '>INICIO SESION</button>
+                                <button className='h-[3rem] w-[8rem] mb-2 text-[14px] font-semibold text-slate-100  hover:font-semibold hover:text-[#7D0DDA]  '>ACCESO</button>
                             </div>
                             <div className='hidden sm:block xl:block md:block  2xl:hidden justify-end '>
                                 <button className=' w-[10rem] text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px] py-[22px] mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white font-sans hover:shadow-lg hover:shadow-indigo-400/60'> <a href="#contact">EMPEZAR</a> </button>
@@ -140,7 +140,7 @@ function NavBar() {
                 </div>
                 <div className="w-full flex ">
                     <div className='sm:hidden xl:block md:block 2xl:block w-full '>
-                        <button className='h-[3rem] w-[15.5rem]  font-semibold text-slate-100 hover:text-slate-300  hover:font-semibold  '>INICIO SESION</button>
+                        <button className='h-[3rem] w-[15.5rem]  font-semibold text-slate-100 hover:text-slate-300  hover:font-semibold  '>ACCESO</button>
                     </div>
                     <div className='sm:hidden xl:block  md:block 2xl:block w-full'>
                         <button className='h-[3rem] w-[14.4rem] font-semibold bg-[#3C047B] text-slate-400 hover:bg-[#3C047B] hover:text-white font-sans'><a href="#contact">EMPEZAR</a></button>
