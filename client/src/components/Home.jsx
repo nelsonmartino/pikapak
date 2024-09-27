@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const Home = () => {
-    const phrases = ['Sin Demoras.', 'A cualquier hora.', 'Rapidísimo.'];
+    const phrases = ['sin demoras.', 'a toda hora.', 'rapidísimo.'];
     const [text, setText] = useState('');
     const [phraseIndex, setPhraseIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -31,12 +31,10 @@ const Home = () => {
     }, [text, isDeleting, phraseIndex, phrases]);
 
     return (
-        <div className='bg-[url("./assets/imgs/Background_header.png")] bg-cover bg-center bg-no-repeat ' id='home'>
-            <div className=' max-w-[1100px] flex justify-center '>
-
+        <div className='bg-[url("./assets/imgs/Background_header.png")] bg-cover bg-center bg-no-repeat' id='home'>
+            <div className=' max-w-[1100px] flex justify-center py-14'>
                 <div className='max-w-[77%] mt-[5rem] xl:mt-[6.5rem] '>
                     <p className='font-sans text-[0.8rem] font-extrabold pt-0 pb-[7px] leading-[15px] tracking-[1px] uppercase text-[#ffb200]'>ENVIA CON PIKAPAK</p>
-
                     <div className=' '>
                         <h2 className='xl:text-[64px] text-[42px] font-gibson pt-[8px] font-bold leading-[5rem] text-white'>Enviá (casi) cualquier cosa,<br /> a todos lados, <br /><div className='inline-block  text-[#ffb200]'>{text} </div></h2>
                     </div>
@@ -46,14 +44,16 @@ const Home = () => {
                     <div className=''>
                         <button className='xl:text-[16px] text-[14px] bg-transparent text-[#fff] center xl:min-w-[140px] min-w-[140px] py-[12px] xl:py-[18px]  my-[15px] mx-0 leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[16px] py-[18px] no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap border-solid border-2 border-white hover:bg-white hover:text-black' >EMPEZAR</button>
                     </div>
-
-
                 </div>
+            </div>
+
+            <div className='h-[10rem] bg-white '>
+
             </div>
             <div className='max-w-[100%]  flex flex-col p-3 mb-16 bg-[#9f31a8] shadow-xl shadow-indigo-600/70'>
                 <div className='flex-col justify-center mb-2 '>
 
-                    <h2 className='flex justify-center mb-2 text-white'>Inscribite a nuestro Newsletter</h2>
+                    <h2 className='flex justify-center mb-2 text-white'>Suscribite para novedades</h2>
                     <div className='flex  justify-center h-[3rem] '>
 
                         <input className='xl:w-[30%] w-[60%] border-solid border-white border-2 pl-2 rounded-xl  focus:shadow-lg focus:shadow-indigo-200/80' placeholder='Escribe tu Email...' type="text" />
