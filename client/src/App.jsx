@@ -12,7 +12,7 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="app">
+    <div className="max-w-[100vw] min-h-screen">
       <NavBar />
       <Home />
       <Carrussel />
