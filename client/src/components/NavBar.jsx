@@ -19,7 +19,10 @@ function classNames(...classes) {
 
 function NavBar() {
     return (
-        <Disclosure as="nav" className="bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  z-50 xl:fixed xl:w-full min-w-full  fixed ">
+
+        <Disclosure as="nav" className="fixed bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  z-50 min-w-full  opacity-95">
+
+
             <div className="xl:mx-auto xl:max-w-7xl sm:px-6 lg:px-8" >
                 <div className="relative flex  h-16 items-center justify-between  xl:space-x-2  xl:right-8 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
@@ -34,7 +37,7 @@ function NavBar() {
                     <div className="flex items-center justify-between  sm:items-stretch sm:justify-start">
                         <div className="flex items-center xl:w-[6rem] xl:mr-[7rem]">
 
-                            <div className=' flex-col justify-start items-center h-14 pl-[16rem]  xl:pl-0  xl:ml-4 scroll-smooth  '>
+                            <div className=' flex-col justify-start items-center h-14 pl-[18rem]  xl:pl-0  xl:ml-4  '>
                                 <a href="#home">
                                     <img
                                         alt="logo_Pikapak"
@@ -43,6 +46,7 @@ function NavBar() {
                                     />
                                     <p className='flex flex-col xl:w-52  pl-7 text-white text-xs justify-start border-solid'>A todos lados, mas rápido</p>
                                 </a>
+
                                 <div>
                                 </div>
                             </div>
@@ -98,7 +102,7 @@ function NavBar() {
                             </div> */}
                             <MenuItems
                                 transition
-                                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in "
                             >
                                 <MenuItem>
                                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
@@ -130,7 +134,7 @@ function NavBar() {
                             href={item.href}
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
-                                item.current ? 'bg-[#3C047B] text-white' : 'text-gray-300 hover:bg-[#3C047B] hover:text-white',
+                                item.current ? 'bg-[#3C047B]  text-white ' : 'text-gray-300 hover:bg-[#3C047B]  hover:text-white',
                                 'block rounded-md px-3 py-2 text-base font-medium',
                             )}
                         >
@@ -148,6 +152,7 @@ function NavBar() {
                 </div>
             </DisclosurePanel>
         </Disclosure >
+
     )
 }
 export default NavBar;

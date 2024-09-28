@@ -154,11 +154,7 @@ function FormContact() {
                         </div>
 
                         <div className="flex justify-end space-x-4">
-                            <button
-                                type="reset"
-                                className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-md">
-                                Cancelar
-                            </button>
+
                             <button
                                 type="submit"
                                 className="px-4 py-2 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md">

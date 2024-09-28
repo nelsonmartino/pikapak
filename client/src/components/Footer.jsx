@@ -1,6 +1,7 @@
 
 // import { InstagramIcon, LinkedInIcon } from './icons'; // Asegúrate de tener los iconos de Instagram y LinkedIn
-
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 function Footer() {
     return (
@@ -11,22 +12,22 @@ function Footer() {
                         &copy; 2024 Pikapak. Todos los derechos reservados.
                     </p>
                     <div className="flex flex-wrap justify-center space-x-4 mt-2 sm:mt-0">
-                        <a href="/terms" className="text-white text-sm hover:underline">
+                        <a href="/terms" className="text-white text-sm hover:no-underline hover:text-gray-400">
                             Términos y condiciones
                         </a>
-                        <a href="/privacy" className="text-white text-sm hover:underline">
+                        <a href="/privacy" className="text-white text-sm hover:no-underline hover:text-gray-400">
                             Política de privacidad
                         </a>
-                        <a href="mailto:hello@pikapak.app" className="text-white text-sm hover:underline">
+                        <a href="mailto:hello@pikapak.app" className="text-white text-sm hover:no-underline hover:text-gray-400">
                             hello@pikapak.app
                         </a>
                     </div>
                     <div className="flex space-x-4 mt-2 sm:mt-0">
                         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                            {/* <InstagramIcon className="h-6 w-6 text-white hover:text-gray-400" /> */}
+                            <FaInstagram className="h-6 w-6 text-white hover:text-gray-400" />
                         </a>
                         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                            {/* <LinkedInIcon className="h-6 w-6 text-white hover:text-gray-400" /> */}
+                            <FaLinkedinIn className="h-6 w-6 text-white hover:text-gray-400" />
                         </a>
                     </div>
                 </div>
@@ -35,4 +36,4 @@ function Footer() {
     );
 }
 
-export default Footer
+export default Footer;
