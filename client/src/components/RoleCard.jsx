@@ -10,19 +10,17 @@ const RoleCard = ({ info }) => {
           {info.description}
         </p>
       </div>
-      <div className="flex flex-col justify-evenly pb-4 pt-0 mt-2 w-full">
-        <button
-          className="bg-[#3e047c] p-2 m-1 border border-2 border-[#3e047c] text-center text-xs font-semibold text-white text-nowrap transition-all shadow-md uppercase hover:shadow-lg hover:bg-transparent hover:text-[#3e047c]"
-          type="button"
-        >
-          {info.action}
+      <div className="flex flex-col justify-evenly pb-4 pt-0 w-full">
+        <button className="mx-12" type="button">
+          <img src={info.action} alt="Google PLay" />
         </button>
-        <button
+        <a
           className="bg-[#3e047c] p-2 m-1 border border-2 border-[#3e047c] text-center text-xs font-semibold text-white text-nowrap transition-all shadow-md uppercase hover:shadow-lg hover:bg-transparent hover:text-[#3e047c]"
           type="button"
+          href={info.href}
         >
           + info
-        </button>
+        </a>
       </div>
     </div>
   )
