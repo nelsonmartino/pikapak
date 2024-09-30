@@ -23,6 +23,6 @@ export const landingInfo = [
       'Cuando un destinatario final se presente a retirar un paquete, escaneas el QR y se lo entregás',
     label3:
       'Ganaste plata mientras hacías tus cosas. Sin gastos extra, sin presiones, mientras estás ahí. ¡Un éxito!',
-    id: 'quieroEnviar',
+    id: 'quieroAlmacenar',
   },
 ]
