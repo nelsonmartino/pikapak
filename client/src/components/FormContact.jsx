@@ -85,7 +85,7 @@ function FormContact() {
 
 
     return (
-        <div className="container mx-auto xl:py-[5rem] my-[6rem]  xl:p-6 xl:my-[4rem]  items-center h-screen" id='contact'>
+        <div className="container mb-36 xl:py-[5rem]  xl:p-6 xl:my-[4rem]  items-center h-screen" id='contact'>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
 
                 {/* Columna izquierda: Texto descriptivo */}
@@ -94,7 +94,7 @@ function FormContact() {
                 </div>
 
                 {/* Columna derecha: Formulario */}
-                <div className="bg-white p-8 rounded-xl shadow-xl border ">
+                <div className="bg-white p-8 rounded-xl shadow-xl m-4 border">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
                             <label className="block mb-2 text-sm font-medium text-gray-700">Nombre y Apellido</label>

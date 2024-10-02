@@ -2,10 +2,10 @@ import gPlay from '../assets/imgs/disponible-en-google-play-badge-2.png'
 
 function PartThree() {
   return (
-    <div className="flex flex-col items-center justify-center pt-4 min-h-screen text-[#3e047c]">
+    <div className="flex flex-col items-center justify-center p-4 min-h-screen text-[#3e047c]">
       <h2
         className="text-[36px] text-3xl canada-type-gibson,sans-serif font-weight-700
- text-black-700 pb-3 pt-5"
+ text-black-700 p-2"
       >
         Genera Ingresos Extra YA!
       </h2>

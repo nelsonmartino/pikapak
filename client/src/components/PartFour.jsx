@@ -1,11 +1,11 @@
 function PartFour({ info }) {
   return (
     <div
-      className="flex flex-col items-center text-center text-[#3e047c]"
+      className="flex flex-col items-center text-center text-[#3e047c] max-w-full p-4"
       id={info.id}
     >
       <div className="font-extrabold text-3xl w-fit p-3">{info.header}</div>
-      <div className="font-semibold text-lg w-[36rem] my-2">
+      <div className="font-semibold text-lg  my-2">
         {info.description}
       </div>
       <button className="bg-[#3e047c] border border-2 border-[#3e047c] text-white shadow-md hover:shadow-lg hover:bg-transparent hover:text-[#3e047c] w-80 mt-2">
