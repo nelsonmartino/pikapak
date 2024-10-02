@@ -6,7 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 function Footer() {
     return (
         <footer className="bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg py-6">
-            <div className="mx-auto max-w-7xl xl:px-6">
+            <div className="mx-auto max-w-7xl xl:px-6 ">
                 <div className="flex flex-col items-center justify-between sm:flex-row">
                     <p className="text-center text-white text-sm mb-2 sm:mb-0">
                         &copy; 2024 Pikapak. Todos los derechos reservados.
