@@ -20,10 +20,10 @@ function classNames(...classes) {
 function NavBar() {
     return (
 
-        <Disclosure as="nav" className="fixed bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  z-50 min-w-full  opacity-95">
+        <Disclosure as="nav" className="fixed bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  min-w-full z-50 opacity-95">
 
 
-            <div className="xl:mx-auto xl:max-w-7xl sm:px-6 lg:px-8" >
+            <div className="xl:mx-auto xl:max-w-7xl sm:px-6 lg:px-8  " >
                 <div className="relative flex  h-16 items-center justify-between  xl:space-x-2  xl:right-8 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                         {/* Mobile menu button*/}
@@ -73,7 +73,7 @@ function NavBar() {
                                 <button className='h-[3rem] w-[8rem] mb-2 text-[14px] font-semibold text-slate-100  hover:font-semibold hover:text-[#7D0DDA]  '>ACCESO</button>
                             </div>
                             <div className='hidden sm:block xl:block md:block  2xl:hidden justify-end '>
-                                <button className=' w-[10rem] text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px] py-[22px] mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white font-sans hover:shadow-lg hover:shadow-indigo-400/60'> <a href="#contact">EMPEZAR</a> </button>
+                                <button className=' w-[10rem] text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px] py-[22px] mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'> <a href="#contact">EMPEZAR</a> </button>
                             </div>
                         </div>
                     </div>

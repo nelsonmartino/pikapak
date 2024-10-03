@@ -85,105 +85,114 @@ function FormContact() {
 
 
     return (
-        <div className="container mb-36 xl:py-[5rem]  xl:p-6 xl:my-[4rem]  items-center h-screen" id='contact'>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+        <>
+            {/* Sección con imagen de fondo fija */}
+            <div className='relative h-full  xl:bg-[url("./assets/imgs/pikapak-viajas.png")] bg-cover bg-center bg-no-repeat bg-fixed   xl:bg-[length:99.9%_99.9%] bg-[url("./assets/imgs/Background_header.png")]  drop-shadow-lg shadow-xl bg-[length:99.9%_99.9%]' >
+                {/* Filtro oscuro opcional */}
+                <div className='absolute inset-0 bg-black opacity-20'></div>
+                <div className="container  xl:py-[5rem]  xl:p-6   items-center  min-h-screen " id='contact'>
 
-                {/* Columna izquierda: Texto descriptivo */}
-                <div className="flex flex-col justify-center">
-                    <h2 className="text-3xl font-bold mb-4 xl:text-[54px] font-gibson font-extrabold xl:leading-[4.5rem] leading-[2.5rem] text-center">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte.</h2>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+
+                        {/* Columna izquierda: Texto descriptivo */}
+                        <div className="flex flex-col justify-center mt-[3rem]">
+                            <h2 className="text-3xl font-bold mb-4 mt-[3rem] xl:text-[54px] font-gibson text-white font-extrabold xl:leading-[4.5rem] leading-[2.5rem] xl:leading-[3rem] xl:mt-[11rem] text-center opacity-90">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte.</h2>
+                        </div>
+
+                        {/* Columna derecha: Formulario */}
+                        <div className="bg-white p-6 rounded-xl shadow-xl m-4  border opacity-90">
+                            <form onSubmit={handleSubmit} className="space-y-2 py-0">
+                                <div>
+                                    <label className="block mb-2 text-sm font-medium text-gray-700">Nombre y Apellido</label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                    />
+                                    {formErrors.name && (
+                                        <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <label className="block mb-2 text-sm font-medium text-gray-700">WhatsApp</label>
+                                    <input
+                                        type="text"
+                                        name="whatsapp"
+                                        value={formData.whatsapp}
+                                        onChange={handleInputChange}
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                    />
+                                    {formErrors.whatsapp && (
+                                        <p className="text-red-500 text-sm mt-1">{formErrors.whatsapp}</p>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <label className="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                    />
+                                    {formErrors.email && (
+                                        <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <label className="block mb-2 text-sm font-medium text-gray-700">Mensaje</label>
+                                    <textarea
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                        rows="4"
+                                        placeholder='Cuéntanos brevemente sobre tu negocio.'
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                    ></textarea>
+                                    {formErrors.message && (
+                                        <p className="text-red-500 text-sm mt-1">{formErrors.message}</p>
+                                    )}
+                                </div>
+
+                                <div className="flex justify-end space-x-4">
+
+                                    <button
+                                        type="submit"
+                                        className="px-4 py-2 bg-[url('./assets/imgs/Background_header.png')] hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-500/80 text-white rounded-md">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
 
-                {/* Columna derecha: Formulario */}
-                <div className="bg-white p-8 rounded-xl shadow-xl m-4 border">
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <div>
-                            <label className="block mb-2 text-sm font-medium text-gray-700">Nombre y Apellido</label>
-                            <input
-                                type="text"
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleInputChange}
-                            />
-                            {formErrors.name && (
-                                <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
-                            )}
-                        </div>
 
-                        <div>
-                            <label className="block mb-2 text-sm font-medium text-gray-700">WhatsApp</label>
-                            <input
-                                type="text"
-                                name="whatsapp"
-                                value={formData.whatsapp}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                            />
-                            {formErrors.whatsapp && (
-                                <p className="text-red-500 text-sm mt-1">{formErrors.whatsapp}</p>
-                            )}
-                        </div>
 
-                        <div>
-                            <label className="block mb-2 text-sm font-medium text-gray-700">Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                            />
-                            {formErrors.email && (
-                                <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
-                            )}
-                        </div>
-
-                        <div>
-                            <label className="block mb-2 text-sm font-medium text-gray-700">Mensaje</label>
-                            <textarea
-                                className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                                rows="4"
-                                placeholder='Cuéntanos brevemente sobre tu negocio.'
-                                name="message"
-                                value={formData.message}
-                                onChange={handleInputChange}
-                            ></textarea>
-                            {formErrors.message && (
-                                <p className="text-red-500 text-sm mt-1">{formErrors.message}</p>
-                            )}
-                        </div>
-
-                        <div className="flex justify-end space-x-4">
-
+                {/* Modal de éxito */}
+                {successModalIsOpen && (
+                    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                        <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
+                            <h4 className="text-xl font-semibold mb-2">¡Formulario Enviado!</h4>
+                            <p className="text-gray-600 mb-4">Gracias por contactarnos. Te responderemos a la brevedad.</p>
                             <button
-                                type="submit"
+                                onClick={closeSuccessModal}
                                 className="px-4 py-2 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md">
-                                Enviar
+                                Cerrar
                             </button>
                         </div>
-                    </form>
-                </div>
-
-            </div>
-
-
-
-            {/* Modal de éxito */}
-            {successModalIsOpen && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
-                        <h4 className="text-xl font-semibold mb-2">¡Formulario Enviado!</h4>
-                        <p className="text-gray-600 mb-4">Gracias por contactarnos. Te responderemos a la brevedad.</p>
-                        <button
-                            onClick={closeSuccessModal}
-                            className="px-4 py-2 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md">
-                            Cerrar
-                        </button>
                     </div>
-                </div>
 
-            )}
-        </div>
+                )}
+            </div>
+        </>
     );
 }
 
