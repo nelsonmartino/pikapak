@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Sección con imagen de fondo fija */}
-            <div className='relative h-[100vh]  bg-[url("./assets/imgs/pikapak-viajas.png")] bg-cover bg-center bg-no-repeat bg-fixed xl:bg-[length:99.99%_99.999%] xl:bg-fixed xl:bg-[length:99.9%_99.9%] bg-[length:100%]' >
+            <div className='relative h-[100vh]  bg-[url("./assets/imgs/pikapak-viajas.png")] bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.9%_99.9%] bg-[length:99.999%]' >
 
                 {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
 
