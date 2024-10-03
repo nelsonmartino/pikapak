@@ -87,22 +87,22 @@ function FormContact() {
     return (
         <>
             {/* Sección con imagen de fondo fija */}
-            <div className='relative h-full  xl:bg-[url("./assets/imgs/pikapak-viajas.png")] bg-cover bg-center bg-no-repeat bg-fixed   xl:bg-[length:99.9%_99.9%] bg-[url("./assets/imgs/Background_header.png")]  drop-shadow-lg shadow-xl bg-[length:99.9%_99.9%]' >
+            <div className='relative h-full xl:pt-4 xl:bg-[url("./assets/imgs/pikapak-viajas.png")] bg-cover bg-center bg-no-repeat bg-fixed   xl:bg-[length:99.9%_99.9%] bg-[url("./assets/imgs/Background_header.png")]  drop-shadow-lg shadow-xl bg-[length:99.9%_99.9%]' >
                 {/* Filtro oscuro opcional */}
                 <div className='absolute inset-0 bg-black opacity-20'></div>
-                <div className="container  xl:py-[5rem]  xl:p-6   items-center  min-h-screen " id='contact'>
+                <div className="container   xl:p-6   items-center  min-h-screen " id='contact'>
 
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
 
                         {/* Columna izquierda: Texto descriptivo */}
                         <div className="flex flex-col justify-center mt-[3rem]">
-                            <h2 className="text-3xl font-bold mb-4 mt-[3rem] xl:text-[54px] font-gibson text-white font-extrabold xl:leading-[4.5rem] leading-[2.5rem] xl:leading-[3rem] xl:mt-[11rem] text-center opacity-90">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte.</h2>
+                            <h2 className="text-3xl font-bold mb-4 mt-[3rem] xl:text-[54px] font-gibson text-white font-extrabold xl:leading-[4.5rem] leading-[2.5rem] xl:leading-[52px] xl:mt-[15rem] text-center opacity-90">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte.</h2>
                         </div>
 
                         {/* Columna derecha: Formulario */}
                         <div className="bg-white p-6 rounded-xl shadow-xl m-4  border opacity-90">
-                            <form onSubmit={handleSubmit} className="space-y-2 py-0">
+                            <form onSubmit={handleSubmit} className=" xl:mt-4 space-y-2 py-0">
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-700">Nombre y Apellido</label>
                                     <input
