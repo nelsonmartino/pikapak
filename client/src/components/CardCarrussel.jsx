@@ -1,16 +1,16 @@
 
 function CardCarrussel({ title, description, image }) {
   return (
-    <div className="relative flex justify-center  xl:w-[19rem] h-96 overflow-hidden rounded-lg shadow-lg group cursor-pointer ">
+    <div className="relative flex justify-center content-center m-auto   xl:w-[17rem] h-72 w-[90%] overflow-hidden rounded-xl shadow-xl group cursor-pointer  border-2 border-gray-300 ">
       <img
         src={image}
         alt={title}
-        className=" xl:h-64 h-full object-cover"
+        className=" xl:h-48 h-[20rem] m-4 object-cover"
       />
 
       <div className="absolute xl:h-[13.5rem] bottom-0 left-0 right-0  bg-opacity-40 transition-transform duration-1000 translate-y-[6.5rem] group-hover:-translate-y-0  group-hover:bg-opacity-20 transition-all p-6  ">
         <div className="w-full xl:w-[15rem]">
-          <div className="flex justify-between items-center ">
+          <div className="flex justify-between ">
             <h2 className="font-extrabold xl:font-extrabold text-[1.3rem] flex self-start  mt-[-55px] pl-4 p-2 xl:w-full bg-gray-200 bg-opacity-60 ">{title}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
