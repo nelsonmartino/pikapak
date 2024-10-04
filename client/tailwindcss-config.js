@@ -14,8 +14,10 @@ export default withMT({
         'my-custom-color': '#FFBA00',
       },
       fontFamily: {
+
         gibson: ['gibson', 'serif'],
         nova: ['proxima-nova', 'sans-serif'],
+
       },
     },
   },

@@ -32,10 +32,12 @@ function PartThree() {
   const handleOpen = (value) => setOpen(open === value ? 0 : value)
 
   return (
+
     <>
       <div
         id="accordion"
         className="flex flex-col items-center justify-center pt-4 text-[#3e047c]"
+
       >
         <h2
           className="text-[36px] text-3xl canada-type-gibson,sans-serif font-weight-700
