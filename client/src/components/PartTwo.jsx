@@ -22,7 +22,7 @@ const PartTwo = () => {
         {roleInfo.map((role, index) => (
           <div
             key={index}
-            className="flex justify-center w-5/6 sm:w-1/3 mx-3 xl:mx-5 lg:w-auto"
+            className="flex justify-center w-5/6 m-1 md:w-[30%] lg:mx-5 lg:w-auto"
           >
             <RoleCard info={role} />
           </div>

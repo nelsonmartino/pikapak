@@ -1,6 +1,9 @@
 function PartSix() {
   return (
-    <div className="flex flex-col items-center justify-center pt-4 pb-4 min-h-screen text-[#3e047c]">
+    <div
+      className="flex flex-col items-center justify-center pt-4 pb-4 min-h-screen text-[#3e047c]"
+      id="quieroEnviar"
+    >
       <h2 className="font-extrabold text-3xl text-[#3e047c] pb-3 pt-5">
         Quiero Enviar
       </h2>

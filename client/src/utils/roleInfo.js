@@ -1,34 +1,34 @@
-import role from '../assets/imgs/Role.png'
+import hub from '../assets/imgs/hub-pikapak.png'
+import transportista from '../assets/imgs/transportista-pikapak.png'
+import remitente from '../assets/imgs/remitente-pikapak.png'
 import gPlay from '../assets/imgs/disponible-en-google-play-badge-2.png'
 
 export const roleInfo = [
   {
-    title: 'Hub',
-    description: 'Tenés un lugar disponible en tu casa, local o comercio',
+    title: 'Remitente',
+    description: 'Necesitás enviar tus ventas rapidísimo a todos lados',
+    postDescription: 'Adherite como',
     action: gPlay,
-    image: role,
-    href: '#quieroAlmacenar',
-  },
-  {
-    title: 'Persona Remitente',
-    description: 'Sos una persona y necesitás enviar algo',
-    action: gPlay,
-    image: role,
+    image: remitente,
     href: '#contact',
-  },
-  {
-    title: 'Hub Remitente',
-    description: 'Tenés un comercio y necesitas enviar tus ventas',
-    action: gPlay,
-    image: role,
-    href: '#contact',
+    href1: '#comercioPersona',
   },
   {
     title: 'Transportista',
-    description:
-      'Viajás por la ciudad o entre ciudades y podés llevar un paquete',
+    description: 'Viajás o te moves en tu vehiculo o transporte público',
+    postDescription: 'Hacete',
     action: gPlay,
-    image: role,
-    href: '#quieroTransportar',
+    image: transportista,
+    href: '#accordion',
+    href1: '#accordion',
+  },
+  {
+    title: 'Hub',
+    description: 'Tenés un lugar disponible en tu casa, local o comercio',
+    postDescription: 'Convertite en',
+    action: gPlay,
+    image: hub,
+    href: '#accordion',
+    href1: '#accordion',
   },
 ]
