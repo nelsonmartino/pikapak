@@ -1,13 +1,11 @@
+import comercio from '../assets/imgs/pikapak-comercio.png'
+import persona from '../assets/imgs/pikapak-persona.png'
+
 function PartFour() {
   return (
-
     <div id="comercioPersona">
-      <img
-        src="../src/assets/imgs/pikapak-comercio.png"
-        alt="Pikapak Comercio"
-      />
-      <img src="../src/assets/imgs/pikapak-persona.png" alt="Pikapak Persona" />
-
+      <img src={comercio} alt="Pikapak Comercio" />
+      <img src={persona} alt="Pikapak Persona" />
     </div>
   )
 }
