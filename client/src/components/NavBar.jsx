@@ -20,11 +20,11 @@ function classNames(...classes) {
 function NavBar() {
     return (
 
-        <Disclosure as="nav" className="fixed bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg  min-w-full z-50 opacity-95">
+        <Disclosure as="nav" className="fixed  w-full bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg   z-50 opacity-95">
 
 
-            <div className="xl:mx-auto xl:max-w-7xl sm:px-6 lg:px-8  " >
-                <div className="relative flex  h-16 items-center justify-between  xl:space-x-2  xl:right-8 ">
+            <div className=" xl:w-[100%] flex sm:px-6 " >
+                <div className="relative flex  h-16 items-center w-full   xl:space-x-20 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                         {/* Mobile menu button*/}
                         <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-4  text-gray-400 hover:bg-[#3C047B] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ">
@@ -34,49 +34,65 @@ function NavBar() {
                             <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
                         </DisclosureButton>
                     </div>
-                    <div className="flex items-center justify-between  sm:items-stretch sm:justify-start">
-                        <div className="flex items-center xl:w-[6rem] xl:mr-[7rem]">
 
-                            <div className=' flex-col justify-start items-center h-14 pl-[18rem]  xl:pl-0  xl:ml-4  '>
-                                <a href="#home">
-                                    <img
-                                        alt="logo_Pikapak"
-                                        src={logo}
-                                        className="h-16  my-[-14px]"
-                                    />
-                                    <p className='flex flex-col xl:w-52  pl-7 text-white text-xs justify-start border-solid'>A todos lados, mas rápido</p>
-                                </a>
+                    {/* LOGO Y MENU */}
+                    <div className="flex items-center xl:w-min-full sm:items-stretch sm:justify-start xl:justify-between">
 
-                                <div>
+                        {/* LOGO Y SLOGAN */}
+                        <div className="flex items-center xl:flex-col xl:w-[20%] w-screen justify-end    xl:justify-start ">
+                            <a href="#home" className="flex h-full flex-col justify-items-end  relative right-14  items-start">
+                                <img
+                                    alt="logo_Pikapak"
+                                    src={logo}
+                                    className="flex justify-self-start h-16  sm:h-10 md:h-12 lg:h-14 xl:h-16 w-auto "
+                                />
+                                <p className='flex xl:justify-self-start  relative top-[-1rem] xl:left-6 left-7 z-10 flex-col  text-white text-xs   '>A todos lados, mas rápido</p>
+                            </a>
+                        </div>
+
+
+                        {/* Menú de Navegación */}
+                        <div className='xl:flex xl:items-center xl:relative xl:left-10 xl:w-min-[50%] ' id='contact'>
+
+                            <div className='xl:flex   w-full  '>
+                                <div className="hidden sm:block w-full ">
+                                    <div className="flex space-x-4 ">
+                                        {navigation.map((item) => (
+                                            <a
+                                                key={item.name}
+                                                href={item.href}
+                                                className={classNames(
+                                                    item.current
+                                                        ? 'bg-[#3C047B]  text-[#ffb200] content-center'
+                                                        : 'text-gray-300 hover:border-[#3C047B] hover:text-white',
+                                                    'rounded-md px-3 py-2 text-xs lg:text-sm font-medium ',
+                                                )}
+                                                aria-current={item.current ? 'page' : undefined}
+                                            >
+                                                {item.name}
+                                            </a>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="hidden sm:ml-6 sm:block mt-2  flex w-[41rem]">
-                            <div className="flex space-x-6  items-center justify-items-center px-18 ml-[6rem] mt-2">
-                                {navigation.map((item) => (
-                                    <a
-                                        key={item.name}
-                                        href={item.href}
-                                        aria-current={item.current ? 'page' : undefined}
-                                        className={classNames(
-                                            item.current ? 'bg-[#3C047B] p-2 text-[#ffb200]' : 'text-gray-300 hover:border-b-8 hover:border-2 hover:border-[#3C047B] hover:text-white',
-                                            'rounded-md font-normal  w-[7rem] h-[3rem] flex text-xs items-center justify-center text-center cursor-pointer',
-                                        )}
-                                    >
-                                        {item.name}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                        <div className=" xl:w-[26rem] h-[4rem] flex justify-end items-center mt-[10px]">
-                            <div className='hidden sm:block xl:block md:block 2xl:hidden justify-end ' >
-                                <button className='h-[3rem] w-[8rem] mb-2 text-[14px] font-semibold text-slate-100  hover:font-semibold hover:text-[#7D0DDA]  '>ACCESO</button>
-                            </div>
-                            <div className='hidden sm:block xl:block md:block  2xl:hidden justify-end '>
-                                <button className=' w-[10rem] text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px] py-[22px] mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'> <a href="#contact">EMPEZAR</a> </button>
+
+                                {/* Botones */}
+                                {/* <div className=" xl:w-[30%] h-[4rem] flex justify-end items-center border">
+                                        <div className='hidden sm:block xl:block md:block  justify-end ' > */}
+                                <div className="xl:flex xl:relative xl:left-[4rem] xl:w-[40%] items-center hidden">
+                                    <button className='h-[3rem] w-full mb-2 text-[14px] font-semibold text-white  hover:font-semibold hover:text-[#7D0DDA] p-4 ml-4'>ACCESO</button>
+
+                                    {/* <div className='hidden sm:block xl:block md:block   justify-end '> */}
+                                    <button className=' w-full text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px]  p-4  mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'>
+                                        <a href="#contact" >EMPEZAR </a> </button>
+                                </div>
+                                {/* </div> */}
                             </div>
                         </div>
                     </div>
+
+
+
+
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
                         {/* <button
                             type="button"
@@ -142,12 +158,12 @@ function NavBar() {
                         </DisclosureButton>
                     ))}
                 </div>
-                <div className="w-full flex ">
+                <div className="xl:w-full  flex justify-end">
                     <div className='sm:hidden xl:block md:block 2xl:block w-full '>
-                        <button className='h-[3rem] w-[15.5rem]  font-semibold text-slate-100 hover:text-slate-300  hover:font-semibold  '>ACCESO</button>
+                        <button className='h-[3rem] w-[15.5rem]  font-semibold text-white  hover:font-semibold hover:text-[#3C047B] '>ACCESO</button>
                     </div>
                     <div className='sm:hidden xl:block  md:block 2xl:block w-full'>
-                        <button className='h-[3rem] w-[14.4rem] font-semibold bg-[#3C047B] text-slate-400 hover:bg-[#3C047B] hover:text-white font-sans'><a href="#contact">EMPEZAR</a></button>
+                        <button className='h-[3rem] w-[14.4rem] font-semibold bg-[#3C047B] text-pink-300 hover:bg-[#3C047B] hover:text-white font-sans'><a href="#contact">EMPEZAR</a></button>
                     </div>
                 </div>
             </DisclosurePanel>
