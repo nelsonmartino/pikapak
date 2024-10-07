@@ -52,7 +52,7 @@ function NavBar() {
 
 
                         {/* Menú de Navegación */}
-                        <div className='xl:flex xl:items-center xl:relative xl:left-10 xl:w-min-[50%] ' id='contact'>
+                        <div className='xl:flex xl:items-center xl:relative xl:left-10 xl:w-min-[50%]' >
 
                             <div className='xl:flex   w-full  '>
                                 <div className="hidden sm:block w-full ">
