@@ -1,14 +1,14 @@
 import '../src/output.css'
-import Carrussel from './components/Carrussel'
-import Home from './components/Home'
 import NavBar from './components/NavBar'
+import Home from './components/Home'
+import Carrussel from './components/Carrussel'
+import GeneraIngresos from './components/GeneraIngresos'
 import PartFour from './components/PartFour'
-import PartThree from './components/PartThree'
 import PartTwo from './components/PartTwo'
 import PartSix from './components/PartSix'
-// import { landingInfo } from './utils/landingInfo'
 import FormContact from './components/FormContact'
 import Footer from './components/Footer'
+// import { landingInfo } from './utils/landingInfo'
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Home />
       <Carrussel />
       <PartTwo />
-      <PartThree />
+      <GeneraIngresos />
       <PartFour />
       {/* {landingInfo.map((info, index) => (
         <PartFour key={index} info={info} />
