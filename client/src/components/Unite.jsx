@@ -1,13 +1,13 @@
 import RoleCard from './RoleCard'
 import { roleInfo } from '../utils/roleInfo'
 
-const PartTwo = () => {
+const Unite = () => {
   return (
-    <div className="text-center text-[#3e047c] py-3">
+    <div className="text-center text-[#3e047c] py-20" id="unite">
 
       <div>
-        <div className="text-xl font-semibold">Unite a Pikapak</div>
-        <div>de acuerdo con tu necesidad</div>
+        <h1 className="text-3xl font-semibold">Unite a Pikapak</h1>
+        <h2 className='text-xl'>de acuerdo con tu necesidad</h2>
       </div>
       <div className="flex flex-row justify-center flex-wrap">
         {roleInfo.map((role, index) => (
@@ -19,9 +19,9 @@ const PartTwo = () => {
           </div>
         ))}
       </div>
-      <h2>Elegí tu rol en la cadena y ganá!</h2>
+      <h3 className='text-xl'>Elegí tu rol en la cadena y ganá!</h3>
     </div>
   )
 }
 
-export default PartTwo
+export default Unite;

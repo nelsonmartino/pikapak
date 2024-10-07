@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Carrussel from './components/Carrussel'
 import GeneraIngresos from './components/GeneraIngresos'
 import PartFour from './components/PartFour'
-import PartTwo from './components/PartTwo'
+import Unite from './components/Unite'
 import PartSix from './components/PartSix'
 import FormContact from './components/FormContact'
 import Footer from './components/Footer'
@@ -16,7 +16,7 @@ function App() {
       <NavBar />
       <Home />
       <Carrussel />
-      <PartTwo />
+      <Unite />
       <GeneraIngresos />
       <PartFour />
       {/* {landingInfo.map((info, index) => (
@@ -30,4 +30,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
