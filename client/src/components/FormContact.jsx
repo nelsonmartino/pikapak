@@ -85,8 +85,8 @@ function FormContact() {
 
 
     return (
-        <div id='contact' className='border'>
-            <div className="container xl:p-6 h-full xl:flex xl:items-center xl:justify-center">
+        <div className=' '>
+            <div className="container xl:p-6 h-full xl:flex xl:items-center xl:justify-center" id='contact'>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8   xl:items-center xl:content-center" >
 
                     {/* Columna izquierda: Texto descriptivo */}
@@ -95,7 +95,7 @@ function FormContact() {
                     </div>
 
                     {/* Columna derecha: Formulario */}
-                    <div className="bg-white p-6 rounded-xl shadow-xl   items-center border opacity-90 m-6">
+                    <div className="bg-white p-6 rounded-xl shadow-xl   items-center border opacity-90 m-6 ">
                         <form onSubmit={handleSubmit} className=" xl:mt-4 space-y-2 py-0 ">
                             <div>
                                 <label className="block mb-2 text-sm font-medium text-gray-700">Nombre y Apellido</label>
@@ -166,26 +166,26 @@ function FormContact() {
                     </div>
                 </div>
 
-            </div>
 
 
 
-            {/* Modal de éxito */}
-            {successModalIsOpen && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
-                        <h4 className="text-xl font-semibold mb-2">¡Formulario Enviado!</h4>
-                        <p className="text-gray-600 mb-4">Gracias por contactarnos. Te responderemos a la brevedad.</p>
-                        <button
-                            onClick={closeSuccessModal}
-                            className="px-4 py-2 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md">
-                            Cerrar
-                        </button>
+
+                {/* Modal de éxito */}
+                {successModalIsOpen && (
+                    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                        <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
+                            <h4 className="text-xl font-semibold mb-2">¡Formulario Enviado!</h4>
+                            <p className="text-gray-600 mb-4">Gracias por contactarnos. Te responderemos a la brevedad.</p>
+                            <button
+                                onClick={closeSuccessModal}
+                                className="px-4 py-2 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md">
+                                Cerrar
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-            )}
-
+                )}
+            </div>
         </div>
     );
 }
