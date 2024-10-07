@@ -132,7 +132,7 @@ function Carrussel() {
     const translateX = -(currentIndex * (100 / cardsToShow));
 
     return (
-        <div className='h-full py-[4rem] flex flex-col justify-center items-center overflow-hidden xl-w-full' id='comoFunciona'>
+        <div className='h-full py-[4rem] mb-6 flex flex-col justify-center items-center overflow-hidden xl-w-full' id='comoFunciona'>
             <h2 className='text-center xl:text-4xl  font-gibson xl:text-[3rem] text-[35px] h-[1rem] mt-8  mb-[7.5rem] xl:mb-[8rem] tracking-wide font-extrabold xl:font-extrabold'>Todas las Soluciones <br /> en una</h2>
             <div className="relative w-full  lg:max-w-[75%] xl:max-w-[85%] overflow-hidden ">
 

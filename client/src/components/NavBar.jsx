@@ -61,7 +61,7 @@ function NavBar() {
                                                 className={classNames(
                                                     item.current
                                                         ? 'bg-[#3C047B]  text-[#ffb200] content-center'
-                                                        : 'text-gray-300 hover:border-[#3C047B] hover:text-white',
+                                                        : 'text-gray-300 hover:border-[#3C047B] hover:text-[#ffb200]',
                                                     'rounded-md px-3 py-2 text-xs lg:text-sm font-medium ',
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
@@ -75,11 +75,11 @@ function NavBar() {
                                 {/* Botones */}
                                 {/* <div className=" xl:w-[30%] h-[4rem] flex justify-end items-center border">
                                         <div className='hidden sm:block xl:block md:block  justify-end ' > */}
-                                <div className="xl:flex xl:relative xl:left-[4rem] xl:w-[40%] items-center hidden">
-                                    <button className='h-[3rem] w-full mb-2 text-[14px] font-semibold text-white  hover:font-semibold hover:text-[#7D0DDA] p-4 ml-4'>ACCESO</button>
+                                <div className="xl:flex xl:relative xl:left-[4rem]  xl:w-[40%] items-center hidden">
+                                    <button className='h-[3rem] w-full  text-[14px] font-semibold text-white  hover:font-semibold hover:text-[#7D0DDA] p-4  ml-4'>ACCESO</button>
 
                                     {/* <div className='hidden sm:block xl:block md:block   justify-end '> */}
-                                    <button className=' w-full text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px]  p-4  mb-2 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'>
+                                    <button className=' w-full h-full text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px]  p-4  no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'>
                                         <a href="#contact" >EMPEZAR </a> </button>
                                 </div>
                                 {/* </div> */}
