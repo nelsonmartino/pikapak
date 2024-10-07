@@ -19,10 +19,7 @@ function classNames(...classes) {
 
 function NavBar() {
     return (
-
         <Disclosure as="nav" className="fixed  w-full bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg   z-50 opacity-95">
-
-
             <div className=" xl:w-[100%] flex sm:px-6 " >
                 <div className="relative flex  h-16 items-center w-full   xl:space-x-20 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
@@ -39,7 +36,7 @@ function NavBar() {
                     <div className="flex items-center xl:w-min-full sm:items-stretch sm:justify-start xl:justify-between">
 
                         {/* LOGO Y SLOGAN */}
-                        <div className="flex items-center xl:flex-col xl:w-[20%] w-screen justify-end    xl:justify-start ">
+                        <div className="flex items-center xl:flex-col xl:w-[20%] w-screen justify-end xl:justify-start">
                             <a href="#home" className="flex h-full flex-col justify-items-end  relative right-14  items-start">
                                 <img
                                     alt="logo_Pikapak"

@@ -34,7 +34,7 @@ const Home = () => {
     return (
         <div className='bg-[url("./assets/imgs/Background_header.png")] bg-cover bg-center bg-no-repeat overflow-x-hidden' id='home'>
             <div className=' max-w-[1100px] flex justify-center py-14 xl:m-auto '>
-                <div className='max-w-[77%] mt-[5rem] xl:mt-[6.5rem] '>
+                <div className='max-w-[77%] mt-[5rem] xl:mt-[3rem] '>
                     <p className='relative text-[1rem] font-extrabold pt-0 pb-[7px] leading-[15px] tracking-[1px] uppercase text-[#ffb200]'>ENVIA CON PIKAPAK</p>
                     <div >
                         <h2 className='relative xl:text-[64px] text-[42px] pt-[8px] font-bold leading-[5rem] text-white z-20'>Enviá (casi) cualquier cosa,<br /> a todos lados, <br /><div className='inline-block  text-[#ffb200]  whitespace-nowrap min-w-[200px] overflow-hidden'
@@ -47,11 +47,11 @@ const Home = () => {
                         <img
                             src={imgRapidisimo}
                             alt="imagen principal usuario y camion de pikapak"
-                            className='max-w-full h-auto z-0'
+                            className='max-w-[85%] h-auto z-0'
                         />
                     </div>
                     {/* <div className='xl:min-w-full  xl:top-[23rem] xl:relative xl:right-[120rem] xl:px-4 xl:h-full '> */}
-                    <p className='xl:text-[1.5rem]  text-[1rem] leading-[1.5rem] font-normal xl:mt-[-4rem] py-[17px] pr-120px text-white relative z-10 '>Pikapak es una plataforma logística 100% crowdsourced que coordina transportistas y depósitos en una red de movimiento de mercaderías 24x7x365.</p>
+                    <p className='xl:text-[1.5rem]  text-[1rem] leading-[1.5rem] font-normal xl:mt-[-8.5rem] py-[17px] pr-120px text-white relative z-10 '>Pikapak es una plataforma logística 100% crowdsourced que coordina transportistas y depósitos en una red de movimiento de mercaderías 24x7x365.</p>
                     {/* </div> */}
                     <div className=''>
                         <button className='xl:text-[16px] text-[14px] bg-transparent text-[#fff] center xl:min-w-[140px] min-w-[140px] py-[12px] xl:py-[18px]  my-[15px] mx-0 leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[16px] py-[18px] no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap border-solid border-2 border-white hover:bg-white hover:text-black' >EMPEZAR</button>
@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Sección con imagen de fondo fija */}
-            <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.999%_99.999%] bg-[length:100%]' >
+            <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.99%] bg-[length:100%]' >
 
                 {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
 
