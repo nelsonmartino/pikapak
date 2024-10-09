@@ -85,13 +85,13 @@ function FormContact() {
 
 
     return (
-        <div className=' '>
-            <div className="container xl:p-6 h-full xl:flex xl:items-center xl:justify-center" id='contact'>
+        <div className=" bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg h-full py-16 xl:py-10" id='contact'>
+            <div className="container xl:p-6 h-screen xl:flex xl:items-center xl:justify-center" >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8   xl:items-center xl:content-center" >
 
                     {/* Columna izquierda: Texto descriptivo */}
-                    <div className="flex flex-col justify-center xl:items-center mt-[-50%] ">
-                        <h2 className="text-3xl font-bold xl:text-[54px] font-gibson text-black font-extrabold xl:leading-[4.5rem] leading-[2.5rem] xl:leading-[52px] xl:mt-[15rem] text-center opacity-90 mb-[-7rem]">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte.</h2>
+                    <div className="flex flex-col justify-center xl:items-center">
+                        <h2 className="text-2xl font-bold xl:text-5xl text-[#ffb200] font-extrabold xl:leading-[4.5rem] leading-[2.5rem] xl:leading-[52px] xl:mt-[15rem] text-center opacity-90  xl:mt-0 p-4 shadow-2xl">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte</h2>
                     </div>
 
                     {/* Columna derecha: Formulario */}

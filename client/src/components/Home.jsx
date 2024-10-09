@@ -33,7 +33,7 @@ const Home = () => {
 
     return (
         <div className='bg-[url("./assets/imgs/Background_header.png")] bg-cover bg-center bg-no-repeat overflow-x-hidden' id='home'>
-            <div className=' max-w-[1100px] flex justify-center py-14 xl:m-auto '>
+            <div className=' max-w-[1100px] flex justify-center xl:py-12 py-4 xl:m-auto '>
                 <div className='max-w-[77%] mt-[5rem] xl:mt-[3rem] '>
                     <p className='relative text-[1rem] font-extrabold pt-0 pb-[7px] leading-[15px] tracking-[1px] uppercase text-[#ffb200]'>ENVIA CON PIKAPAK</p>
                     <div >
@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Sección con imagen de fondo fija */}
-            <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.99%] bg-[length:100%]' >
+            <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%]' >
 
                 {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
 
