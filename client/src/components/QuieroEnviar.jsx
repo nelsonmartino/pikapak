@@ -1,3 +1,4 @@
+
 function QuieroEnviar() {
   return (
     <div
@@ -13,9 +14,9 @@ function QuieroEnviar() {
       </div>
 
       {/* Contenedor principal con imagen de fondo */}
-      <div className="relative w-full h-[80vh] ">
+      <div className="relative w-full h-[100vh] ">
         {/* Imagen centrada como fondo */}
-        <div className="absolute inset-0 bg-[url('./assets/imgs/pikapak-todos.png')] bg-cover bg-center opacity-50 z-0 bg-no-repeat xl:bg-[length:40%] bg-[length:95%] left-10 flex justify-center"></div>
+        <div className="absolute inset-0 bg-[url('./assets/imgs/pikapak-aplicacion.png')] bg-cover bg-center xl:opacity-90 opacity-30 z-0 bg-no-repeat xl:bg-[length:40%] bg-[length:95%] left-10 flex justify-center"></div>
 
 
         {/* Contenedor cards*/}
