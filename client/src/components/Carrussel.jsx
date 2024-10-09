@@ -132,37 +132,48 @@ function Carrussel() {
     const translateX = -(currentIndex * (100 / cardsToShow));
 
     return (
-        <div className='h-full py-[4rem] mb-6 flex flex-col justify-center items-center overflow-hidden xl-w-full' id='comoFunciona'>
-            <h2 className='text-center xl:text-4xl  font-gibson xl:text-[3rem] text-[35px] h-[1rem] mt-8  mb-[7.5rem] xl:mb-[8rem] tracking-wide font-extrabold xl:font-extrabold'>Todas las Soluciones <br /> en una</h2>
-            <div className="relative w-full  lg:max-w-[75%] xl:max-w-[85%] overflow-hidden ">
+        <>
+            <div className='h-full py-[5rem] mb-2 flex flex-col justify-center items-center overflow-hidden xl-w-full' id='comoFunciona'>
+                <h2 className='text-center xl:text-4xl  xl:text-[3rem] text-[35px] h-[1rem] mt-8  mb-[7.5rem] xl:mb-[8rem] tracking-wide font-extrabold xl:font-extrabold'>Todas las Soluciones <br /> en una</h2>
+                <div className="relative w-full  lg:max-w-[75%] xl:max-w-[85%] overflow-hidden ">
 
-                <div
-                    className="flex transition-transform duration-1000 xl:p-2"
-                    style={{ transform: `translateX(${translateX}%)` }}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    ref={carruselRef}
-                >
+                    <div
+                        className="flex transition-transform duration-1000 xl:p-2"
+                        style={{ transform: `translateX(${translateX}%)` }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        ref={carruselRef}
+                    >
 
-                    {totalCards.map((card, index) => (
-                        <div className="flex-shrink-0 xl:mx-[1.5px] w-full sm:w-[50%] lg:w-[33.33%] xl:w-[25%] " key={index}>
-                            <CardCarrussel
-                                title={card.title}
-                                description={card.description}
-                                image={card.image}
-                            />
-                        </div>
-                    ))}
+                        {totalCards.map((card, index) => (
+                            <div className="flex-shrink-0 xl:mx-[1.5px] w-full sm:w-[50%] lg:w-[33.33%] xl:w-[25%] " key={index}>
+                                <CardCarrussel
+                                    title={card.title}
+                                    description={card.description}
+                                    image={card.image}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    <button onClick={prev} className="absolute left-[-5px] top-1/2 transform -translate-y-1/2 text-black text-5xl mx-[-10px] p-3 font-extralight font-sans hover:text-slate-500 z-20">
+                        ❮
+                    </button>
+                    <button onClick={next} className="absolute right-[-5px] top-1/2 transform -translate-y-1/2 text-black  text-5xl mx-[-10px] p-3 font-extralight font-sans hover:text-slate-500 z-20 ">
+                        ❯
+                    </button>
                 </div>
-
-                <button onClick={prev} className="absolute left-[-5px] top-1/2 transform -translate-y-1/2 text-black text-5xl mx-[-10px] p-3 font-extralight font-sans hover:text-slate-500 z-20">
-                    ❮
-                </button>
-                <button onClick={next} className="absolute right-[-5px] top-1/2 transform -translate-y-1/2 text-black  text-5xl mx-[-10px] p-3 font-extralight font-sans hover:text-slate-500 z-20 ">
-                    ❯
-                </button>
             </div>
-        </div>
+            {/* Sección con imagen de fondo fija */}
+            <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%]' >
+
+                {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
+
+                <div className='h-[30rem]'>
+
+                </div>
+            </div>
+        </>
     )
 }
 export default Carrussel;

@@ -1,8 +1,9 @@
 
 function QuieroEnviar() {
   return (
+
     <div
-      className="relative flex flex-col items-center justify-center  py-[3rem] mb-[7rem] pb-[6rem] min-h-screen text-[#3e047c] "
+      className="relative flex flex-col items-center justify-center  py-[3rem] mb-[7rem] pb-[5rem] min-h-screen text-[#3e047c] "
       id="quieroEnviar"
     >
       {/* Título y subtítulo */}
@@ -20,7 +21,7 @@ function QuieroEnviar() {
 
 
         {/* Contenedor cards*/}
-        <div className="xl:relative w-full h-full flex flex-col gap-4 items-center ">
+        <div className="xl:relative w-full h-full flex flex-col xl:mb-16 items-center ">
 
           <div className="xl:absolute xl:top-0 xl:left-[15%] xl:w-72 xl:h-36 w-[90%]   h-full border border-2 border-[#3e047c] flex justify-center items-center  p-4 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">
             <p className="text-center">Si lo hacés de vez en cuándo y NO TENES un local,  <a href="#acceso" className="text-[#ffb200]">Registrate </a> como Persona</p>
@@ -52,13 +53,29 @@ function QuieroEnviar() {
           </div>
 
           {/* Séptima caja, en la parte inferior derecha */}
-          <div className="xl:absolute xl:bottom-[1%] xl:right-[15%] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-1 flex justify-center items-center p-4 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">
+          <div className="xl:absolute xl:bottom-[1%] xl:right-[15%] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-1 flex justify-center items-center p-4 mb-6 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">
             <p className="text-center">O completa este simple <a href="#contact" className="text-[#ffb200]">formulario</a> y te contactamos a la brevedad.</p>
+
+
+
+          </div>
+        </div>
+        {/* Sección con imagen de fondo fija */}
+        <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%] xl:h-[25rem] xl:my-[4rem]' >
+
+          <div className='h-[25rem]'>
           </div>
         </div>
       </div>
+
+
+
+      {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
+
+
     </div>
+
+
   );
 }
-
 export default QuieroEnviar;
