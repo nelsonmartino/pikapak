@@ -1,14 +1,16 @@
 const RoleCard = ({ info }) => {
   return (
-    <div className="flex flex-col my-6  p-4 items-center text-[#3e047c] rounded-xl shadow-xl group border-2 border-gray-300  xl:w-72 xl:h-[90%] w-[70%] h-full">
-      <div className="flex p-6 h-[100%] content-end overflow-hidden text-white w-full justify-center">
-        <img src={info.image} className=" w-full" alt={info.title} />
+    <div className="flex flex-col my-6  p-4 items-center text-[#3e047c] rounded-xl shadow-xl group border-2 -gray-300  xl:w-72 w-[80%] ">
+
+      <div className="flex p-4 overflow-hidden text-white w-full justify-center xl:h-[17rem] h-full">
+        <img src={info.image} className="xl:w-auto w-[70%] p-2" alt={info.title} />
       </div>
 
+      <div className="flex flex-col justify-between  flex-grow h-full">
 
-      <div className="flex flex-col mt-4 justify-between flex-grow h-full">
-        <div className="p-2 flex flex-col items-center flex-grow">
-          <p className=" leading-normal font-medium text-pretty h-20">
+        <div className="flex flex-col items-center  m-auto ">
+
+          <p className="leading-normal xl:font-medium text-xl text-pretty h-20 ">
             {info.description}
           </p>
           <svg
@@ -21,32 +23,34 @@ const RoleCard = ({ info }) => {
               d="m10 256 200 150v-80h156V186H210v-80zM394 186h40v140h-40zM462 186h40v140h-40z"
             />
           </svg>
-          <p className=" leading-normal font-medium text-pretty">
+          <p className="leading-normal font-medium text-pretty text-2xl xl:text-xl ">
             {info.postDescription}
           </p>
-          <a
-            className="bg-[#3e047c] p-2 m-1 w-full border border-2 border-[#3e047c] text-center text-xs font-semibold text-white text-nowrap transition-all shadow-md uppercase hover:shadow-lg hover:bg-transparent hover:text-[#3e047c]"
-            type="button"
-            href={info.href}
+          <h3
+            className="p-2 w-full mt-[1rem] text-center xl:text-2xl  text-3xl font-semibold text-[#ffb200]  uppercase "
           >
             {info.title}
-          </a>
+          </h3>
         </div>
-        <div className="flex flex-col  pb-4 w-full ">
-          <button className="my-2 " type="button">
-            <img src={info.action} className="w-[70%] m-auto" alt="logo Google PLay" />
+
+
+        <div className="flex flex-col pb-4 w-full">
+          <button className="mb-4" type="button">
+            <img src={info.action} className="xl:w-[70%] w-[40%] m-auto" alt="logo Google PLay" />
           </button>
-          <a
-            className="bg-[#3e047c] p-2 m-1 border border-2 border-[#3e047c] text-center text-xs font-semibold text-white text-nowrap transition-all shadow-md uppercase hover:shadow-lg hover:bg-transparent hover:text-[#3e047c]"
-            type="button"
-            href={info.href1}
-          >
-            + info
-          </a>
+          <div className="flex justify-end">
+            <a
+              className="p-2 m-1 text-center xl:text-xl  text-3xl font-semibold text-[#3e047c] hover:text-[#ffb200] w-[30%]"
+              href={info.href}
+            >
+              + info
+            </a>
+
+          </div>
         </div>
 
       </div>
-    </div>
+    </div >
   )
 }
 

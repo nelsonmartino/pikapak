@@ -6,9 +6,9 @@ import logo from '../assets/imgs/logo.png';
 
 const navigation = [
     { name: 'UNIRTE', href: '#unite', current: true },
-    { name: 'QUIERO TRANSPORTAR', href: '#quieroTransportar', current: false },
+    { name: 'QUIERO TRANSPORTAR', href: '#transportista', current: false },
     { name: 'QUIERO ENVIAR', href: '#quieroEnviar', current: false },
-    { name: 'QUIERO ALMACENAR', href: '#quieroAlmacenar', current: false },
+    { name: 'QUIERO ALMACENAR', href: '#hub', current: false },
     { name: 'COMO FUNCIONA', href: '#comoFunciona', current: false },
 ]
 

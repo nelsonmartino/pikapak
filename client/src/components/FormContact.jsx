@@ -85,19 +85,19 @@ function FormContact() {
 
 
     return (
-        <div className=" bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg h-full py-16 xl:py-10" id='contact'>
-            <div className="container xl:p-6 h-screen xl:flex xl:items-center xl:justify-center" >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8   xl:items-center xl:content-center" >
+        <div className=" bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg h-full xl:mb-[40px] xl:pt-8 pb-[4rem] pt-[5rem] mb-[30px]" id='contact'>
+            <div className="container h-screen xl:flex xl:flex-col xl:items-center xl:justify-center" >
+                <div className="grid grid-cols-1 lg:grid-cols-2  xl:items-center" >
 
                     {/* Columna izquierda: Texto descriptivo */}
-                    <div className="flex flex-col justify-center xl:items-center">
-                        <h2 className="text-2xl font-bold xl:text-5xl text-[#ffb200] font-extrabold xl:leading-[4.5rem] leading-[2.5rem] xl:leading-[52px] xl:mt-[15rem] text-center opacity-90  xl:mt-0 p-4 shadow-2xl">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte</h2>
+                    <div className="flex flex-col xl:justify-center xl:items-center">
+                        <h2 className="flex xl:flex-col text-2xl font-bold xl:text-[2.7rem] text-[#ffb200] font-extrabold xl:leading-[4.5rem] leading-[2.5rem] xl:leading-[64px] text-center opacity-90  p-4 shadow-2xl">Si tenés un comercio o vendes productos, dejanos tus datos y te contactamos para adherirte</h2>
                     </div>
 
                     {/* Columna derecha: Formulario */}
-                    <div className="bg-white p-6 rounded-xl shadow-xl   items-center border opacity-90 m-6 ">
+                    <div className="bg-white p-6 rounded-xl shadow-xl  border opacity-60 m-6 ">
                         <form onSubmit={handleSubmit} className=" xl:mt-4 space-y-2 py-0 ">
-                            <div>
+                            <div className=''>
                                 <label className="block mb-2 text-sm font-medium text-gray-700">Nombre y Apellido</label>
                                 <input
                                     type="text"
@@ -154,7 +154,7 @@ function FormContact() {
                                 )}
                             </div>
 
-                            <div className="flex justify-end space-x-4">
+                            <div className="flex justify-end">
 
                                 <button
                                     type="submit"

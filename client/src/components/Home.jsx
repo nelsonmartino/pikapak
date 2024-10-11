@@ -50,37 +50,33 @@ const Home = () => {
                             className='max-w-[85%] h-auto z-0'
                         />
                     </div>
-                    {/* <div className='xl:min-w-full  xl:top-[23rem] xl:relative xl:right-[120rem] xl:px-4 xl:h-full '> */}
+
                     <p className='xl:text-[1.5rem]  text-[1rem] leading-[1.5rem] font-normal xl:mt-[-8.5rem] py-[17px] pr-120px text-white relative z-10 '>Pikapak es una plataforma logística 100% crowdsourced que coordina transportistas y depósitos en una red de movimiento de mercaderías 24x7x365.</p>
-                    {/* </div> */}
                     <div className=''>
                         <button className='xl:text-[16px] text-[14px] bg-transparent text-[#fff] center xl:min-w-[140px] min-w-[140px] py-[12px] xl:py-[18px]  my-[15px] mx-0 leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[16px] py-[18px] no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap border-solid border-2 border-white hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-900/90' >EMPEZAR</button>
                     </div>
                 </div>
             </div>
-            {/* Sección con imagen de fondo fija */}
-            <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%]' >
 
-                {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
 
-                <div className='h-[10rem]'>
-
-                </div>
-                <div className='max-w-[100%]  flex flex-col p-3 mb-16 bg-[#9f31a8] shadow-xl shadow-indigo-600/70'>
-                    <div className='flex-col justify-center mb-2 '>
-
-                        <h2 className='flex justify-center mb-2 text-white'>Suscribite para novedades</h2>
-                        <div className='flex  justify-center h-[3rem] '>
-
-                            <input className='xl:w-[30%] w-[60%] border-solid border-white border-2 pl-2 rounded-xl  focus:shadow-lg focus:shadow-indigo-200/80' placeholder='Escribe tu Email...' type="text" />
-
-                            <button className='text-[16px] bg-transparent text-[#fff] center min-w-[130px] leading-[17px] transition-all easy-in duration-[0.15s] inline-block ml-2 px-[10px] py-[15px] no-underline uppercase rounded-xl outline-none tracking-[2px] font-bold whitespace-nowrap border-solid border-2 border-[white] hover:bg-white hover:text-black' type="submit">Enviar</button>
-                        </div>
-
-                    </div>
-                </div>
+            <div className='h-[4rem] bg-white'>
 
             </div>
+            <div className='max-w-[100%]  flex flex-col p-3 mb-16 bg-[#9f31a8] shadow-xl shadow-indigo-600/70'>
+                <div className='flex-col justify-center mb-2 '>
+
+                    <h2 className='flex justify-center mb-2 text-white'>Suscribite para novedades</h2>
+                    <div className='flex  justify-center h-[3rem] '>
+
+                        <input className='xl:w-[30%] w-[60%] border-solid border-white border-2 pl-2 rounded-xl  focus:shadow-lg focus:shadow-indigo-200/80' placeholder='Escribe tu Email...' type="text" />
+
+                        <button className='text-[16px] bg-transparent text-[#fff] center min-w-[130px] leading-[17px] transition-all easy-in duration-[0.15s] inline-block ml-2 px-[10px] py-[15px] no-underline uppercase rounded-xl outline-none tracking-[2px] font-bold whitespace-nowrap border-solid border-2 border-[white] hover:bg-white hover:text-black' type="submit">Enviar</button>
+                    </div>
+
+                </div>
+            </div>
+
+
 
 
 
