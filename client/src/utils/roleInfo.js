@@ -19,7 +19,7 @@ export const roleInfo = [
     postDescription: 'Hacete',
     action: gPlay,
     image: transportista,
-    href: '#accordion',
+    href: '#transportista',
     href1: '#accordion',
   },
   {
@@ -28,7 +28,7 @@ export const roleInfo = [
     postDescription: 'Convertite en',
     action: gPlay,
     image: hub,
-    href: '#accordion',
+    href: '#hub',
     href1: '#accordion',
   },
 ]

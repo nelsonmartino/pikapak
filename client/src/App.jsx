@@ -7,6 +7,7 @@ import QuieroEnviar from './components/QuieroEnviar'
 import Unite from './components/Unite'
 import FormContact from './components/FormContact'
 import Footer from './components/Footer'
+import RemitentesPersonaComercio from './components/RemitentesPersonaComercio'
 // import { landingInfo } from './utils/landingInfo'
 
 function App() {
@@ -18,11 +19,12 @@ function App() {
       <Unite />
       <GeneraIngresos />
       <QuieroEnviar />
+      <RemitentesPersonaComercio />
       {/* {landingInfo.map((info, index) => (
-        <PartFour key={index} info={info} />
-      ))} */}
+        <QuieroEnviar key={index} info={info} />
+      ))}
 
-      {/* <img src="../src/assets/logo.png" alt="logo_Pikapak" /> */}
+      <img src="../src/assets/logo.png" alt="logo_Pikapak" /> */}
       <FormContact />
       <Footer />
     </div>

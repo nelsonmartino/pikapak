@@ -12,22 +12,22 @@ function Footer() {
                         &copy; 2024 Pikapak. Todos los derechos reservados.
                     </p>
                     <div className="flex flex-wrap justify-center space-x-4 mt-2 sm:mt-0">
-                        <a href="/terms" className="text-white text-sm hover:no-underline hover:text-gray-400">
+                        <a href="/terms" className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
                             Términos y condiciones
                         </a>
-                        <a href="/privacy" className="text-white text-sm hover:no-underline hover:text-gray-400">
+                        <a href="/privacy" className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
                             Política de privacidad
                         </a>
-                        <a href="mailto:hello@pikapak.app" className="text-white text-sm hover:no-underline hover:text-gray-400">
+                        <a href="mailto:hello@pikapak.app" className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
                             hello@pikapak.app
                         </a>
                     </div>
                     <div className="flex space-x-4 mt-2 sm:mt-0">
                         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram className="h-6 w-6 text-white hover:text-gray-400" />
+                            <FaInstagram className="h-6 w-6 text-white hover:text-[#ffb200]" />
                         </a>
                         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedinIn className="h-6 w-6 text-white hover:text-gray-400" />
+                            <FaLinkedinIn className="h-6 w-6 text-white hover:text-[#ffb200]" />
                         </a>
                     </div>
                 </div>
