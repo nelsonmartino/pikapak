@@ -4,6 +4,9 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+// luego de cada modificación ejecutar
+// npx prisma migrate dev --name init
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -18,6 +21,7 @@ model User {
   name String
   surname String
   email String @unique
+  whatsapp String
   password String
 }
 

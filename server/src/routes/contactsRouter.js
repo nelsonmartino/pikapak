@@ -1,8 +1,8 @@
 const { Router } = require('express')
 const { postContactHandler } = require('../handlers/contactsHandlers')
 
-const contactsRouter = Router()
+const loginRouter = Router()
 
-contactsRouter.post('/', postContactHandler)
+loginRouter.post('/', postContactHandler)
 
-module.exports = contactsRouter
+module.exports = loginRouter
