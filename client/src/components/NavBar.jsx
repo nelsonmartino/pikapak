@@ -2,6 +2,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuItem, MenuItem
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import '../index.css'
 import logo from '../assets/imgs/logo.png';
+import { Link } from 'react-router-dom';
+
 
 
 const navigation = [
@@ -18,9 +20,12 @@ function classNames(...classes) {
 
 
 function NavBar() {
+
+
+
     return (
-        <Disclosure as="nav" className="fixed  w-full bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg   z-50 opacity-95">
-            <div className=" xl:w-[100%] flex sm:px-6 " >
+        <Disclosure as="nav" className="fixed  w-full bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg z-50 opacity-95">
+            <div className=" xl:w-[100%] flex sm:px-6">
                 <div className="relative flex  h-16 items-center w-full   xl:space-x-20 ">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                         {/* Mobile menu button*/}
@@ -43,7 +48,7 @@ function NavBar() {
                                     src={logo}
                                     className="flex justify-self-start h-16  sm:h-10 md:h-12 lg:h-14 xl:h-16 w-auto "
                                 />
-                                <p className='flex xl:justify-self-start  relative top-[-1rem] xl:left-6 left-7 z-10 flex-col  text-white text-xs   '>A todos lados, mas rápido</p>
+                                <p className='flex xl:justify-self-start  relative top-[-1rem] xl:left-6 left-7 z-10 flex-col  text-white text-xs'>A todos lados, mas rápido</p>
                             </a>
                         </div>
 
@@ -75,13 +80,14 @@ function NavBar() {
                                 {/* Botones */}
                                 {/* <div className=" xl:w-[30%] h-[4rem] flex justify-end items-center border">
                                         <div className='hidden sm:block xl:block md:block  justify-end ' > */}
-                                <div className="xl:flex xl:relative xl:left-[4rem]  xl:w-[40%] items-center hidden">
-                                    <button className='h-[3rem] w-full  text-[14px] font-semibold text-white  hover:font-semibold hover:text-[#7D0DDA] p-4  ml-4'>ACCESO</button>
+                                <ul className="xl:flex xl:relative xl:left-[4rem] xl:w-[40%] items-center hidden ">
+                                    <li className='h-[3rem] w-full   text-[14px] font-semibold text-white  hover:font-semibold hover:text-[#7D0DDA] p-4  ml-4'>
+                                        <Link to="/auth">ACCESO</Link> </li>
 
                                     {/* <div className='hidden sm:block xl:block md:block   justify-end '> */}
-                                    <button className=' w-full h-full text-[12px] bg-transparent text-[#fff] center leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[10px]  p-4  no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'>
-                                        <a href="#contact" >EMPEZAR </a> </button>
-                                </div>
+                                    <li className=' w-full h-full text-[12px] bg-transparent text-[#fff] text-center leading-[17px] transition-all easy-in duration-[0.15s] inline-block mt-2 px-[10px]  p-4  no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'>
+                                        <a href="#contact" >EMPEZAR </a> </li>
+                                </ul>
                                 {/* </div> */}
                             </div>
                         </div>
@@ -155,14 +161,18 @@ function NavBar() {
                         </DisclosureButton>
                     ))}
                 </div>
-                <div className="xl:w-full  flex justify-end">
-                    <div className='sm:hidden xl:block md:block 2xl:block w-full '>
-                        <button className='h-[3rem] w-[15.5rem]  font-semibold text-white  hover:font-semibold hover:text-[#3C047B] '>ACCESO</button>
-                    </div>
-                    <div className='sm:hidden xl:block  md:block 2xl:block w-full'>
-                        <button className='h-[3rem] w-[14.4rem] font-semibold bg-[#3C047B] text-pink-300 hover:bg-[#3C047B] hover:text-white font-sans'><a href="#contact">EMPEZAR</a></button>
-                    </div>
-                </div>
+                <nav className="xl:w-full  flex justify-end">
+                    <ul className='sm:hidden xl:block md:block 2xl:block w-full flex justify-center items-center'>
+                        <li>
+                            <Link to="/auth" className='h-[3rem] w-[15.5rem]  font-semibold text-white  hover:font-semibold hover:text-[#3C047B] '>ACCESO</Link>
+                        </li>
+                    </ul>
+                    <ul className='sm:hidden xl:block  md:block 2xl:block w-full'>
+                        <li className='h-[3rem] w-[14.4rem] font-semibold w-full bg-[#3C047B] text-pink-300 hover:bg-[#3C047B] hover:text-white font-sans  flex justify-center items-center'>
+                            <a href="#contact">EMPEZAR</a></li>
+
+                    </ul>
+                </nav>
             </DisclosurePanel>
         </Disclosure >
 

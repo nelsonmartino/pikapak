@@ -11,6 +11,8 @@ const Home = () => {
     const typingSpeed = 150;
     const deletingSpeed = 100;
 
+
+
     useEffect(() => {
         const currentPhrase = phrases[phraseIndex];
         const timeout = setTimeout(() => {
@@ -53,7 +55,7 @@ const Home = () => {
 
                     <p className='xl:text-[1.5rem]  text-[1rem] leading-[1.5rem] font-normal xl:mt-[-8.5rem] py-[17px] pr-120px text-white relative z-10 '>Pikapak es una plataforma logística 100% crowdsourced que coordina transportistas y depósitos en una red de movimiento de mercaderías 24x7x365.</p>
                     <div className=''>
-                        <button className='xl:text-[16px] text-[14px] bg-transparent text-[#fff] center xl:min-w-[140px] min-w-[140px] py-[12px] xl:py-[18px]  my-[15px] mx-0 leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[16px] py-[18px] no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap border-solid border-2 border-white hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-900/90' >EMPEZAR</button>
+                        <button className='xl:text-[16px] text-[14px] bg-transparent text-[#fff] center xl:min-w-[140px] min-w-[140px] py-[12px] xl:py-[18px]  my-[15px] leading-[17px] transition-all easy-in duration-[0.15s] inline-block px-[16px] py-[18px] no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap border-solid border-2 border-white hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-900/90' > <a href="#contact" >EMPEZAR </a></button>
                     </div>
                 </div>
             </div>
