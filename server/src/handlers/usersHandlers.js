@@ -1,18 +1,10 @@
-const { getUserbyEmail, postUser } = require('../controllers/usersControllers')
+const {
+  postUser,
+  postRecoveryKey,
+  putNewPassword,
+} = require('../controllers/usersControllers')
 
-// const getUserbyEmailHandler = async (req, res) => {
-//   const { email } = req.query
-//   try {
-//     if (email) {
-//       const user = await getUserbyEmail(email)
-//       res.status(200).json(user)
-//     } else {
-//       res.status(400).json({ message: 'Email needed' })
-//     }
-//   } catch (error) {
-//     res.status(400).json({ message: error.message })
-//   }
-// }
+const jwt = require('jsonwebtoken')
 
 const postUserHandler = async (req, res) => {
   const user = req.body
@@ -34,7 +26,38 @@ const postUserHandler = async (req, res) => {
   }
 }
 
+const postRecoveryKeyHandler = async (req, res) => {
+  const { email } = req.body
+
+  try {
+    await postRecoveryKey(email)
+    res.status(200).json({ message: 'Recovery email sent' })
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
+}
+
+const putNewPasswordHandler = async (req, res) => {
+  const { key, newPassword } = req.body
+  try {
+    if (!key) {
+      return res.status(401).json({ message: 'Missing key' })
+    }
+    jwt.verify(key, process.env.JWT_SECRET_KEY, async function (err, data) {
+      if (err) {
+        res.status(403).json(err)
+      } else {
+        const message = await putNewPassword(data.email, key, newPassword)
+        res.status(200).json({ message })
+      }
+    })
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
+}
+
 module.exports = {
-  // getUserbyEmailHandler,
   postUserHandler,
+  postRecoveryKeyHandler,
+  putNewPasswordHandler,
 }
