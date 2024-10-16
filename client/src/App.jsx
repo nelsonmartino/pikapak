@@ -1,33 +1,39 @@
-import '../src/output.css'
-import NavBar from './components/NavBar'
-import Home from './components/Home'
-import Carrussel from './components/Carrussel'
-import GeneraIngresos from './components/GeneraIngresos'
-import QuieroEnviar from './components/QuieroEnviar'
-import Unite from './components/Unite'
-import FormContact from './components/FormContact'
-import Footer from './components/Footer'
-import RemitentesPersonaComercio from './components/RemitentesPersonaComercio'
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+import Landing from './components/Landing'
+import Login from './components/Login';
+import '../src/output.css';
 // import { landingInfo } from './utils/landingInfo'
 
 function App() {
+  // const isAuthenticated = true; // Cambia este valor según la autenticación real
+
   return (
-    <div className="max-w-[100vw] min-h-screen">
-      <NavBar />
-      <Home />
-      <Carrussel />
-      <Unite />
-      <GeneraIngresos />
-      <QuieroEnviar />
-      <RemitentesPersonaComercio />
-      {/* {landingInfo.map((info, index) => (
+    <>
+      <Router>
+
+        <Routes>
+          {/* Ruta para el login/registro */}
+          <Route path="/auth" element={<Login />} />
+          <Route path="/" element={<Landing />} />
+          {/* Ruta protegida para la página de inicio */}
+          {/* <Route
+            path="/home"
+            element={isAuthenticated ? <Home /> : <Navigate to="/auth" />}
+          /> */}
+
+          {/* Ruta por defecto redirige al login */}
+          {/* <Route path="*" element={<Navigate to="/auth" />} /> */}
+
+        </Routes>
+
+        {/* <div className="max-w-[100vw] min-h-screen"> */}
+        {/* {landingInfo.map((info, index) => (
         <QuieroEnviar key={index} info={info} />
       ))}
-
       <img src="../src/assets/logo.png" alt="logo_Pikapak" /> */}
-      <FormContact />
-      <Footer />
-    </div>
+        {/* </div> */}
+      </Router>
+    </>
   )
 }
 
