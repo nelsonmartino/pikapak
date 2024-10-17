@@ -85,7 +85,7 @@ function FormContact() {
 
 
     return (
-        <div className=" bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg h-full xl:mb-[40px] xl:pt-8 pb-[4rem] pt-[5rem] mb-[30px]" id='contact'>
+        <div className="bg-[#6B14CF] bg-cover bg-center drop-shadow-lg h-full xl:mb-[40px] xl:pt-8 pb-[4rem] pt-[5rem] mb-[30px]" id='contact'>
             <div className="container h-screen xl:flex xl:flex-col xl:items-center xl:justify-center" >
                 <div className="grid grid-cols-1 lg:grid-cols-2  xl:items-center" >
 
@@ -158,7 +158,7 @@ function FormContact() {
 
                                 <button
                                     type="submit"
-                                    className="px-4 py-2 bg-[url('./assets/imgs/Background_header.png')] hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-500/80 text-white rounded-md">
+                                    className="px-4 py-2 bg-[#6B14CF]  hover:bg-[#ffb200] hover:text-white  hover:shadow-lg hover:shadow-indigo-500/80 text-white rounded-md">
                                     Enviar
                                 </button>
                             </div>

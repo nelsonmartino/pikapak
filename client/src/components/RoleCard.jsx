@@ -1,16 +1,13 @@
 const RoleCard = ({ info }) => {
   return (
     <div className="flex flex-col my-6  p-4 items-center text-[#3e047c] rounded-xl shadow-xl group border-2 -gray-300  xl:w-72 w-[80%] ">
-
       <div className="flex p-4 overflow-hidden text-white w-full justify-center xl:h-[17rem] h-full">
-        <img src={info.image} className="xl:w-auto w-[70%] p-2" alt={info.title} />
+        <img src={info.image} className="xl:w-auto w-[70%] p-2 " alt={info.title} />
       </div>
 
-      <div className="flex flex-col justify-between  flex-grow h-full">
-
-        <div className="flex flex-col items-center  m-auto ">
-
-          <p className="leading-normal xl:font-medium text-xl text-pretty h-20 ">
+      <div className="flex flex-col justify-between flex-grow h-full">
+        <div className="flex flex-col items-center m-auto">
+          <p className="leading-normal xl:font-medium mb-2 text-xl  h-22 ">
             {info.description}
           </p>
           <svg
@@ -33,7 +30,6 @@ const RoleCard = ({ info }) => {
           </h3>
         </div>
 
-
         <div className="flex flex-col pb-4 w-full">
           <button className="mb-4" type="button">
             <img src={info.action} className="xl:w-[70%] w-[40%] m-auto" alt="logo Google PLay" />
@@ -48,10 +44,8 @@ const RoleCard = ({ info }) => {
 
           </div>
         </div>
-
       </div>
-    </div >
+    </div>
   )
 }
-
-export default RoleCard
+export default RoleCard;

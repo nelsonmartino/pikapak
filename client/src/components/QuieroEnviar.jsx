@@ -3,14 +3,14 @@ function QuieroEnviar() {
   return (
 
     <div
-      className="relative flex flex-col items-center justify-center  py-[3rem] mb-[7rem] pb-[5rem] min-h-full text-[#3e047c] "
+      className="relative flex flex-col items-center justify-center  py-[6rem] min-h-full text-[#3e047c] bg-[#6B14CF]"
       id="quieroEnviar"
     >
       {/* Título y subtítulo */}
-      <h1 className="font-extrabold text-3xl text-[#3e047c] pb-3 pt-5">
-        Quiero Enviar
+      <h1 className="font-bold xl:text-4xl text-4xl text-[#3e047c] pb-3 ">
+        Quiero <span className='text-[#ffb200]'> Enviar</span>
       </h1>
-      <div className="font-semibold text-lg text-[#3e047c] mb-4">
+      <div className="font-semibold xl:text-xl text-2xl text-[#3e047c] mb-4">
         Envia paquetes a la velocidad de la luz
       </div>
 
@@ -104,22 +104,16 @@ function QuieroEnviar() {
               <p className="text-center">O completa este simple <a href="#contact" className="text-[#ffb200]">formulario</a> y te contactamos a la brevedad.</p>
             </div>
           </div>
-
-
         </div>
+
         {/* Sección con imagen de fondo fija */}
-        <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%] xl:h-[25rem] xl:my-[4rem]' >
+        {/* <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%] xl:h-[25rem] xl:my-[4rem]' >
 
           <div className='h-[25rem]'>
           </div>
-        </div>
+        </div> */}
+        {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
       </div>
-
-
-
-      {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
-
-
     </div>
 
 

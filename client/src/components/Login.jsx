@@ -155,12 +155,12 @@ function Login() {
                                 )}
                                 <div className="flex w-full mb-6">
                                     {/* Email Input */}
-                                    <div className={`w-full ${isLogin ? 'xl:w-full' : ''} `}>
-                                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                                    <div className={`w-full ${!isLogin ? 'w-full' : ''} `}>
+                                        <label className="block text-gray-700 text-sm font-bold mb-2 " htmlFor="email">
                                             Email
                                         </label>
                                         <input
-                                            className=" appearance-none border rounded w-full  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                            className=" appearance-none border rounded min-w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500"
                                             id="email"
                                             name="email"
                                             type="email"
@@ -204,7 +204,7 @@ function Login() {
 
 
                             {!isLogin && (
-                                <div className="w-full xl:mb-0  mb-4">
+                                <div className="w-full xl:mb-0 mb-4">
                                     <label className="block text-gray-700 text-sm font-bold mb-2 xl:mb-2 " htmlFor="confirmPassword">
                                         Confirmar Contraseña
                                     </label>
@@ -251,7 +251,7 @@ function Login() {
                                         <button
                                             type="button"
                                             onClick={toggleForm}
-                                            className="text-[#3C043B] self-center  h-full  hover:text-white focus:outline-none hover:underline focus:underline hover:text-[#930f7f]"
+                                            className="text-[#3C043B] self-center  h-full   hover:text-[#930f7f] focus:outline-none hover:underline  hover:text-[#930f7f]"
                                         >
                                             Regístrate
                                         </button>
@@ -262,7 +262,7 @@ function Login() {
                                         <button
                                             type="button"
                                             onClick={toggleForm}
-                                            className="text-[#3C043B] self-center  h-full  hover:text-[#930f7f] hover:underline focus:outline-none focus:underline"
+                                            className="text-[#3C043B] self-center  h-full  hover:text-[#930f7f] hover:underline focus:outline-none "
                                         >
                                             Inicia Sesión
                                         </button>
