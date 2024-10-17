@@ -85,7 +85,7 @@ function NavBar() {
                                         <Link to="/auth">ACCESO</Link> </li>
 
                                     {/* <div className='hidden sm:block xl:block md:block   justify-end '> */}
-                                    <li className=' w-full h-full text-[12px] bg-transparent text-[#fff] text-center leading-[17px] transition-all easy-in duration-[0.15s] inline-block mt-2 px-[10px]  p-4  no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white  hover:shadow-lg hover:shadow-indigo-400/60'>
+                                    <li className=' w-full h-full text-[12px] bg-transparent text-[#fff] text-center leading-[17px] transition-all easy-in duration-[0.15s] inline-block mt-2 px-[10px] p-4 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white hover:shadow-lg hover:shadow-indigo-400/60'>
                                         <a href="#contact" >EMPEZAR </a> </li>
                                 </ul>
                                 {/* </div> */}

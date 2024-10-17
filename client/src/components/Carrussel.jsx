@@ -128,13 +128,15 @@ function Carrussel() {
             }, 1000); // Tiempo para que la transición de la primera tarjeta ocurra
         }
     }, [currentIndex, totalCards.length]);
-
     const translateX = -(currentIndex * (100 / cardsToShow));
 
     return (
         <>
-            <div className='h-full py-[5rem] mb-2 flex flex-col justify-center items-center overflow-hidden xl-w-full' id='comoFunciona'>
-                <h2 className='text-center xl:text-4xl  xl:text-[3rem] text-[35px] h-[1rem] mt-8  mb-[7.5rem] xl:mb-[8rem] tracking-wide font-extrabold xl:font-extrabold'>Todas las Soluciones <br /> en una</h2>
+            <div className='h-full bg-[#6B14CF] py-[5rem] mb-2  flex flex-col justify-center items-center overflow-hidden xl-w-full' id='comoFunciona'>
+
+                <h1 className="text-5xl font-bold xl:mb-[3.2rem] xl:mt-6  text-[#3e047c]">Todas las Soluciones en <span className='text-[#ffb200]'>una </span> </h1>
+
+                {/* <h2 className='text-center xl:text-4xl  xl:text-[3rem] text-[35px] h-[1rem] mt-8  mb-[7.5rem] xl:mb-[8rem] tracking-wide font-extrabold xl:font-extrabold'>Todas las Soluciones <br /> en una</h2>*/}
                 <div className="relative w-full  lg:max-w-[75%] xl:max-w-[85%] overflow-hidden ">
 
                     <div
@@ -163,16 +165,16 @@ function Carrussel() {
                         ❯
                     </button>
                 </div>
-            </div>
+            </div >
             {/* Sección con imagen de fondo fija */}
-            <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%]' >
+            {/* <div className='relative   bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%]' > */}
 
-                {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
+            {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
 
-                <div className='h-[30rem]'>
+            {/* <div className='h-[30rem]'> */}
 
-                </div>
-            </div>
+            {/* </div> */}
+            {/* </div> */}
         </>
     )
 }

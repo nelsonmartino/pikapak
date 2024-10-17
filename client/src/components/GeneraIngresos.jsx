@@ -8,12 +8,8 @@ import {
   AccordionHeader,
   AccordionBody,
 } from '@material-tailwind/react'
-
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import hombreCaja from '../assets/imgs/pikapak-todos.png'
-
-
-
 
 function Icon({ id, open }) {
   return (
@@ -37,23 +33,20 @@ function Icon({ id, open }) {
 
 function GeneraIngresos() {
   const [open, setOpen] = React.useState(0)
-
   const handleOpen = (value) => setOpen(open === value ? 0 : value)
 
   return (
     <>
-
       <div
         id="transportista"
-        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg"
-
+        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[#6B14CF] bg-cover bg-center drop-shadow-lg"
       >
         <h1
-          className="text-2xl xl:text-4xl font-bold pb-6 pt-5 text-[#ffb200] drop-shadow-[0_0_5px_#ffb200] drop-shadow-[0_0_5px_#3e047c] hover:drop-shadow-[0_0_20px_#ffb200]"
+          className="text-2xl xl:text-4xl font-bold pb-2 xl:pb-0 pt-5 text-[#3e047c]"
         >
-          Generá Ingresos Extra YA!
+          Generá Ingresos Extra <span className='text-[#ffb200]'>YA!</span>
         </h1>
-        <h3 className="xl:text-2xl text-xl font-medium p-4 mb-8 xl:ml-4 text-center ">
+        <h3 className="xl:text-2xl text-xl font-medium p-4 mb-8 xl:ml-4 text-center text-[#3e047c] ">
           Sin gastos, sin inversión, <br />¡solo ganancias y mientras haces tus cosas!
         </h3>
 
@@ -191,7 +184,7 @@ function GeneraIngresos() {
 
             {/* CONTENEDOR TITULO-IMAGEN */}
             <div className="flex flex-col xl:w-[50%] w-full">
-              <h2 className=" xl:text-3xl text-2xl font-medium text-center text-white mb-6 xl:mr-8">
+              <h2 className=" xl:text-3xl text-2xl font-medium text-center text-[#3e047c] mb-6 xl:mr-8">
                 Obtené una fuente de ingresos extra transportando paquetes
                 mientras viajas por tus asuntos
               </h2>
@@ -207,15 +200,16 @@ function GeneraIngresos() {
 
 
       {/* Sección con imagen de fondo fija */}
-      <div className='relative bg-[url("./assets/imgs/pikapak-viajas.png")] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%] '  >
-        {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
-        <div className='h-[10rem]'>
+      {/* <div className='relative bg-[#6B14CF] xl:bg-cover bg-center bg-no-repeat bg-fixed xl:bg-fixed xl:bg-[length:99.99%_99.8%] bg-[length:100%] '  > */}
+      {/* <div className='absolute inset-0 bg-black opacity-30'></div> Filtro oscuro opcional */}
+      {/* <div className='h-[10rem]'>
+        </div> */}
+      {/* </div> */}
 
-        </div>
-      </div>
+
 
       <div
-        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg "
+        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[#6B14CF] bg-cover bg-center drop-shadow-lg "
         id='hub'
       >
         <div className='flex justify-center  flex-col-reverse  xl:flex-row xl:h-screen xl:items-center'>
@@ -225,7 +219,7 @@ function GeneraIngresos() {
 
             {/* CONTENEDOR TITULO-IMAGEN */}
             <div className="flex flex-col xl:w-[50%] w-full "  >
-              <h2 className=" xl:text-3xl text-2xl font-medium text-center text-white mb-6 xl:ml-4">
+              <h2 className=" xl:text-3xl text-2xl font-medium text-center text-[#3e047c] mb-6 xl:ml-4">
                 Obtené una fuente de ingresos extra con el espacio disponible que
                 no usas y potenciá tu negocio dándole más visibilidad en la web
               </h2>
@@ -336,7 +330,6 @@ function GeneraIngresos() {
                 </AccordionBody>
               </Accordion>
             </div>
-
           </div>
         </div>
       </div>

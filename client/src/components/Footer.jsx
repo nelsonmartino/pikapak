@@ -9,30 +9,32 @@ function Footer() {
             <div className="mx-auto max-w-7xl xl:px-6 ">
                 <div className="flex flex-col items-center justify-between sm:flex-row">
                     <p className="text-center text-white text-sm mb-2 sm:mb-0">
-                        &copy; 2024 Pikapak. Todos los derechos reservados.
+                        &copy; 2024 <span className='text-[#ffb200]'>Pikapak.</span> Todos los derechos reservados.
                     </p>
-                    <div className="flex flex-wrap justify-center space-x-4 mt-2 sm:mt-0">
-                        <a href="/terms" className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
+                    <div className="flex flex-wrap justify-center space-x-10 mt-2 sm:mt-0">
+                        <a href="../public/Terminos_y_Condiciones_PIKAPAK.pdf" download={"terminosYcondiciones_Pikapak.pdf"} className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
                             Términos y condiciones
                         </a>
-                        <a href="/privacy" className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
-                            Política de privacidad
+
+                        <a href="../../public/Productos_prohibidos_PIKAPAK.pdf" download={"productosProhibidos_Pikapak.pdf"} className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
+                            Productos Prohibidos
                         </a>
+
                         <a href="mailto:hello@pikapak.app" className="text-white text-sm hover:no-underline hover:text-[#ffb200]">
                             hello@pikapak.app
                         </a>
                     </div>
-                    <div className="flex space-x-4 mt-2 sm:mt-0">
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram className="h-6 w-6 text-white hover:text-[#ffb200]" />
+                    <div className="flex space-x-8 mt-2 sm:mt-0">
+                        <a href="https://www.instagram.com/pikapak" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram className="h-6 w-6 text-white hover:text-[#DD2A7B]" />
                         </a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedinIn className="h-6 w-6 text-white hover:text-[#ffb200]" />
+                        <a href="https://www.linkedin.com/company/pikapak-app/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedinIn className="h-6 w-6 text-white hover:text-[#0E76A8]" />
                         </a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 }
 

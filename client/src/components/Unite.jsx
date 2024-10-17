@@ -3,11 +3,11 @@ import { roleInfo } from '../utils/roleInfo'
 
 const Unite = () => {
   return (
-    <div className="text-center text-[#3e047c] py-20 " id="unite">
+    <div className="text-center text-[#3e047c] py-20 bg-[#6B14CF]" id="unite">
 
       <div>
-        <h1 className="text-3xl font-semibold">Unite a <span className='text-[#ffb200]'>Pikapak</span> </h1>
-        <h2 className='text-xl'>de acuerdo con tu necesidad</h2>
+        <h1 className="text-4xl font-semibold">Unite a <span className='text-[#ffb200]'>Pikapak</span> </h1>
+        <h2 className='text-4xl'>de acuerdo con tu necesidad</h2>
       </div>
       <div className="flex flex-row justify-center flex-wrap">
         {roleInfo.map((role, index) => (
