@@ -7,10 +7,10 @@ function QuieroEnviar() {
       id="quieroEnviar"
     >
       {/* Título y subtítulo */}
-      <h1 className="font-bold xl:text-4xl text-[#3e047c] pb-3 ">
+      <h1 className="font-bold xl:text-4xl text-4xl text-[#3e047c] pb-3 ">
         Quiero <span className='text-[#ffb200]'> Enviar</span>
       </h1>
-      <div className="font-semibold xl:text-xl text-[#3e047c] mb-4">
+      <div className="font-semibold xl:text-xl text-2xl text-[#3e047c] mb-4">
         Envia paquetes a la velocidad de la luz
       </div>
 

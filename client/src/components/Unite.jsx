@@ -7,7 +7,8 @@ const Unite = () => {
 
       <div>
         <h1 className="text-4xl font-semibold">Unite a <span className='text-[#ffb200]'>Pikapak</span> </h1>
-        <h2 className='text-4xl'>de acuerdo con tu necesidad</h2>
+        <h3 className='text-3xl mt-8'>Elegí tu rol en la cadena y ganá!</h3>
+        <h2 className='text-3xl'>de acuerdo con tu necesidad</h2>
       </div>
       <div className="flex flex-row justify-center flex-wrap">
         {roleInfo.map((role, index) => (
@@ -19,7 +20,7 @@ const Unite = () => {
           </div>
         ))}
       </div>
-      <h3 className='text-2xl mt-8'>Elegí tu rol en la cadena y ganá!</h3>
+
     </div>
   )
 }

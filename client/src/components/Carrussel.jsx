@@ -132,9 +132,9 @@ function Carrussel() {
 
     return (
         <>
-            <div className='h-full bg-[#6B14CF] py-[5rem] mb-2  flex flex-col justify-center items-center overflow-hidden xl-w-full' id='comoFunciona'>
+            <div className='h-full bg-[#6B14CF] xl:py-[5rem] py-[6rem] xl:mb-2  flex flex-col justify-center items-center overflow-hidden xl-w-full border-b-8 border-white' id='comoFunciona'>
 
-                <h1 className="text-5xl font-bold xl:mb-[3.2rem] xl:mt-6  text-[#3e047c]">Todas las Soluciones en <span className='text-[#ffb200]'>una </span> </h1>
+                <h1 className="text-5xl text-[2.2rem] mb-10 font-bold xl:mb-[3.2rem] xl:mt-6  text-[#3e047c]">Todas las Soluciones en <span className='text-[#ffb200]'>una </span> </h1>
 
                 {/* <h2 className='text-center xl:text-4xl  xl:text-[3rem] text-[35px] h-[1rem] mt-8  mb-[7.5rem] xl:mb-[8rem] tracking-wide font-extrabold xl:font-extrabold'>Todas las Soluciones <br /> en una</h2>*/}
                 <div className="relative w-full  lg:max-w-[75%] xl:max-w-[85%] overflow-hidden ">
