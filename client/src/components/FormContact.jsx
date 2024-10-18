@@ -178,7 +178,7 @@ function FormContact() {
                             <p className="text-gray-600 mb-4">Gracias por contactarnos. Te responderemos a la brevedad.</p>
                             <button
                                 onClick={closeSuccessModal}
-                                className="px-4 py-2 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md">
+                                className="px-4 py-2 bg-[#ffb200] hover:bg-[#e8a200] text-white rounded-md">
                                 Cerrar
                             </button>
                         </div>

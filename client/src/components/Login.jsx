@@ -133,7 +133,6 @@ function Login() {
                         )}
 
 
-
                         <div className="flex flex-wrap w-full xl:mb-4">
                             <div className="flex xl:w-full ">
                                 {!isLogin && (
@@ -155,7 +154,7 @@ function Login() {
                                 )}
                                 <div className="flex w-full mb-6">
                                     {/* Email Input */}
-                                    <div className={`w-full ${!isLogin ? 'w-full' : ''} `}>
+                                    <div className={`xl:w-full  ${!isLogin ? 'w-full   border-black border-2 border-solid' : ''} `}>
                                         <label className="block text-gray-700 text-sm font-bold mb-2 " htmlFor="email">
                                             Email
                                         </label>
