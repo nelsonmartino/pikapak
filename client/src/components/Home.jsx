@@ -7,7 +7,7 @@ const Home = () => {
     const [phraseIndex, setPhraseIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [formErrors, setFormErrors] = useState({});
-
+    const [formStatus, setFormStatus] = useState('');
     const [successModalIsOpen, setSuccessModalIsOpen] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
@@ -26,7 +26,7 @@ const Home = () => {
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!formData.email.trim()) {
-            errors.email = 'El correo electrónico es obligatorio.';
+            errors.email = 'Debe ingresar un correo electrónico para enviar.';
         } else if (!emailRegex.test(formData.email)) {
             errors.email = 'Por favor, introduce un correo electrónico válido.';
         }
@@ -36,16 +36,37 @@ const Home = () => {
     }
 
     // Maneja el envío del formulario
-    function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (validateEmail()) {
-            console.log('Formulario enviado con éxito:', formData);
-            setSuccessModalIsOpen(true);
-            // Reseteo
-            setFormData({
-                email: '',
+
+        try {
+            const response = await fetch('http://localhost:3001/newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
+            const resJSON = await response.json();
+            console.log(resJSON);
+
+
+
+            if (validateEmail()) {
+                console.log('Formulario enviado con éxito:', formData);
+                setSuccessModalIsOpen(true);
+                // Reseteo
+                setFormData({
+                    email: '',
+                });
+            } else {
+                setFormStatus('Error al enviar el mail.');
+                console.log(formStatus)
+            }
+        } catch (error) {
+            setFormStatus('Error al enviar el mail.', error);
         }
+
     }
     function closeSuccessModal() {
         setSuccessModalIsOpen(false);
@@ -139,12 +160,12 @@ const Home = () => {
                                 )}
 
                                 <button className='
-          text-[16px] bg-transparent text-white
-          mt-4 xl:min-w-[130px] px-4 py-2
-          border-2 border-white 
-          rounded-xl uppercase font-bold tracking-[2px]
-          hover:bg-[#ffb200] hover:text-black transition-all
-        '
+                                text-[16px] bg-transparent text-white
+                                mt-4 xl:min-w-[130px] px-4 py-2
+                                border-2 border-white 
+                                rounded-xl uppercase font-bold tracking-[2px]
+                                hover:bg-[#ffb200] hover:text-black transition-all
+                                '
                                     type="submit"
                                 >
                                     Enviar
