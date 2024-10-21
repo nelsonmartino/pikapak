@@ -4,6 +4,8 @@ function FormContact() {
 
     const [formErrors, setFormErrors] = useState({});
     const [successModalIsOpen, setSuccessModalIsOpen] = useState(false);
+
+    const [formStatus, setFormStatus] = useState('');
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -63,22 +65,45 @@ function FormContact() {
     }
 
     // Maneja el envío del formulario
-    function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (validateForm()) {
-            console.log('Formulario enviado con éxito:', formData);
-            // setModalContactIsOpen(false); // Cierra el modal de formulario
-            setSuccessModalIsOpen(true); // Abre el modal de éxito
 
-            // Reseteo
-            setFormData({
-                name: '',
-                email: '',
-                message: '',
-                whatsapp: ''
+        try {
+            const response = await fetch('http://localhost:3001/contacts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
+            const resJSON = await response.json();
+            console.log(resJSON);
+
+            if (response.ok) {
+                setFormStatus('Mensaje enviado con éxito.');
+                console.log(formStatus);
+
+            }
+            if (validateForm()) {
+                // console.log('Formulario enviado con éxito:', formData);
+                // setModalContactIsOpen(false); // Cierra el modal de formulario
+                setSuccessModalIsOpen(true); // Abre el modal de éxito
+
+                // Reseteo
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: '',
+                    whatsapp: ''
+                });
+            } else {
+                setFormStatus('Error al enviar el mensaje.');
+            }
+        } catch (error) {
+            setFormStatus('Error al enviar el mensaje.', error);
         }
     }
+
     function closeSuccessModal() {
         setSuccessModalIsOpen(false);
     }
