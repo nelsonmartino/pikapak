@@ -4,7 +4,6 @@ function FormContact() {
 
     const [formErrors, setFormErrors] = useState({});
     const [successModalIsOpen, setSuccessModalIsOpen] = useState(false);
-
     const [formStatus, setFormStatus] = useState('');
     const [formData, setFormData] = useState({
         name: '',
