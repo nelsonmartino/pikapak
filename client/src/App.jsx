@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import Landing from './components/Landing'
 import Login from './components/Login';
+import Registro from './components/Registro';
 import '../src/output.css';
 // import { landingInfo } from './utils/landingInfo'
 
@@ -13,7 +14,8 @@ function App() {
 
         <Routes>
           {/* Ruta para el login/registro */}
-          <Route path="/auth" element={<Login />} />
+          <Route path="/users" element={<Registro />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Landing />} />
           {/* Ruta protegida para la página de inicio */}
           {/* <Route
