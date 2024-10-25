@@ -82,10 +82,10 @@ function NavBar() {
                                         <div className='hidden sm:block xl:block md:block  justify-end ' > */}
                                 <ul className="xl:flex xl:relative xl:left-[4rem] xl:w-[40%] items-center hidden ">
                                     <li className='h-[3rem] w-full   text-[14px] font-semibold text-white  hover:font-semibold hover:text-[#7D0DDA] p-4  ml-4'>
-                                        <Link to="/auth">ACCESO</Link> </li>
+                                        <Link to="/login">ACCESO</Link> </li>
 
                                     {/* <div className='hidden sm:block xl:block md:block   justify-end '> */}
-                                    <li className=' w-full h-full text-[12px] bg-transparent text-[#fff] text-center leading-[17px] transition-all easy-in duration-[0.15s] inline-block mt-2 px-[10px] p-4 no-underline uppercase rounded-sm outline-none tracking-[2px] font-extrabold whitespace-nowrap hover:bg-[#3C047B] hover:text-white hover:shadow-lg hover:shadow-indigo-400/60'>
+                                    <li className='h-[3rem] w-full   text-[14px] font-semibold text-white  hover:font-semibold hover:text-[#7D0DDA] p-4  ml-4'>
                                         <a href="#contact" >EMPEZAR </a> </li>
                                 </ul>
                                 {/* </div> */}
@@ -164,7 +164,7 @@ function NavBar() {
                 <nav className="xl:w-full  flex justify-end">
                     <ul className='sm:hidden xl:block md:block 2xl:block w-full flex justify-center items-center'>
                         <li>
-                            <Link to="/auth" className='h-[3rem] w-[15.5rem]  font-semibold text-white  hover:font-semibold hover:text-[#3C047B] '>ACCESO</Link>
+                            <Link to="/login" className='h-[3rem] w-[15.5rem]  font-semibold text-white  hover:font-semibold hover:text-[#3C047B] '>ACCESO</Link>
                         </li>
                     </ul>
                     <ul className='sm:hidden xl:block  md:block 2xl:block w-full'>

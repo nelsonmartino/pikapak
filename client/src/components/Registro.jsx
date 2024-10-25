@@ -1,7 +1,7 @@
 import { useState } from "react";
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import validationsLogin from '../utils/validationsLogin.js'
+import validationsRegister from '../utils/validationsRegster.js'
 import { Link } from 'react-router-dom';
 
 function Registro() {
@@ -40,7 +40,7 @@ function Registro() {
         e.preventDefault();
 
         // Realiza las validaciones antes de hacer la llamada a la API
-        const errors = validationsLogin(formData);
+        const errors = validationsRegister(formData);
 
         if (Object.keys(errors).length > 0) {
             setFormErrors(errors);

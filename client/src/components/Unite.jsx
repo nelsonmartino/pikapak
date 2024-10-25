@@ -14,7 +14,7 @@ const Unite = () => {
         {roleInfo.map((role, index) => (
           <div
             key={index}
-            className="flex justify-center w-full my-4 m-1 md:w-[30%] lg:mx-5 lg:w-auto"
+            className="flex  justify-center w-full my-4 m-1 md:w-[30%] lg:mx-5 lg:w-auto"
           >
             <RoleCard info={role} />
           </div>
