@@ -3,6 +3,7 @@ import Landing from './components/Landing'
 import Login from './components/Login';
 import Registro from './components/Registro';
 import '../src/output.css';
+import Tutos from './components/Tutos';
 // import { landingInfo } from './utils/landingInfo'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/users" element={<Registro />} />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Landing />} />
+          <Route path="/tutos" element={<Tutos />} />
           {/* Ruta protegida para la página de inicio */}
           {/* <Route
             path="/home"

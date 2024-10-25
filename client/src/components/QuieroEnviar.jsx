@@ -26,7 +26,7 @@ function QuieroEnviar() {
           <div className="xl:relative w-full  flex justify-center flex-wrap ">
             <div className="mb-2  flex flex-col items-center">
 
-              <span className="xl:absolute  xl:top-[-15px] xl:left-[20%] bg-white p-2  xl:p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] z-30">
+              <span className="xl:absolute  xl:top-[-15px] xl:left-[20%] bg-white p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] z-30">
                 Paso 1 como Persona
               </span>
               <div className="xl:absolute xl:top-0 xl:left-[15%] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] flex justify-center items-center p-2 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10 space-y-4 ">
@@ -38,7 +38,7 @@ function QuieroEnviar() {
           <div className="xl:relative w-full flex justify-center flex-wrap">
             <div className="mb-2  flex flex-col items-center w-full">
 
-              <span className="xl:absolute xl:top-[11rem]  xl:left-[14rem] bg-white p-2 xl:p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c]">
+              <span className="xl:absolute xl:top-[11rem]  xl:left-[14rem] bg-white p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c]">
                 Paso 2 como Persona
               </span>
               <div className="xl:absolute xl:top-[12rem] xl:left-[10rem] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-1 flex justify-center items-center p-2 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10 space-y-4 ">
@@ -49,7 +49,7 @@ function QuieroEnviar() {
 
           <div className="xl:relative w-full flex justify-center flex-wrap">
             <div className="mb-2 flex flex-col items-center w-full">
-              <span className="xl:absolute xl:top-[27rem] xl:left-[17rem] bg-white p-1 xl:p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
+              <span className="xl:absolute xl:top-[27rem] xl:left-[17rem] bg-white p-1 p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
                 Paso 3 como Persona
               </span>
               <div className="xl:absolute xl:top-[28rem] xl:left-[13rem] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-1 flex justify-center items-center p-4 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">
@@ -61,7 +61,7 @@ function QuieroEnviar() {
 
           <div className=" xl:relative w-full flex justify-center flex-wrap">
             <div className="mb-2 flex flex-col items-center w-full">
-              <span className="xl:absolute xl:top-[-3rem] xl:right-[13.5rem] bg-white p-1 xl:p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
+              <span className="xl:absolute xl:top-[-3rem] xl:right-[13.5rem] bg-white p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
                 Paso 1 como Hub Remitente
               </span>
               <div className="xl:absolute xl:top-[-2rem] xl:right-[11rem] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-1 flex justify-center items-center p-4 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">
@@ -72,7 +72,7 @@ function QuieroEnviar() {
 
           <div className=" xl:relative w-full flex justify-center flex-wrap">
             <div className="mb-2 flex flex-col items-center w-full">
-              <span className="xl:absolute xl:top-[9rem] xl:right-[11rem] bg-white p-1 xl:p-2 xl:text-sm font-bold text-[#3e047c] z-30 rounded-xl shadow-xl bg-opacity-80 border-2 border-[#3e047c]">
+              <span className="xl:absolute xl:top-[9rem] xl:right-[11rem] bg-white p-2 xl:text-sm font-bold text-[#3e047c] z-30 rounded-xl shadow-xl bg-opacity-80 border-2 border-[#3e047c]">
                 Paso 2 como Hub Remitente
               </span>
               <div className="xl:absolute xl:top-[10rem] xl:right-[10%] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-1 flex justify-center items-center p-4 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">
@@ -83,7 +83,7 @@ function QuieroEnviar() {
 
           <div className="xl:relative w-full flex justify-center flex-wrap">
             <div className="mb-2 flex flex-col items-center w-full">
-              <span className="xl:absolute xl:top-[25rem] xl:right-[15rem] bg-white p-1 xl:p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
+              <span className="xl:absolute xl:top-[25rem] xl:right-[15rem] bg-white p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
                 Paso 3 como Hub Remitente
               </span>
               <div className="xl:absolute xl:top-[26rem] xl:right-[15%] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-2 flex justify-center items-center p-4 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">
@@ -95,7 +95,7 @@ function QuieroEnviar() {
 
           <div className="xl:relative w-full flex justify-center flex-wrap">
             <div className="mb-2 flex flex-col items-center w-full">
-              <span className="xl:absolute xl:top-[34.5rem] xl:left-[40rem] bg-white p-1 xl:p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
+              <span className="xl:absolute xl:top-[34.5rem] xl:left-[40rem] bg-white p-2 xl:text-sm font-bold text-[#3e047c] rounded-xl shadow-xl z-30 bg-opacity-80 border-2 border-[#3e047c] ">
                 O Podes ...
               </span>
               <div className="xl:absolute xl:top-[40rem] xl:left-[50%] xl:translate-x-[-50%] xl:translate-y-[-50%] xl:w-72 xl:h-36 w-[90%] h-full border border-2 border-[#3e047c] p-1 flex justify-center items-center p-4 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-[#3e047c] bg-opacity-50 z-10">

@@ -1,24 +1,23 @@
 import { useState } from "react";
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import validationsLogin from '../utils/validationsLogin.js'
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-    // const [isLogin, setIsLogin] = useState(false);
     const [formErrors, setFormErrors] = useState({});
     const [successModalIsOpen, setSuccessModalIsOpen] = useState(false);
-    const [formStatus, setFormStatus] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
         password: '',
     });
-     
-    const [showPassword, setShowPassword] = useState(false);
+
+    // const [formStatus, setFormStatus] = useState('');
 
     // Función para alternar mostrar/ocultar contraseña
     const toggleShowPassword = () => setShowPassword(!showPassword);
-
+    const navigate = useNavigate();
 
     // Maneja el cambio de cada input y actualiza el estado del formulario
     function handleInputChange(e) {
@@ -28,94 +27,59 @@ function Login() {
             [name]: value,
         });
     }
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setFormErrors({}); // Reinicia errores
 
-        // Realiza las validaciones antes de hacer la llamada a la API
-        const errors = validationsLogin(formData);
+        // Validación de campos vacíos
+        const errors = {};
+        if (!formData.email) {
+            errors.email = 'Debe ingresar su Email';
+        }
+        if (!formData.password) {
+            errors.password = 'Debe ingresar su Contraseña';
+        }
+
 
         if (Object.keys(errors).length > 0) {
             setFormErrors(errors);
-            return;
+            return; // Detener el envío del formulario si hay errores
         }
 
-        // Verifica si el correo electrónico ya existe
-        try {
-            const emailExists = await checkEmailExists(formData.email);
-            if (!emailExists) {
-                return; // Detiene la ejecución si el email ya está registrado
-            }
-        } catch (error) {
-            console.error('Error al verificar el email:', error);
-            setFormErrors((prevErrors) => ({
-                ...prevErrors,
-                email: 'Error en la verificación del email', // Maneja el error
-            }));
-            return;
-        }
 
-        // eslint-disable-next-line no-unused-vars
-        const { confirmPassword, ...dataToSend } = formData;
 
         try {
-            const response = await fetch('http://localhost:3001/users', {
+            const response = await fetch('http://localhost:3001/login', {
+                // Cambia la URL según tu API
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(dataToSend),
+                body: JSON.stringify(formData),
             });
             const resJSON = await response.json();
-            console.log(resJSON);
+            console.log('Respuesta de la API:', resJSON); // Verifica la respuesta
 
-            // Aquí puedes manejar la respuesta del servidor (por ejemplo, si el login fue exitoso o no)
-            console.log('Login con éxito:', dataToSend);
-            setSuccessModalIsOpen(true);
-            setFormErrors({});
-            // Reseteo
-            setFormData({
-                name: '',
-                surname: '',
-                whatsapp: '',
-                email: '',
-                password: '',
-                confirmPassword: '',
-            });
+            if (resJSON.message == "Authorized") {
+                alert("Logead");
+                console.log('Login con éxito:', formData);
+                setFormData({ email: '', password: '' });
+                navigate('/tutos'); // Redirige a la ruta deseada
 
-        } catch (error) {
-            setFormStatus(`Error: ${error.message}`);
-            console.log(formStatus);
-        }
-    }
-
-    // Función para verificar si el email existe
-    const checkEmailExists = async (email) => {
-        try {
-            const response = await fetch('http://localhost:3001/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email }),
-            });
-
-            if (response.ok) {
-                return true; // Email disponible
             } else {
-                const errorData = await response.json();
-                setFormErrors((prevErrors) => ({
-                    ...prevErrors,
-                    email: "Mail Existente", // Mensaje de error del servidor
-                }));
-                console.log(errorData);
+                setFormErrors({ general: 'Credenciales incorrectas' });
+                console.log('Respuesta de la API:', resJSON); // Verifica la respuesta
 
-                return false; // Email ya registrado
             }
         } catch (error) {
-            console.error('Error al verificar el email:', error);
-            return false; // Manejar el error según sea necesario
+            console.error('Error al iniciar sesión:', error);
+            setFormErrors({ general: 'Error en la conexión' });
         }
     };
+
+
 
     function closeSuccessModal() {
         setSuccessModalIsOpen(false);
@@ -156,7 +120,7 @@ function Login() {
                                                 Email
                                             </label>
                                             <input
-                                                className=" appearance-none border rounded min-w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
+                                                className="appearance-none border rounded min-w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
                                                 id="email"
                                                 name="email"
                                                 type="email"
@@ -195,6 +159,10 @@ function Login() {
                                         )}
                                 </div>
 
+                                {/* Mostrar error general */}
+                                {formErrors.general && (
+                                    <p className="text-red-500 text-sm text-center ">{formErrors.general}</p>
+                                )}
                             </div>
 
 
