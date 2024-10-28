@@ -128,10 +128,6 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='h-[0.5rem] border-b-8 border-white'>
-                    {/*    style={{
-
-                    background: 'linear-gradient(90deg, rgba(38,30,180,1) 0%, rgba(60,4,123,1) 52%, rgba(1,125,246,1) 90%)',
-                }}>*/}
 
                 </div>
                 <div className='max-w-full flex flex-col items-center py-4 my-6'>
@@ -144,11 +140,11 @@ const Home = () => {
                             <form onSubmit={handleSubmit} className='flex flex-col items-center  w-full'>
                                 <input
                                     className='xl:w-full w-[80%] 
-            border-2 border-white 
-            pl-2 py-2
-            rounded-xl 
-            focus:shadow-lg focus:shadow-indigo-200/80
-          '
+                                    border-2 border-white 
+                                    pl-2 py-2
+                                    rounded-xl 
+                                    focus:shadow-lg focus:shadow-indigo-200/80
+                                '
                                     placeholder='Escribe tu Email...'
                                     type="email"
                                     name="email"

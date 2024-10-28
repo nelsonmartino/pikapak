@@ -171,7 +171,6 @@ function Login() {
                                 <button
                                     className="xl:w-1/2 bg-[#3C047B] text-pink-300 hover:bg-[#3C028B] hover:text-white font-sans text-white font-bold px-4 py-2 mb-4 xl:mb-0 rounded flex-wrap focus:outline-none focus:ring-2 focus:white hover:shadow-xl"
                                     type="submit"
-
                                 >
                                     Iniciar Sesion
                                 </button>
@@ -179,23 +178,24 @@ function Login() {
 
                             {/* Toggle Link */}
                             <div className="inline justify-center w-full">
-                                <p className="w-full inline text-center text-gray-500 text-sm">
+                                <p className="w-full inline text-center text-gray-500 text-sm ">
                                     {/* {isLogin ? ( */}
-                                    <span className="flex w-full gap-4 justify-center">
+                                    <span className="flex w-full gap-4 justify-center mb-2">
                                         ¿No tienes una cuenta?{' '}
 
                                         <Link to="/users" className="text-[#3C043B] self-center  h-full   hover:text-[#930f7f] focus:outline-none hover:underline  hover:text-[#930f7f]" >
                                             Regístrate
                                         </Link>
                                     </span>
-                                    {/* ) : ( */}
-                                    {/* <span className="flex w-full gap-4 justify-center">
-                                        ¿Ya tienes una cuenta?{' '}
-                                        <Link to="/login" className="text-[#3C043B] self-center  h-full  hover:text-[#930f7f] hover:underline  focus:outline-none" >
-                                            Inicia Sesión
+
+                                </p>
+                                <p className="w-full inline text-center text-gray-500 text-sm">
+                                    <span className="flex w-full gap-4 justify-center">
+                                        <Link to="/users/recovery" className="text-[#3C043B] self-center  h-full   hover:text-[#930f7f] focus:outline-none hover:underline  hover:text-[#930f7f]" >
+                                            ¿Olvidaste tu contraseña?
                                         </Link>
-                                    </span> */}
-                                    {/* )} */}
+                                    </span>
+
                                 </p>
                             </div>
                         </form>
