@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Registro from './components/Registro';
 import '../src/output.css';
 import Tutos from './components/Tutos';
+import PassRecovery from './components/PassRecovery';
 // import { landingInfo } from './utils/landingInfo'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Landing />} />
           <Route path="/tutos" element={<Tutos />} />
+          <Route path="/users/recovery" element={<PassRecovery />} />
           {/* Ruta protegida para la página de inicio */}
           {/* <Route
             path="/home"
