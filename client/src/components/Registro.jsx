@@ -2,7 +2,7 @@ import { useState } from "react";
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import validationsRegister from '../utils/validationsRegster.js'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Registro() {
@@ -28,6 +28,9 @@ function Registro() {
     // Función para alternar mostrar/ocultar contraseña
     const toggleShowPassword = () => setShowPassword(!showPassword);
     const toggleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
+
+
+    const navigate = useNavigate();
 
     // Maneja el cambio de cada input y actualiza el estado del formulario
     function handleInputChange(e) {
@@ -76,16 +79,15 @@ function Registro() {
 
 
         } catch (error) {
-            // Si axios recibe un error, captura el mensaje de error y lo establece en el estado
             const errorMessage = error.response ? error.response.data.message : error.message;
             setFormErrors({ ...formErrors, email: "Mail ya registrado" });
             console.error("Error en la solicitud:", errorMessage);
         }
     }
 
-
     function closeSuccessModal() {
         setSuccessModalIsOpen(false);
+        navigate("/login");
     }
 
     return (
@@ -274,10 +276,10 @@ function Registro() {
                 <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
                     <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
                         <h4 className="text-xl font-semibold mb-2">¡Registro exitoso!</h4>
-                        <p className="text-gray-600 mb-4">Gracias por registrarte. Te enviaremos un mail de confirmación a la brevedad.</p>
+                        <p className="text-gray-600 mb-4">Bienvenido/a a Pikapak!</p>
                         <button
                             onClick={closeSuccessModal}
-                            className="px-4 py-2 bg-cyan-500 hover:bg-cyan-700 text-white rounded-md">
+                            className="px-4 py-2 bg-[#ffb200] hover:bg-[#e8a200] text-white rounded-md">
                             Cerrar
                         </button>
                     </div>

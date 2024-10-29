@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import Landing from './components/Landing'
 import Login from './components/Login';
 import Registro from './components/Registro';
-import '../src/output.css';
 import Tutos from './components/Tutos';
 import PassRecovery from './components/PassRecovery';
+import PassUpdate from './components/PassUpdate';
+import '../src/output.css';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/tutos" element={<Tutos />} />
           <Route path="/users/recovery" element={<PassRecovery />} />
+          <Route path="/recovery" element={<PassUpdate />} />
           {/* Ruta protegida para la página de inicio */}
           {/* <Route
             path="/home"
