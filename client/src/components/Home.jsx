@@ -50,8 +50,6 @@ const Home = () => {
             const resJSON = await response.json();
             console.log(resJSON);
 
-
-
             if (validateEmail()) {
                 console.log('Formulario enviado con éxito:', formData);
                 setSuccessModalIsOpen(true);
@@ -128,7 +126,6 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='h-[0.5rem] border-b-8 border-white'>
-
                 </div>
                 <div className='max-w-full flex flex-col items-center py-4 my-6'>
                     <div className='flex flex-col items-center mb-2'>

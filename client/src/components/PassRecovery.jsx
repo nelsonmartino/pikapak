@@ -38,6 +38,8 @@ function PassRecovery() {
             return;
         }
 
+
+
         try {
             const response = await axios.post('http://localhost:3001/users/recovery', formData, {
                 withCredentials: true, // Para enviar cookies si es necesario
@@ -47,15 +49,15 @@ function PassRecovery() {
             });
 
 
-            const resJSON = await response.json();
-            console.log('Respuesta de la API:', resJSON); // Verifica la respuesta
+            console.log('Respuesta de la API:', response.data); // Verifica la respuesta
 
-            if (resJSON.message == "Recovery email sent") {
+            if (response.data.message === "Recovery email sent") {
                 setSuccessModalIsOpen(true);
                 setFormData({ email: '' });
+                return response;
             } else {
                 setFormErrors({ general: 'Mail incorrecto' });
-                console.log('Respuesta de la API:', resJSON); // Verifica la respuesta
+                console.log('Respuesta de la API:', response.data); // Verifica la respuesta
 
             }
         } catch (error) {
@@ -75,7 +77,6 @@ function PassRecovery() {
             </button>
 
             <div className="flex items-center justify-center flex-col xl:min-w-1/2 ">
-
                 <div className="flex flex-col justify-start  xl:w-1/2  mb-4">
                     <h2 className="flex flex-col items-start justify-end text-xl font-semibold flex h-full">
                         Recuperar contraseña</h2>
@@ -84,7 +85,6 @@ function PassRecovery() {
                 <form onSubmit={handleSubmit} className="xl:w-[50%] xl:p-10 h-full flex flex-col rounded-xl shadown-xl justify-center border-2 border-[#3C047B] border-solid shadow-xl">
                     <div className="flex items-center w-full h-full  xl:mb-4 ">
                         <div className="flex w-full ">
-
                             <div className="flex w-full  flex-col items-center">
                                 {/* Email Input */}
                                 <div className='w-1/2'>
@@ -115,7 +115,6 @@ function PassRecovery() {
                                     <button
                                         className="xl:w-[50%]  items-center justify-center bg-[#3C047B] text-pink-300 hover:bg-[#3C028B] hover:text-white font-sans text-white font-bold px-2 py-2 mb-4 xl:text-sm xl:mb-0 rounded flex-wrap focus:outline-none focus:ring-2 focus:white hover:shadow-xl"
                                         type="submit"
-
                                     >
                                         Enviar
                                     </button>
