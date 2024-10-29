@@ -39,8 +39,8 @@ export default function validateForm(formData) {
     }
 
 
-    if (formData.password.length < 6) {
-        errors.password = 'La contraseña debe tener al menos 6 caracteres.';
+    if (formData.password.length < 6 || formData.password.length > 14) {
+        errors.password = 'La contraseña debe tener al menos 6 caracteres y no mas que 14.';
     }
 
     // Expresión regular para validar que la contraseña empieza con mayúscula y termina con un símbolo

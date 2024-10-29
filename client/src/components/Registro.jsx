@@ -3,6 +3,7 @@ import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import validationsRegister from '../utils/validationsRegster.js'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Registro() {
 
@@ -10,6 +11,8 @@ function Registro() {
     const [isLogin, setIsLogin] = useState(false);
     const [formErrors, setFormErrors] = useState({});
     const [successModalIsOpen, setSuccessModalIsOpen] = useState(false);
+
+    // eslint-disable-next-line no-unused-vars
     const [formStatus, setFormStatus] = useState('');
     const [formData, setFormData] = useState({
         name: '',
@@ -35,7 +38,6 @@ function Registro() {
         });
     }
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -47,102 +49,44 @@ function Registro() {
             return;
         }
 
-
-        // Verifica si el correo electrónico ya existe
-        try {
-            const emailExists = await checkEmailExists(formData.email);
-            if (!emailExists) {
-                return; // Detiene la ejecución si el email ya está registrado
-            }
-        } catch (error) {
-            console.error('Error al verificar el email:', error);
-            setFormErrors((prevErrors) => ({
-                ...prevErrors,
-                email: 'Error en la verificación del email', // Maneja el error
-            }));
-            return;
-        }
-
         // eslint-disable-next-line no-unused-vars
         const { confirmPassword, ...dataToSend } = formData;
-
         try {
-            const response = await fetch('http://localhost:3001/users', {
-                method: 'POST',
+            const response = await axios.post('http://localhost:3001/users', dataToSend, {
+                withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(dataToSend),
             });
-            const resJSON = await response.json();
-            console.log(resJSON);
 
-            // Aquí puedes manejar la respuesta del servidor (por ejemplo, si el login fue exitoso o no)
-            console.log('Login con éxito:', dataToSend);
+            // Verifica la respuesta y procesa los datos
+            console.log("respuesta front:", response.data);
             setSuccessModalIsOpen(true);
+
             setFormErrors({});
             // Reseteo
             setFormData({
                 name: '',
                 surname: '',
-                whatsapp: '',
                 email: '',
+                whatsapp: '',
                 password: '',
                 confirmPassword: '',
             });
 
+
         } catch (error) {
-            setFormStatus(`Error: ${error.message}`);
-            console.log(formStatus);
+            // Si axios recibe un error, captura el mensaje de error y lo establece en el estado
+            const errorMessage = error.response ? error.response.data.message : error.message;
+            setFormErrors({ ...formErrors, email: "Mail ya registrado" });
+            console.error("Error en la solicitud:", errorMessage);
         }
     }
 
-    // Función para verificar si el email existe
-    const checkEmailExists = async (email) => {
-        try {
-            const response = await fetch('http://localhost:3001/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email }),
-            });
-
-            if (response.ok) {
-                return true; // Email disponible
-            } else {
-                const errorData = await response.json();
-                setFormErrors((prevErrors) => ({
-                    ...prevErrors,
-                    email: "Mail Existente", // Mensaje de error del servidor
-                }));
-                console.log(errorData);
-
-                return false; // Email ya registrado
-            }
-        } catch (error) {
-            console.error('Error al verificar el email:', error);
-            return false; // Manejar el error según sea necesario
-        }
-    };
 
     function closeSuccessModal() {
         setSuccessModalIsOpen(false);
     }
-
-    // const toggleForm = () => {
-    //     setIsLogin(!isLogin);
-    //     // Reseteo
-    //     setFormData({
-    //         name: '',
-    //         surname: '',
-    //         whatsapp: '',
-    //         email: '',
-    //         password: '',
-    //         confirmPassword: '',
-    //     });
-    //     setFormErrors({});
-    // };
 
     return (
         <>
@@ -167,7 +111,6 @@ function Registro() {
                     </div>
                     <div className="xl:m-4">
                         <form onSubmit={handleSubmit} className="w-full flex flex-col    rounded-xl shadown-xl p-8 xl:px-8  justify-center border-2 border-[#3C047B] border-solid shadow-xl">
-                            {/* {!isLogin && ( */}
                             <div className="flex flex-wrap w-full xl:mb-4">
                                 <div className='w-full xl:w-1/2 pr-2 xl:mb-0 mb-4'>
                                     <label className="block text-black text-sm font-bold mb-2">Nombre</label>
@@ -198,7 +141,6 @@ function Registro() {
                                     )}
                                 </div>
                             </div>
-                            {/* )} */}
 
                             <div className="flex flex-wrap w-full xl:mb-4">
                                 <div className="flex w-full ">
@@ -209,7 +151,7 @@ function Registro() {
                                                 type="text"
                                                 className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
                                                 name="whatsapp"
-                                                placeholder="Ej. +54 911 123 4567"
+                                                placeholder="Ej. +54 11 12345678"
                                                 value={formData.whatsapp}
                                                 onChange={handleInputChange}
                                             />
@@ -263,7 +205,6 @@ function Registro() {
                                             <p className="text-red-500 text-sm mt-1">{formErrors.password}</p>
                                         )}
                                 </div>
-                                {/* {!isLogin && ( */}
                                 <div className="w-full xl:mb-0 mb-4">
                                     <label className="block text-black text-sm font-bold mb-2 xl:mb-2 " htmlFor="confirmPassword">
                                         Confirmar Contraseña
@@ -287,7 +228,6 @@ function Registro() {
                                             <p className="text-red-500 text-sm mt-1">{formErrors.confirmPassword}</p>
                                         )}
                                 </div>
-                                {/* )} */}
                             </div>
 
 
@@ -342,9 +282,7 @@ function Registro() {
                         </button>
                     </div>
                 </div>
-
             )}
-
         </>
     );
 }
