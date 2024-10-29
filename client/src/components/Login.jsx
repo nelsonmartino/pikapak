@@ -5,139 +5,96 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 function Login() {
-  const [formErrors, setFormErrors] = useState({})
-  const [successModalIsOpen, setSuccessModalIsOpen] = useState(false)
-  const [showPassword, setShowPassword] = useState(false)
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  })
-
-  // const [formStatus, setFormStatus] = useState('');
-
-  // Función para alternar mostrar/ocultar contraseña
-  const toggleShowPassword = () => setShowPassword(!showPassword)
-  const navigate = useNavigate()
-
-  // Maneja el cambio de cada input y actualiza el estado del formulario
-  function handleInputChange(e) {
-    const { name, value } = e.target
-    setFormData({
-      ...formData,
-      [name]: value,
+    const [formErrors, setFormErrors] = useState({})
+    const [successModalIsOpen, setSuccessModalIsOpen] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
     })
-  }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setFormErrors({}) // Reinicia errores
+    // const [formStatus, setFormStatus] = useState('');
 
-    // Validación de campos vacíos
-    const errors = {}
-    if (!formData.email) {
-      errors.email = 'Debe ingresar su Email'
-    }
-    if (!formData.password) {
-      errors.password = 'Debe ingresar su Contraseña'
-    }
+    // Función para alternar mostrar/ocultar contraseña
+    const toggleShowPassword = () => setShowPassword(!showPassword)
+    const navigate = useNavigate()
 
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors)
-      return // Detener el envío del formulario si hay errores
+    // Maneja el cambio de cada input y actualiza el estado del formulario
+    function handleInputChange(e) {
+        const { name, value } = e.target
+        setFormData({
+            ...formData,
+            [name]: value,
+        })
     }
 
-    try {
-      const response = await fetch('http://localhost:3001/login', {
-        // Cambia la URL según tu API
-        method: 'POST',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-      const resJSON = await response.json()
-      console.log('Respuesta de la API:', resJSON) // Verifica la respuesta
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setFormErrors({}) // Reinicia errores
 
-      if (resJSON.message == 'Authorized') {
-        alert('Logead')
-        console.log('Login con éxito:', formData)
-        setFormData({ email: '', password: '' })
-        navigate('/tutos') // Redirige a la ruta deseada
-      } else {
-        setFormErrors({ general: 'Credenciales incorrectas' })
-        console.log('Respuesta de la API:', resJSON) // Verifica la respuesta
-      }
-    } catch (error) {
-      console.error('Error al iniciar sesión:', error)
-      setFormErrors({ general: 'Error en la conexión' })
+        // Validación de campos vacíos
+        const errors = {}
+        if (!formData.email) {
+            errors.email = 'Debe ingresar su Email'
+        }
+        if (!formData.password) {
+            errors.password = 'Debe ingresar su Contraseña'
+        }
+
+        if (Object.keys(errors).length > 0) {
+            setFormErrors(errors)
+            return // Detener el envío del formulario si hay errores
+        }
+
+        try {
+            const response = await fetch('http://localhost:3001/login', {
+                // Cambia la URL según tu API
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            const resJSON = await response.json()
+            console.log('Respuesta de la API:', resJSON) // Verifica la respuesta
+
+            if (resJSON.message == 'Authorized') {
+                alert('Logead')
+                console.log('Login con éxito:', formData)
+                setFormData({ email: '', password: '' })
+                navigate('/tutos') // Redirige a la ruta deseada
+            } else {
+                setFormErrors({ general: 'Credenciales incorrectas' })
+                console.log('Respuesta de la API:', resJSON) // Verifica la respuesta
+            }
+        } catch (error) {
+            console.error('Error al iniciar sesión:', error)
+            setFormErrors({ general: 'Error en la conexión' })
+        }
     }
-  }
 
-  function closeSuccessModal() {
-    setSuccessModalIsOpen(false)
-  }
+    function closeSuccessModal() {
+        setSuccessModalIsOpen(false)
+    }
 
-  return (
-    <>
-      <div className="flex content-center justify-center flex-col md:flex-row  w-full h-full xl:fixed">
-        <div className="flex justify-center  xl:w-full md:w-1/2  hidden xl:block bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg shadow-lg ">
-          <div className="flex justify-center items-center pt-[6%]  w-full">
-            <h1 className=" text-4xl font-semibold text-black ">
-              <Link to="/" className="text-[#ffb200] p-2 hover:shadow-lg">
-                Pikapak
-              </Link>
-            </h1>
-          </div>
-          <img
-            src={camionAbeja}
-            alt="Camion-Abeja"
-            className="w-[65%] xl:mt-[7%]  m-auto"
-          />
-        </div>
-        <div className="flex flex-col justify-center xl:w-[70rem] items-center text-white  m-2 xl:mt-[2rem] ">
-          <div className="xl:hidden flex justify-center items-center   w-full">
-            <h1 className=" text-3xl font-semibold text-black my-2">
-              <Link to="/" className="text-[#ffb200] hover:shadow-lg">
-                Pikapak
-              </Link>
-            </h1>
-          </div>
-          <div className="xl:m-4">
-            <form
-              onSubmit={handleSubmit}
-              className="w-full flex flex-col    rounded-xl shadown-xl p-8 xl:px-8  justify-center border-2 border-[#3C047B] border-solid shadow-xl"
-            >
-              <div className="flex flex-wrap w-full xl:mb-4">
-                <div className="flex w-full ">
-                  <div className="flex w-full mb-6">
-                    {/* Email Input */}
-                    <div className="w-full">
-                      <label
-                        className="block text-black text-sm font-bold mb-2 "
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        className="appearance-none border rounded min-w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Ej. micorreo@mail.com"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                      />
-
-                      {formErrors.email && (
-                        <p className="text-red-500 text-sm mt-1">
-                          {formErrors.email}
-                        </p>
-                      )}
+    return (
+        <>
+            <div className="flex content-center justify-center flex-col md:flex-row  w-full h-full xl:fixed">
+                <div className="flex justify-center  xl:w-full md:w-1/2  hidden xl:block bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg shadow-lg ">
+                    <div className="flex justify-center items-center pt-[6%]  w-full">
+                        <h1 className=" text-4xl font-semibold text-black ">
+                            <Link to="/" className="text-[#ffb200] p-2 hover:shadow-lg">
+                                Pikapak
+                            </Link>
+                        </h1>
                     </div>
-                  </div>
+                    <img
+                        src={camionAbeja}
+                        alt="Camion-Abeja"
+                        className="w-[65%] xl:mt-[7%]  m-auto"
+                    />
                 </div>
-
                 <div className="flex flex-col justify-center xl:w-[70rem] items-center text-white  m-2 xl:mt-[2rem] ">
                     <div className="xl:hidden flex justify-center items-center   w-full">
                         <h1 className=" text-3xl font-semibold text-black my-2">
@@ -260,11 +217,10 @@ function Login() {
             )}
 
         </>
+
+
     );
-
-
-
 
 }
 
-export default Login
+export default Login;

@@ -5,10 +5,11 @@ import Registro from './components/Registro';
 import '../src/output.css';
 import Tutos from './components/Tutos';
 import PassRecovery from './components/PassRecovery';
-// import { landingInfo } from './utils/landingInfo'
+
+
+
 
 function App() {
-  // const isAuthenticated = true; // Cambia este valor según la autenticación real
 
   return (
     <>

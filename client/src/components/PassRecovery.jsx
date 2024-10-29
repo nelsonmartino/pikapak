@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 
 function PassRecovery() {
     const [formErrors, setFormErrors] = useState({});
@@ -39,14 +39,14 @@ function PassRecovery() {
         }
 
         try {
-            const response = await fetch('http://localhost:3001/users/recovery', {
-
-                method: 'POST',
+            const response = await axios.post('http://localhost:3001/users/recovery', formData, {
+                withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
             });
+
+
             const resJSON = await response.json();
             console.log('Respuesta de la API:', resJSON); // Verifica la respuesta
 
@@ -60,7 +60,7 @@ function PassRecovery() {
             }
         } catch (error) {
             console.error('Error', error);
-            setFormErrors({ general: 'Error en la conexión' });
+            setFormErrors({ general: 'Error en el mail ingresado' });
         }
     };
 
