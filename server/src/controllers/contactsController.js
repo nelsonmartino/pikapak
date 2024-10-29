@@ -29,12 +29,14 @@ const postContact = async (contact) => {
     `,
   }
 
-  transporter.sendMail(mail, (error, info) => {
-    if (error) {
-      throw Error(error)
-    } else {
-      return info
-    }
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mail, (error, info) => {
+      if (error) {
+        reject(error)
+      } else {
+        resolve(info)
+      }
+    })
   })
 }
 
