@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import imgRapidisimo from '../assets/imgs/pikapak-rapidisimo.png';
-import axios from 'axios';
 
 const Home = () => {
     const phrases = ['sin demoras.', 'a toda hora.', 'rapidísimo.'];
@@ -78,18 +77,6 @@ const Home = () => {
     const deletingSpeed = 100;
 
 
-    //Prueba conexion con back
-    async function checkBackendConnection() {
-        try {
-            const response = await axios.get('https://backend-pikapak.vercel.app:3001/ping'); // Ajusta el URL si es necesario
-            console.log(response.data); // Deberías ver `{ message: 'pong' }` en la consola
-            alert('Conexión exitosa con el backend');
-        } catch (error) {
-            console.error('No se pudo conectar con el backend:', error);
-            alert('Error en la conexión con el backend');
-        }
-    }
-    checkBackendConnection();
 
     useEffect(() => {
         const currentPhrase = phrases[phraseIndex];
