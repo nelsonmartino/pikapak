@@ -51,7 +51,7 @@ function Registro() {
         // eslint-disable-next-line no-unused-vars
         const { confirmPassword, ...dataToSend } = formData;
         try {
-            const response = await axios.post('https://pikapak-backend.vercel.app//users', dataToSend, {
+            const response = await axios.post('https://pikapak-backend.vercel.app/users', dataToSend, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',
