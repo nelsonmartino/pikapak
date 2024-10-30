@@ -30,7 +30,7 @@ function PassUpdate() {
         const params = new URLSearchParams(window.location.search);
         const key = params.get("key"); // Cambia "key" por el nombre del parámetro en tu URL
         if (key) {
-            setQueryKey(key); // Guardar la key en el estado
+            setQueryKey(key);
         }
     }, []);
 
@@ -46,7 +46,6 @@ function PassUpdate() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Realiza las validaciones antes de hacer la llamada a la API
         const errors = validationsPass(formData);
 
         if (Object.keys(errors).length > 0) {
@@ -60,18 +59,16 @@ function PassUpdate() {
 
 
         try {
-            const response = await axios.put('http://localhost:3001/users/update', dataToSend, {
+            const response = await axios.put('https://pikapak-backend.vercel.app/users/update', dataToSend, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
 
-
             // Verifica la respuesta y procesa los datos
             console.log("respuesta front:", response.data);
             setSuccessModalIsOpen(true);
-
             setFormErrors({});
             // Reseteo
             setFormData({
@@ -81,7 +78,6 @@ function PassUpdate() {
 
 
         } catch (error) {
-            // Si axios recibe un error, captura el mensaje de error y lo establece en el estado
             const errorMessage = error.response ? error.response.data.message : error.message;
             setFormErrors({ ...formErrors, newPassword: errorMessage });
             console.error("Error en la solicitud:", errorMessage);
@@ -94,9 +90,6 @@ function PassUpdate() {
         navigate("/login");
     }
 
-
-
-
     return (
         <>
             <div className="xl:w-1/2 flex flex-col xl:m-auto xl:mt-[7%] mx-4 ">
@@ -106,7 +99,6 @@ function PassUpdate() {
                             Escriba su nueva contraseña:
                         </h2>
                     </div>
-
                 </div>
                 <form onSubmit={handleSubmit} className="w-full flex flex-col rounded-xl shadown-xl p-8 xl:px-8  border-2 border-[#3C047B] border-solid shadow-xl gap-4">
                     <div className="w-full mb-4">
@@ -117,7 +109,6 @@ function PassUpdate() {
                             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
                             id="newPassword"
                             type={showPassword ? 'text' : 'password'}
-                            // Alternar entre 'text' y 'password'
                             name="newPassword"
                             placeholder="Escriba su nueva contraseña 6 digitos"
                             value={formData.newPassword}
@@ -185,5 +176,4 @@ function PassUpdate() {
         </>
     )
 }
-
-export default PassUpdate
+export default PassUpdate;

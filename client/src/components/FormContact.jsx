@@ -68,7 +68,7 @@ function FormContact() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/contacts', {
+            const response = await fetch('https://pikapak-backend.vercel.app/contacts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

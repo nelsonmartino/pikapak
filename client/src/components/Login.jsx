@@ -13,8 +13,6 @@ function Login() {
         password: '',
     })
 
-    // const [formStatus, setFormStatus] = useState('');
-
     // Función para alternar mostrar/ocultar contraseña
     const toggleShowPassword = () => setShowPassword(!showPassword)
     const navigate = useNavigate()
@@ -30,7 +28,7 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setFormErrors({}) // Reinicia errores
+        setFormErrors({})
 
         // Validación de campos vacíos
         const errors = {}
@@ -43,11 +41,11 @@ function Login() {
 
         if (Object.keys(errors).length > 0) {
             setFormErrors(errors)
-            return // Detener el envío del formulario si hay errores
+            return
         }
 
         try {
-            const response = await fetch('http://localhost:3001/login', {
+            const response = await fetch('https://pikapak-backend.vercel.app/login', {
                 // Cambia la URL según tu API
                 method: 'POST',
                 credentials: 'include',
@@ -191,7 +189,6 @@ function Login() {
                                             ¿Olvidaste tu contraseña?
                                         </Link>
                                     </span>
-
                                 </p>
                             </div>
                         </form>
@@ -213,14 +210,8 @@ function Login() {
                         </button>
                     </div>
                 </div>
-
             )}
-
         </>
-
-
     );
-
 }
-
 export default Login;
