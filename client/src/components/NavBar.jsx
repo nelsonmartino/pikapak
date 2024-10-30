@@ -4,8 +4,6 @@ import '../index.css'
 import logo from '../assets/imgs/logo.png';
 import { Link } from 'react-router-dom';
 
-
-
 const navigation = [
     { name: 'UNIRTE', href: '#unite', current: true },
     { name: 'QUIERO TRANSPORTAR', href: '#transportista', current: false },
@@ -18,11 +16,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-
 function NavBar() {
-
-
-
     return (
         <Disclosure as="nav" className="fixed  w-full bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg bg-no-repeat shadow-lg z-50 opacity-95">
             <div className=" xl:w-[100%] flex sm:px-6">
