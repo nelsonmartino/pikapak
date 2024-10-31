@@ -38,7 +38,7 @@ function PassRecovery() {
         }
 
         try {
-            const response = await axios.post('https://pikapak-backend.vercel.app/users/recovery', formData, {
+            const response = await axios.post('http://localhost:3001/users/recovery', formData, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',

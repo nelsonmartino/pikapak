@@ -59,7 +59,7 @@ function PassUpdate() {
 
 
         try {
-            const response = await axios.put('https://pikapak-backend.vercel.app/update', dataToSend, {
+            const response = await axios.put('http://localhost:3001/users/update', dataToSend, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',
