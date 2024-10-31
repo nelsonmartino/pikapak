@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-binary-expression */
 import { useEffect, useState } from 'react';
 import imgRapidisimo from '../assets/imgs/pikapak-rapidisimo.png';
 
@@ -39,8 +40,12 @@ const Home = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+
+
+        const newslatterUrl = 'http://localhost:3001' || import.meta.env.VITE_BACKEND_URL;
+
         try {
-            const response = await fetch('https://pikapak-backend.vercel.app/newsletter', {
+            const response = await fetch(`${newslatterUrl}/newsletter`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

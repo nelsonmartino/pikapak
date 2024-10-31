@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-binary-expression */
 import { useState } from 'react'
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
@@ -44,8 +45,9 @@ function Login() {
             return
         }
 
+        const loginUrl = 'http://localhost:3001' || import.meta.env.VITE_BACKEND_URL;
         try {
-            const response = await fetch('https://pikapak-backend.vercel.app/login', {
+            const response = await fetch(`${loginUrl}/login`, {
                 // Cambia la URL según tu API
                 method: 'POST',
                 credentials: 'include',
