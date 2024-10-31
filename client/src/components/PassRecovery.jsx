@@ -1,3 +1,4 @@
+ 
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -37,8 +38,10 @@ function PassRecovery() {
             return;
         }
 
+
+        const recoveryUsers = 'http://localhost:3001';
         try {
-            const response = await axios.post('http://localhost:3001/users/recovery', formData, {
+            const response = await axios.post(`${recoveryUsers}/users/recovery`, formData, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',

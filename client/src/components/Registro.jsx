@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-binary-expression */
 import { useState } from "react";
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -50,8 +51,12 @@ function Registro() {
 
         // eslint-disable-next-line no-unused-vars
         const { confirmPassword, ...dataToSend } = formData;
+
+
+        const postUsers = 'http://localhost:3001' || import.meta.env.VITE_BACKEND_URL;
+
         try {
-            const response = await axios.post('https://pikapak-backend.vercel.app/users', dataToSend, {
+            const response = await axios.post(`${postUsers}/users`, dataToSend, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',
