@@ -21,9 +21,13 @@ const postUser = async (user) => {
 
 const postRecoveryKey = async (email) => {
   const user = await getUserbyEmail(email)
-  user.recoveryKey = jwt.sign(user, process.env.JWT_SECRET_KEY, {
-    expiresIn: '1h',
-  })
+  user.recoveryKey = jwt.sign(
+    { email: user.email },
+    process.env.JWT_SECRET_KEY,
+    {
+      expiresIn: '1h',
+    }
+  )
   await prisma.user.update({ where: { email }, data: user })
   await prisma.$disconnect()
 
