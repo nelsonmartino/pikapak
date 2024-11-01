@@ -1,4 +1,4 @@
-/* eslint-disable no-constant-binary-expression */
+
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import validationsPass from '../utils/validationsPass.js'
@@ -59,10 +59,8 @@ function PassUpdate() {
         dataToSend.key = queryKey; // Añadir la key al payload
 
 
-
-        const recoveryUrlWithKey = 'http://localhost:3001' || import.meta.env.VITE_BACKEND_URL;
         try {
-            const response = await axios.put(`${recoveryUrlWithKey}/users/update`, dataToSend, {
+            const response = await axios.put('/users/update', dataToSend, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',

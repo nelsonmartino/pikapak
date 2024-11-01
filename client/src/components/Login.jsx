@@ -1,9 +1,10 @@
-/* eslint-disable no-constant-binary-expression */
+
 import { useState } from 'react'
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function Login() {
     const [formErrors, setFormErrors] = useState({})
@@ -45,19 +46,16 @@ function Login() {
             return
         }
 
-        const loginUrl = 'http://localhost:3001' || import.meta.env.VITE_BACKEND_URL;
         try {
-            const response = await fetch(`${loginUrl}/login`, {
-                // Cambia la URL según tu API
-                method: 'POST',
-                credentials: 'include',
+            const response = await axios.post('/login', {
+                withCredentials: true,
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             })
             const resJSON = await response.json()
-            console.log('Respuesta de la API:', resJSON) // Verifica la respuesta
+            console.log('Respuesta de la API:', resJSON)
 
             if (resJSON.message == 'Authorized') {
                 alert('Logead')

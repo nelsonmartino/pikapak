@@ -1,6 +1,7 @@
-/* eslint-disable no-constant-binary-expression */
+
 import { useEffect, useState } from 'react';
 import imgRapidisimo from '../assets/imgs/pikapak-rapidisimo.png';
+import axios from 'axios';
 
 const Home = () => {
     const phrases = ['sin demoras.', 'a toda hora.', 'rapidísimo.'];
@@ -40,13 +41,8 @@ const Home = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
-
-        const newslatterUrl = 'http://localhost:3001' || import.meta.env.VITE_BACKEND_URL;
-
         try {
-            const response = await fetch(`${newslatterUrl}/newsletter`, {
-                method: 'POST',
+            const response = await axios.post('/newsletter', {
                 headers: {
                     'Content-Type': 'application/json',
                 },
