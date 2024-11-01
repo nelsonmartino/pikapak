@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -11,9 +12,8 @@ function PassRecovery() {
 
     const navigate = useNavigate();
     const handleGoBack = () => {
-        navigate(-1); // Regresa a la página anterior
+        navigate(-1);
     };
-
 
     // Maneja el cambio de cada input y actualiza el estado del formulario
     function handleInputChange(e) {
@@ -39,17 +39,15 @@ function PassRecovery() {
         }
 
 
-
         try {
-            const response = await axios.post('http://localhost:3001/users/recovery', formData, {
-                withCredentials: true, // Para enviar cookies si es necesario
+            const response = await axios.post('/users/recovery', formData, {
+                withCredentials: true,
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
 
-
-            console.log('Respuesta de la API:', response.data); // Verifica la respuesta
+            console.log('Respuesta de la API:', response.data);
 
             if (response.data.message === "Recovery email sent") {
                 setSuccessModalIsOpen(true);
@@ -57,8 +55,7 @@ function PassRecovery() {
                 return response;
             } else {
                 setFormErrors({ general: 'Mail incorrecto' });
-                console.log('Respuesta de la API:', response.data); // Verifica la respuesta
-
+                console.log('Respuesta de la API:', response.data);
             }
         } catch (error) {
             console.error('Error', error);
@@ -75,13 +72,11 @@ function PassRecovery() {
             <button onClick={handleGoBack} className="text-blue-500 pl-10 pt-6 hover:text-[#e8a200] underline">
                 Volver
             </button>
-
             <div className="flex items-center justify-center flex-col xl:min-w-1/2 ">
                 <div className="flex flex-col justify-start  xl:w-1/2  mb-4">
                     <h2 className="flex flex-col items-start justify-end text-xl font-semibold flex h-full">
                         Recuperar contraseña</h2>
                 </div>
-
                 <form onSubmit={handleSubmit} className="xl:w-[50%] xl:p-10 h-full flex flex-col rounded-xl shadown-xl justify-center border-2 border-[#3C047B] border-solid shadow-xl">
                     <div className="flex items-center w-full h-full  xl:mb-4 ">
                         <div className="flex w-full ">
@@ -139,11 +134,8 @@ function PassRecovery() {
                         </div>
                     </div>
                 </form>
-
             </div>
         </div>
     )
-
 }
-
-export default PassRecovery
+export default PassRecovery;

@@ -1,8 +1,10 @@
+
 import { useState } from 'react'
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function Login() {
     const [formErrors, setFormErrors] = useState({})
@@ -12,8 +14,6 @@ function Login() {
         email: '',
         password: '',
     })
-
-    // const [formStatus, setFormStatus] = useState('');
 
     // Función para alternar mostrar/ocultar contraseña
     const toggleShowPassword = () => setShowPassword(!showPassword)
@@ -30,7 +30,7 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setFormErrors({}) // Reinicia errores
+        setFormErrors({})
 
         // Validación de campos vacíos
         const errors = {}
@@ -43,21 +43,19 @@ function Login() {
 
         if (Object.keys(errors).length > 0) {
             setFormErrors(errors)
-            return // Detener el envío del formulario si hay errores
+            return
         }
 
         try {
-            const response = await fetch('http://localhost:3001/login', {
-                // Cambia la URL según tu API
-                method: 'POST',
-                credentials: 'include',
+            const response = await axios.post('/login', {
+                withCredentials: true,
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             })
             const resJSON = await response.json()
-            console.log('Respuesta de la API:', resJSON) // Verifica la respuesta
+            console.log('Respuesta de la API:', resJSON)
 
             if (resJSON.message == 'Authorized') {
                 alert('Logead')
@@ -191,7 +189,6 @@ function Login() {
                                             ¿Olvidaste tu contraseña?
                                         </Link>
                                     </span>
-
                                 </p>
                             </div>
                         </form>
@@ -213,14 +210,8 @@ function Login() {
                         </button>
                     </div>
                 </div>
-
             )}
-
         </>
-
-
     );
-
 }
-
 export default Login;

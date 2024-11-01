@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 
 function FormContact() {
@@ -68,8 +69,7 @@ function FormContact() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/contacts', {
-                method: 'POST',
+            const response = await axios.post('/contacts', {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -84,10 +84,7 @@ function FormContact() {
 
             }
             if (validateForm()) {
-                // console.log('Formulario enviado con éxito:', formData);
-                // setModalContactIsOpen(false); // Cierra el modal de formulario
-                setSuccessModalIsOpen(true); // Abre el modal de éxito
-
+                setSuccessModalIsOpen(true);
                 // Reseteo
                 setFormData({
                     name: '',

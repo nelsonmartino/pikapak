@@ -1,5 +1,7 @@
+
 import { useEffect, useState } from 'react';
 import imgRapidisimo from '../assets/imgs/pikapak-rapidisimo.png';
+import axios from 'axios';
 
 const Home = () => {
     const phrases = ['sin demoras.', 'a toda hora.', 'rapidísimo.'];
@@ -40,8 +42,7 @@ const Home = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/newsletter', {
-                method: 'POST',
+            const response = await axios.post('/newsletter', {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -109,7 +110,6 @@ const Home = () => {
                                 style={{ minHeight: '5rem', display: 'inline-block', width: 'auto' }}
                             >{text} </div></h2>
                         </div>
-
                         {/* Imagen */}
                         <div className='w-full flex justify-center mt-[-15rem] ml-[7rem] xl:ml-[15rem] xl:mt-[-17.5rem]  overflow-x-hidden relative'>
                             <img

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import camionAbeja from '../assets/imgs/Camion-Abeja.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -6,7 +7,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Registro() {
-
     // eslint-disable-next-line no-unused-vars
     const [isLogin, setIsLogin] = useState(false);
     const [formErrors, setFormErrors] = useState({});
@@ -25,10 +25,8 @@ function Registro() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    // Función para alternar mostrar/ocultar contraseña
     const toggleShowPassword = () => setShowPassword(!showPassword);
     const toggleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
-
 
     const navigate = useNavigate();
 
@@ -44,7 +42,6 @@ function Registro() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Realiza las validaciones antes de hacer la llamada a la API
         const errors = validationsRegister(formData);
 
         if (Object.keys(errors).length > 0) {
@@ -54,8 +51,10 @@ function Registro() {
 
         // eslint-disable-next-line no-unused-vars
         const { confirmPassword, ...dataToSend } = formData;
+
+
         try {
-            const response = await axios.post('http://localhost:3001/users', dataToSend, {
+            const response = await axios.post('/users', dataToSend, {
                 withCredentials: true, // Para enviar cookies si es necesario
                 headers: {
                     'Content-Type': 'application/json',
@@ -76,7 +75,6 @@ function Registro() {
                 password: '',
                 confirmPassword: '',
             });
-
 
         } catch (error) {
             const errorMessage = error.response ? error.response.data.message : error.message;
@@ -192,7 +190,6 @@ function Registro() {
                                         className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
                                         id="password"
                                         type={showPassword ? 'text' : 'password'}
-                                        // Alternar entre 'text' y 'password'
                                         name="password"
                                         placeholder="Escriba su contraseña 6 digitos"
                                         value={formData.password}
@@ -214,7 +211,6 @@ function Registro() {
                                     <input
                                         className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
                                         type={showConfirmPassword ? 'text' : 'password'}
-                                        // Alternar entre 'text' y 'password'
                                         id="confirmPassword"
                                         name="confirmPassword"
                                         placeholder="Reescriba su Contraseña"
@@ -238,7 +234,6 @@ function Registro() {
                                 <button
                                     className="xl:w-1/2 bg-[#3C047B] text-pink-300 hover:bg-[#3C028B] hover:text-white font-sans text-white font-bold px-4 py-2 mb-4 xl:mb-0 rounded flex-wrap focus:outline-none focus:ring-2 focus:white hover:shadow-xl"
                                     type="submit"
-
                                 >
                                     Registrarse
                                 </button>
@@ -267,7 +262,6 @@ function Registro() {
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
 
@@ -288,5 +282,4 @@ function Registro() {
         </>
     );
 }
-
-export default Registro
+export default Registro;
