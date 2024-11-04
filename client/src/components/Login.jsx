@@ -50,7 +50,7 @@ function Login() {
         withCredentials: true,
       })
       alert('Loged')
-      console.log('Login con éxito:', formData)
+      // console.log('Login con éxito:', formData)
       setFormData({ email: '', password: '' })
       navigate('/tutos') // Redirige a la ruta deseada
     } catch (error) {
@@ -139,7 +139,7 @@ function Login() {
                     type={showPassword ? 'text' : 'password'}
                     // Alternar entre 'text' y 'password'
                     name="password"
-                    placeholder="Escriba su contraseña 6 digitos"
+                    placeholder="Escriba su contraseña"
                     value={formData.password}
                     onChange={handleInputChange}
                   />
