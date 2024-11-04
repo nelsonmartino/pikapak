@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import validationsPass from '../utils/validationsPass.js'
 import axios from 'axios'
@@ -23,6 +22,7 @@ function PassUpdate() {
 
   const navigate = useNavigate()
 
+  // eslint-disable-next-line no-unused-vars
   const [searchParams, setSearchParams] = useSearchParams()
   const queryKey = searchParams.get('key')
 
@@ -46,6 +46,7 @@ function PassUpdate() {
     }
 
     // Excluir confirmNewPassword del payload
+    // eslint-disable-next-line no-unused-vars
     const { confirmNewPassword, ...dataToSend } = formData
     dataToSend.key = queryKey // Añadir la key al payload
 
