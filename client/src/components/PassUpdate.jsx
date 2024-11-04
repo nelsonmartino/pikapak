@@ -3,7 +3,7 @@ import { useState } from 'react'
 import validationsPass from '../utils/validationsPass.js'
 import axios from 'axios'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 function PassUpdate() {
   const [formErrors, setFormErrors] = useState({})
@@ -23,9 +23,8 @@ function PassUpdate() {
 
   const navigate = useNavigate()
 
-  const location = useLocation()
-  const queryParams = new URLSearchParams(location.search)
-  const queryKey = queryParams.get('key')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const queryKey = searchParams.get('key')
 
   // Maneja el cambio de cada input y actualiza el estado del formulario
   function handleInputChange(e) {
@@ -105,7 +104,7 @@ function PassUpdate() {
               id="newPassword"
               type={showPassword ? 'text' : 'password'}
               name="newPassword"
-              placeholder="Escriba su nueva contraseña 6 digitos"
+              placeholder="Escriba su nueva contraseña de entre 6 y 14 caracteres"
               value={formData.newPassword}
               onChange={handleInputChange}
             />

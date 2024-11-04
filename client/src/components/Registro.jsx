@@ -216,7 +216,7 @@ function Registro() {
                     id="password"
                     type={showPassword ? 'text' : 'password'}
                     name="password"
-                    placeholder="Escriba su contraseña 6 digitos"
+                    placeholder="Escriba su contraseña de entre 6 y 14 caracteres"
                     value={formData.password}
                     onChange={handleInputChange}
                   />
