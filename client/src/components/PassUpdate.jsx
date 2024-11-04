@@ -105,7 +105,7 @@ function PassUpdate() {
               id="newPassword"
               type={showPassword ? 'text' : 'password'}
               name="newPassword"
-              placeholder="Escriba su nueva contraseña de entre 6 y 14 caracteres"
+              placeholder="Entre 6 y 14 caracteres"
               value={formData.newPassword}
               onChange={handleInputChange}
             />

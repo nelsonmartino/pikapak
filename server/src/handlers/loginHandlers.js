@@ -7,6 +7,10 @@ const postLoginHandler = async (req, res) => {
   try {
     if (email && password) {
       const user = await getUserbyEmail(email)
+
+      if (!user) {
+        return res.status(401).json({ message: 'Unauthorized' })
+      }
       const auth = await passChecker(password, user.password)
       if (auth) {
         const token = jwt.sign(user, process.env.JWT_SECRET_KEY, {
@@ -17,12 +21,12 @@ const postLoginHandler = async (req, res) => {
           secure: process.env.NODE_ENV === 'production',
           sameSite: 'Strict',
         })
-        res.status(200).json({ message: 'Authorized' })
+        return res.status(200).json({ message: 'Authorized' })
       } else {
-        res.status(401).json({ message: 'Unauthorized' })
+        return res.status(401).json({ message: 'Unauthorized' })
       }
     } else {
-      res.status(400).json({ message: 'Email and password needed' })
+      res.status(401).json({ message: 'Email and password needed' })
     }
   } catch (error) {
     res.status(400).json({ message: error.message })

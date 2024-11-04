@@ -166,7 +166,7 @@ function Registro() {
                         type="text"
                         className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
                         name="whatsapp"
-                        placeholder="Ej. +54 11 12345678"
+                        placeholder="Ej. +541143218765"
                         value={formData.whatsapp}
                         onChange={handleInputChange}
                       />
@@ -216,7 +216,7 @@ function Registro() {
                     id="password"
                     type={showPassword ? 'text' : 'password'}
                     name="password"
-                    placeholder="Escriba su contraseña de entre 6 y 14 caracteres"
+                    placeholder="Entre 6 y 14 caracteres"
                     value={formData.password}
                     onChange={handleInputChange}
                   />

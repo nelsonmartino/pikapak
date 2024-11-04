@@ -52,8 +52,12 @@ function Login() {
       setFormData({ email: '', password: '' })
       navigate('/tutos') // Redirige a la ruta deseada
     } catch (error) {
-      console.error('Error al iniciar sesión:', error)
-      setFormErrors({ general: 'Error en la conexión' })
+      console.error('Error al iniciar sesión:', error.status)
+      if (error.status === 401) {
+        setFormErrors({ general: 'Usuario y/o contraseña incorrectos' })
+      } else {
+        setFormErrors({ general: error.message })
+      }
     }
   }
 
