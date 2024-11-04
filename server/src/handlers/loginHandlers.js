@@ -17,9 +17,6 @@ const postLoginHandler = async (req, res) => {
           expiresIn: '1h',
         })
         res.cookie('token', token, {
-          domain:
-            process.env.NODE_ENV === 'production' ? 'vercel.app' : 'localhost',
-          path: '/',
           httpOnly: true,
           secure: process.env.NODE_ENV === 'production',
           sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Strict',
