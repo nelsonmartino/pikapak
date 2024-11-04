@@ -16,20 +16,11 @@ const postLoginHandler = async (req, res) => {
         const token = jwt.sign(user, process.env.JWT_SECRET_KEY, {
           expiresIn: '1h',
         })
-        if (process.env.NODE_ENV === 'production') {
-          res.setHeader(
-            'Set-Cookie',
-            `token=${token}; Path=/; HttpOnly; Secure; SameSite=None`
-          )
-          res.setHeader('Access-Control-Allow-Credentials', 'true')
-          res.setHeader('Access-Control-Allow-Origin', process.env.FRONTEND_URL)
-        } else {
-          res.cookie('token', token, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Strict',
-          })
-        }
+        res.cookie('token', token, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Strict',
+        })
         return res.status(200).json({ message: 'Authorized' })
       } else {
         return res.status(401).json({ message: 'Unauthorized' })
