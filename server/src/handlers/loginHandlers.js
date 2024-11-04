@@ -21,6 +21,14 @@ const postLoginHandler = async (req, res) => {
           secure: process.env.NODE_ENV === 'production',
           sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Strict',
         })
+        if (process.env.NODE_ENV === 'production') {
+          res.setHeader(
+            'Set-Cookie',
+            `token=${token}; Path=/; HttpOnly; Secure; SameSite=None`
+          )
+          res.setHeader('Access-Control-Allow-Credentials', 'true')
+          res.setHeader('Access-Control-Allow-Origin', process.env.FRONTEND_URL)
+        }
         return res.status(200).json({ message: 'Authorized' })
       } else {
         return res.status(401).json({ message: 'Unauthorized' })
