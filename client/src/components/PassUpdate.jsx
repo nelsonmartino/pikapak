@@ -1,22 +1,20 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import validationsPass from '../utils/validationsPass.js'
 import axios from 'axios'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function PassUpdate() {
   const [formErrors, setFormErrors] = useState({})
   const [successModalIsOpen, setSuccessModalIsOpen] = useState(false)
 
-  const [formStatus, setFormStatus] = useState('')
   const [formData, setFormData] = useState({
     newPassword: '',
     confirmNewPassword: '',
   })
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [queryKey, setQueryKey] = useState(null)
 
   // Función para alternar mostrar/ocultar contraseña
   const toggleShowPassword = () => setShowPassword(!showPassword)
@@ -25,14 +23,9 @@ function PassUpdate() {
 
   const navigate = useNavigate()
 
-  useEffect(() => {
-    // Extraer la key del query string
-    const params = new URLSearchParams(window.location.search)
-    const key = params.get('key') // Cambia "key" por el nombre del parámetro en tu URL
-    if (key) {
-      setQueryKey(key)
-    }
-  }, [])
+  const location = useLocation()
+  const queryParams = new URLSearchParams(location.search)
+  const queryKey = queryParams.get('key')
 
   // Maneja el cambio de cada input y actualiza el estado del formulario
   function handleInputChange(e) {
