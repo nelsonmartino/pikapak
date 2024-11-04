@@ -46,7 +46,9 @@ function Login() {
     }
 
     try {
-      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, formData)
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, formData, {
+        withCredentials: true,
+      })
       alert('Loged')
       console.log('Login con éxito:', formData)
       setFormData({ email: '', password: '' })
