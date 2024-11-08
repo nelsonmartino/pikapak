@@ -49,8 +49,6 @@ function Login() {
       await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, formData, {
         withCredentials: true,
       })
-      alert('Loged')
-      // console.log('Login con éxito:', formData)
       setFormData({ email: '', password: '' })
       navigate('/tutos') // Redirige a la ruta deseada
     } catch (error) {
@@ -69,33 +67,29 @@ function Login() {
 
   return (
     <>
-      <div className="flex content-center justify-center flex-col md:flex-row  w-full h-full xl:fixed">
-        <div className="flex justify-center  xl:w-full md:w-1/2  hidden xl:block bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg shadow-lg ">
-          <div className="flex justify-center items-center pt-[6%]  w-full">
-            <h1 className=" text-4xl font-semibold text-black ">
-              <Link to="/" className="text-[#ffb200] p-2 hover:shadow-lg">
-                Pikapak
-              </Link>
-            </h1>
-          </div>
-          <img
-            src={camionAbeja}
-            alt="Camion-Abeja"
-            className="w-[65%] xl:mt-[7%]  m-auto"
-          />
+      <div className="flex  justify-center flex-col md:flex-row  w-full h-full xl:fixed">
+        <div className="flex justify-center  xl:w-full md:w-1/2 xl:my-[5px] xl:ml-[5px] hidden xl:block bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg shadow-lg ">
+          <Link to="/" >
+            <img
+              src={camionAbeja}
+              alt="Camion-Abeja"
+              className="w-[65%] m-auto xl:mt-[20%] "
+            />
+          </Link>
         </div>
         <div className="flex flex-col justify-center xl:w-[70rem] items-center text-white  m-2 xl:mt-[2rem] ">
-          <div className="xl:hidden flex justify-center items-center   w-full">
-            <h1 className=" text-3xl font-semibold text-black my-2">
-              <Link to="/" className="text-[#ffb200] hover:shadow-lg">
-                Pikapak
-              </Link>
-            </h1>
-          </div>
-          <div className="xl:m-4">
+
+          <div className="w-full  xl:m-4">
+            <div className="flex justify-center items-center  w-full">
+              <h1 className=" text-4xl font-semibold text-black mb-4">
+                <Link to="/" className="text-[#ffb200] p-2">
+                  Pikapak
+                </Link>
+              </h1>
+            </div>
             <form
               onSubmit={handleSubmit}
-              className="w-full flex flex-col    rounded-xl shadown-xl p-8 xl:px-8  justify-center border-2 border-[#3C047B] border-solid shadow-xl"
+              className="box-border flex flex-col rounded-xl shadown-xl p-8 justify-center border-2 border-[#3C047B] border-solid m-4"
             >
               <div className="flex flex-wrap w-full xl:mb-4">
                 <div className="flex w-full ">
@@ -103,70 +97,78 @@ function Login() {
                     {/* Email Input */}
                     <div className="w-full">
                       <label
-                        className="block text-black text-sm font-bold mb-2 "
+                        className="block text-black text-sm font-bold mb-1 mt-4 "
                         htmlFor="email"
                       >
                         Email
                       </label>
-                      <input
-                        className="appearance-none border rounded min-w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Ej. micorreo@mail.com"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                      />
 
-                      {formErrors.email && (
-                        <p className="text-red-500 text-sm mt-1">
-                          {formErrors.email}
-                        </p>
-                      )}
+                      <div className='flex flex-col p-2 box-content '>
+                        <input
+                          className="appearance-none border rounded min-w-full py-2 px-3   text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="Ej. micorreo@mail.com"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                        />
+
+                        {formErrors.email && (
+                          <p className="text-red-500 text-sm absolute xl:top-[44%] top-[31.5%] xl:left-[59.5%]">
+                            {formErrors.email}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="w-full mb-4">
                   <label
-                    className="block text-black text-sm font-bold mb-2 "
+                    className="block text-black text-sm font-bold mb-1 xl:mt-2 "
                     htmlFor="password"
                   >
                     Contraseña
                   </label>
-                  <input
-                    className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
-                    id="password"
-                    type={showPassword ? 'text' : 'password'}
-                    // Alternar entre 'text' y 'password'
-                    name="password"
-                    placeholder="Escriba su contraseña"
-                    value={formData.password}
-                    onChange={handleInputChange}
-                  />
-                  {/* Icono para mostrar/ocultar la contraseña */}
-                  <span
-                    className=" absolute cursor-pointer text-gray-700 z-0 mt-2 ml-2"
-                    onClick={toggleShowPassword}
-                  >
-                    {!showPassword ? <FaEyeSlash /> : <FaEye />}
-                  </span>
-                  {formErrors.password && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {formErrors.password}
-                    </p>
-                  )}
+
+
+                  <div className='flex flex-col h-full p-2 box-content'>
+                    <input
+                      className="appearance-none border rounded w-full py-2 px-3  text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 border-[#3C047B]"
+                      id="password"
+                      type={showPassword ? 'text' : 'password'}
+                      // Alternar entre 'text' y 'password'
+                      name="password"
+                      placeholder="Escriba su contraseña"
+                      value={formData.password}
+                      onChange={handleInputChange}
+                    />
+                    {/* Icono para mostrar/ocultar la contraseña */}
+                    <span
+                      className=" absolute cursor-pointer text-gray-700 z-0 mt-3 xl:ml-[36.5%] ml-[76%]"
+                      onClick={toggleShowPassword}
+                    >
+                      {!showPassword ? <FaEyeSlash /> : <FaEye />}
+                    </span>
+                    {formErrors.password && (
+                      <p className="text-red-500 text-sm absolute xl:top-[62%]  top-[47.5%] xl:left-[59.5%]">
+                        {formErrors.password}
+                      </p>
+                    )}
+                  </div>
                 </div>
+
 
                 {/* Mostrar error general */}
                 {formErrors.general && (
-                  <p className="text-red-500 text-sm text-center ">
+                  <p className="text-red-500 text-sm inline-flex">
                     {formErrors.general}
                   </p>
                 )}
               </div>
 
               {/* Submit Button */}
-              <div className="xl:mb-2 w-full flex-wrap flex justify-center ">
+              <div className="xl:mb-2 w-full flex-wrap flex justify-center mt-4 xl:mt-0">
                 <button
                   className="xl:w-1/2 bg-[#3C047B] text-pink-300 hover:bg-[#3C028B] hover:text-white font-sans text-white font-bold px-4 py-2 mb-4 xl:mb-0 rounded flex-wrap focus:outline-none focus:ring-2 focus:white hover:shadow-xl"
                   type="submit"

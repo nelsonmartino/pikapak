@@ -39,7 +39,7 @@ function GeneraIngresos() {
     <>
       <div
         id="transportista"
-        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[#6B14CF] bg-cover bg-center drop-shadow-lg"
+        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[#fffcfc] bg-cover bg-center drop-shadow-lg"
       >
         <h1
           className="text-2xl xl:text-4xl font-bold pb-2 xl:pb-0 pt-5 text-[#3e047c]"
@@ -209,7 +209,7 @@ function GeneraIngresos() {
 
 
       <div
-        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[#6B14CF] bg-cover bg-center drop-shadow-lg "
+        className="flex flex-col items-center justify-center py-[4rem] my-2 text-white bg-[#fffcfc] bg-cover bg-center drop-shadow-lg "
         id='hub'
       >
         <div className='flex justify-center  flex-col-reverse  xl:flex-row xl:h-screen xl:items-center'>

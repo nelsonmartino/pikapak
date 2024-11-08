@@ -143,49 +143,51 @@ const Home = () => {
           </div>
         </div>
         <div className="h-[0.5rem] border-b-8 border-white"></div>
-        <div className="max-w-full flex flex-col items-center py-4 my-6">
-          <div className="flex flex-col items-center mb-2">
+        <div className="max-w-full flex flex-col items-center py-4 my-4">
+          <div className="flex flex-col items-center  mb-4">
             <h2 className="text-white text-2xl mb-2">
               <span className="mr-2 text-[#ffb200] font-bold">Suscribite</span>{' '}
               para novedades
             </h2>
 
-            <div className="flex flex-col items-center w-full">
+            <div className="flex  items-center space-x-2 w-full">
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col items-center  w-full"
-              >
-                <input
-                  className="xl:w-full w-[80%] 
+                className="flex items-center  w-full">
+                <div className="flex space-x-2 items-center">
+                  <div className="flex flex-col items-center">
+                    <input
+                      className="w-[20rem] w-[80%] 
                                     border-2 border-white 
                                     pl-2 py-2
                                     rounded-xl 
                                     focus:shadow-lg focus:shadow-indigo-200/80
                                 "
-                  placeholder="Escribe tu Email..."
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-                {formErrors.email && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {formErrors.email}
-                  </p>
-                )}
-
-                <button
-                  className="
+                      placeholder="Escribe tu Email..."
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                    />
+                    {formErrors.email && (
+                      <p className="text-red-500 text-sm absolute top-[124.5%] xl:top-[127%] xl:left-[34%]">
+                        {formErrors.email}
+                      </p>
+                    )}
+                  </div>
+                  <button
+                    className="
                                 text-[16px] bg-transparent text-white
-                                mt-4 xl:min-w-[130px] px-4 py-2
+                                 xl:min-w-[100px] px-4 py-2 xl:mt-0
                                 border-2 border-white 
                                 rounded-xl uppercase font-bold tracking-[2px]
                                 hover:bg-[#ffb200] hover:text-black transition-all
                                 "
-                  type="submit"
-                >
-                  Enviar
-                </button>
+                    type="submit"
+                  >
+                    Enviar
+                  </button>
+                </div>
               </form>
             </div>
           </div>

@@ -59,7 +59,7 @@ function PassRecovery() {
   }
 
   return (
-    <div className="xl:w-full xl:h-full">
+    <div className="w-full h-full">
       <button
         onClick={handleGoBack}
         className="text-blue-500 pl-10 pt-6 hover:text-[#e8a200] underline"
@@ -74,7 +74,7 @@ function PassRecovery() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="xl:w-[50%] xl:p-10 h-full flex flex-col rounded-xl shadown-xl justify-center border-2 border-[#3C047B] border-solid shadow-xl"
+          className="w-[90%] xl:w-[50%] p-10 h-full flex flex-col rounded-xl shadown-xl justify-center border-2 border-[#3C047B] border-solid shadow-xl"
         >
           <div className="flex items-center w-full h-full  xl:mb-4 ">
             <div className="flex w-full ">
@@ -98,13 +98,13 @@ function PassRecovery() {
                   />
 
                   {formErrors.email && (
-                    <p className="text-red-500 text-sm mb-4">
+                    <p className="text-red-500 text-sm absolute top-[31.5%] xl:left-[39%]">
                       {formErrors.email}
                     </p>
                   )}
                   {/* Mostrar error general */}
                   {formErrors.general && (
-                    <p className="text-red-500 text-sm mb-4">
+                    <p className="text-red-500 text-sm xl:absolute xl:top-[31.5%] xl:left-[39%]">
                       {formErrors.general}
                     </p>
                   )}
@@ -113,7 +113,7 @@ function PassRecovery() {
                 {/* Submit Button */}
                 <div className="xl:mb-2 xl:w-1/2 flex justify-center pt-4">
                   <button
-                    className="xl:w-[50%]  items-center justify-center bg-[#3C047B] text-pink-300 hover:bg-[#3C028B] hover:text-white font-sans text-white font-bold px-2 py-2 mb-4 xl:text-sm xl:mb-0 rounded flex-wrap focus:outline-none focus:ring-2 focus:white hover:shadow-xl"
+                    className="xl:w-[50%]  items-center justify-center bg-[#3C047B] text-pink-300 hover:bg-[#3C028B] hover:text-white font-sans text-white font-bold px-2 py-2 mt-4 xl:text-sm xl:mb-0 rounded flex-wrap focus:outline-none focus:ring-2 focus:white hover:shadow-xl"
                     type="submit"
                   >
                     Enviar

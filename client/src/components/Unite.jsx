@@ -3,7 +3,7 @@ import { roleInfo } from '../utils/roleInfo'
 
 const Unite = () => {
   return (
-    <div className="text-center text-[#3e047c] py-20 bg-[#6B14CF]" id="unite">
+    <div className="text-center text-[#3e047c] py-20 bg-[##fffcfc]" id="unite">
 
       <div>
         <h1 className="text-4xl font-semibold">Unite a <span className='text-[#ffb200]'>Pikapak</span> </h1>
