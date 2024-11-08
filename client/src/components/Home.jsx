@@ -10,6 +10,7 @@ const Home = () => {
   const [formErrors, setFormErrors] = useState({})
   const [formStatus, setFormStatus] = useState('')
   const [successModalIsOpen, setSuccessModalIsOpen] = useState(false)
+  const [modalMessage, setModalMessage] = useState({ title: '', message: '' })
   const [formData, setFormData] = useState({
     email: '',
   })
@@ -47,6 +48,10 @@ const Home = () => {
 
       if (validateEmail()) {
         console.log('Formulario enviado con éxito:', formData)
+        setModalMessage({
+          title: '¡Enviado con Exito!',
+          message: 'Gracias, te mantendremos informado de todas las novedades!',
+        })
         setSuccessModalIsOpen(true)
         // Reseteo
         setFormData({
@@ -57,6 +62,17 @@ const Home = () => {
         console.log(formStatus)
       }
     } catch (error) {
+      if (error.response.data.message === 'Existing Email') {
+        setModalMessage({
+          title: '¡Excelente!',
+          message: 'Ya teníamos registrado tu email!',
+        })
+        setSuccessModalIsOpen(true)
+        // Reseteo
+        setFormData({
+          email: '',
+        })
+      }
       setFormStatus('Error al enviar el mail.', error)
     }
   }
@@ -153,7 +169,8 @@ const Home = () => {
             <div className="flex  items-center space-x-2 w-full">
               <form
                 onSubmit={handleSubmit}
-                className="flex items-center  w-full">
+                className="flex items-center  w-full"
+              >
                 <div className="flex space-x-2 items-center">
                   <div className="flex flex-col items-center">
                     <input
@@ -199,10 +216,8 @@ const Home = () => {
       {successModalIsOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
-            <h4 className="text-xl font-semibold mb-2">¡Enviado con Exito!</h4>
-            <p className="text-gray-600 mb-4">
-              Gracias, te mantendremos informado de todas las novedades!
-            </p>
+            <h4 className="text-xl font-semibold mb-2">{modalMessage.title}</h4>
+            <p className="text-gray-600 mb-4">{modalMessage.message}</p>
             <button
               onClick={closeSuccessModal}
               className="px-4 py-2 bg-[#ffb200] hover:bg-[#e8a200] text-white rounded-md"
