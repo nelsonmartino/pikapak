@@ -167,7 +167,7 @@ function Registro() {
                         onChange={handleInputChange}
                       />
                       {formErrors.whatsapp && (
-                        <p className="text-red-500 text-sm relative xl:top-[46%] xl:left-[58.8%]">
+                        <p className="text-red-500 text-sm relative xl:top-[5%] xl:left-[1.5%]">
                           {formErrors.whatsapp}
                         </p>
                       )}
