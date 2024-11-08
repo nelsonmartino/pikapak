@@ -161,7 +161,7 @@ function Login() {
 
                 {/* Mostrar error general */}
                 {formErrors.general && (
-                  <p className="text-red-500 text-sm inline-flex">
+                  <p className="text-red-500 text-sm absolute xl:top-[62%]  top-[47.5%] xl:left-[59.5%]">
                     {formErrors.general}
                   </p>
                 )}
