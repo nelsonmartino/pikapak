@@ -2,7 +2,7 @@ function QuieroEnviar() {
   return (
 
     <div
-      className="relative flex flex-col items-center justify-center  min-h-full text-[#3e047c] bg-[#6B14CF] pb-[15rem] pt-[5rem] "
+      className="relative flex flex-col items-center justify-center  min-h-full text-[#3e047c] bg-[#fffcfc] pb-[15rem] pt-[5rem] "
       id="quieroEnviar">
       <div className="flex flex-col justify-center text-center mb-[2rem]">
 

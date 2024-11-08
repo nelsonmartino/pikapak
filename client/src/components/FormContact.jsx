@@ -67,13 +67,15 @@ function FormContact() {
   // Maneja el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setFormErrors({})
+
+    if (!validateForm()) {
+      setFormStatus('Error al enviar el mensaje.')
+      return // Salir de la función si hay errores
+    }
 
     try {
       await axios.post(`${import.meta.env.VITE_BACKEND_URL}/contacts`, formData)
-
-      setFormStatus('Mensaje enviado con éxito.')
-      console.log(formStatus)
-      // }
       if (validateForm()) {
         setSuccessModalIsOpen(true)
         // Reseteo
@@ -83,6 +85,8 @@ function FormContact() {
           message: '',
           whatsapp: '',
         })
+        setFormStatus('Mensaje enviado con éxito.')
+        console.log(formStatus)
       } else {
         setFormStatus('Error al enviar el mensaje.')
       }
@@ -97,10 +101,10 @@ function FormContact() {
 
   return (
     <div
-      className="bg-[#6B14CF] bg-cover bg-center drop-shadow-lg h-full xl:mb-[40px] xl:pt-8 pb-[4rem] pt-[5rem] mb-[30px]"
+      className="bg-[#6B14CF] bg-cover bg-center drop-shadow-lg h-full xl:mb-[10px] xl:pt-8 pb-[4rem] pt-[5rem] mb-[0.5rem]"
       id="contact"
     >
-      <div className="container h-screen xl:flex xl:flex-col xl:items-center xl:justify-center">
+      <div className="container h-full xl:flex xl:flex-col xl:items-center xl:justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2  xl:items-center">
           {/* Columna izquierda: Texto descriptivo */}
           <div className="flex flex-col xl:justify-center xl:items-center">
@@ -111,8 +115,8 @@ function FormContact() {
           </div>
 
           {/* Columna derecha: Formulario */}
-          <div className="bg-white p-6 rounded-xl shadow-xl  border opacity-60 m-6 ">
-            <form onSubmit={handleSubmit} className=" xl:mt-4 space-y-2 py-0 ">
+          <div className="bg-white p-6 rounded-xl shadow-xl  border opacity-60 m-4 h-full">
+            <form onSubmit={handleSubmit} className=" xl:mt-4">
               <div className="">
                 <label className="block mb-2 text-sm font-medium text-gray-700">
                   Nombre y Apellido
@@ -125,12 +129,12 @@ function FormContact() {
                   onChange={handleInputChange}
                 />
                 {formErrors.name && (
-                  <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
+                  <p className="text-red-500 text-sm absolute xl:top-[20%] top-[38%] xl:left-[52%]">{formErrors.name}</p>
                 )}
               </div>
 
               <div>
-                <label className="block mb-2 text-sm font-medium text-gray-700">
+                <label className="block mb-2 text-sm font-medium text-gray-700 mt-8">
                   WhatsApp
                 </label>
                 <input
@@ -141,14 +145,14 @@ function FormContact() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md"
                 />
                 {formErrors.whatsapp && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-red-500 text-sm absolute xl:top-[34%] top-[49.5%] xl:left-[52%]">
                     {formErrors.whatsapp}
                   </p>
                 )}
               </div>
 
               <div>
-                <label className="block mb-2 text-sm font-medium text-gray-700">
+                <label className="block mb-2 text-sm font-medium text-gray-700 mt-8">
                   Email
                 </label>
                 <input
@@ -159,14 +163,14 @@ function FormContact() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md"
                 />
                 {formErrors.email && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-red-500 text-sm absolute xl:top-[48%] top-[60.5%] xl:left-[52%]">
                     {formErrors.email}
                   </p>
                 )}
               </div>
 
               <div>
-                <label className="block mb-2 text-sm font-medium text-gray-700">
+                <label className="block mb-2 text-sm font-medium text-gray-700 mt-8">
                   Mensaje
                 </label>
                 <textarea
@@ -178,7 +182,7 @@ function FormContact() {
                   onChange={handleInputChange}
                 ></textarea>
                 {formErrors.message && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-red-500 text-sm absolute xl:top-[73%] top-[80%] xl:left-[52%]">
                     {formErrors.message}
                   </p>
                 )}
@@ -187,7 +191,7 @@ function FormContact() {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-[#6B14CF]  hover:bg-[#ffb200] hover:text-white  hover:shadow-lg hover:shadow-indigo-500/80 text-white rounded-md"
+                  className="px-4 py-2 bg-[#6B14CF] mt-8  hover:bg-[#ffb200] hover:text-white  hover:shadow-lg hover:shadow-indigo-500/80 text-white rounded-md"
                 >
                   Enviar
                 </button>

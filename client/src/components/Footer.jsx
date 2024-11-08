@@ -3,13 +3,16 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 
+
 function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className="bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg py-6">
             <div className="mx-auto max-w-7xl xl:px-6 ">
                 <div className="flex flex-col items-center justify-between sm:flex-row">
                     <p className="text-center text-white text-sm mb-2 sm:mb-0">
-                        &copy; 2024 <span className='text-[#ffb200]'>Pikapak.</span> Todos los derechos reservados.
+                        &copy; {currentYear} <span className='text-[#ffb200]'><a href="#home" >Pikapak.</a></span> Todos los derechos reservados.
                     </p>
                     <div className="flex flex-wrap justify-center space-x-10 mt-2 sm:mt-0">
                         <a href="../public/Terminos_y_Condiciones_PIKAPAK.pdf" download={"terminosYcondiciones_Pikapak.pdf"} className="text-white text-sm hover:no-underline hover:text-[#ffb200]">

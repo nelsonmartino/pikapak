@@ -89,36 +89,32 @@ function Registro() {
   return (
     <>
       <div className="flex content-center justify-center flex-col md:flex-row  w-full h-full xl:fixed">
-        <div className="flex justify-center  xl:w-full md:w-1/2  hidden xl:block bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg shadow-lg ">
-          <div className="flex justify-center items-center pt-[6%]  w-full">
-            <h1 className=" text-4xl font-semibold text-black ">
-              <Link to="/" className="text-[#ffb200] p-2 hover:shadow-lg">
-                Pikapak
-              </Link>
-            </h1>
-          </div>
-          <img
-            src={camionAbeja}
-            alt="Camion-Abeja"
-            className="w-[65%] xl:mt-[7%]  m-auto"
-          />
+        <div className="flex justify-center  xl:w-full md:w-1/2  xl:my-[5px] xl:ml-[5px] hidden xl:block bg-[url('./assets/imgs/Background_header.png')] bg-cover bg-center drop-shadow-lg shadow-lg ">
+          <Link to="/" >
+            <img
+              src={camionAbeja}
+              alt="Camion-Abeja"
+              className="w-[65%] xl:mt-[20%]  m-auto"
+            />
+          </Link>
         </div>
         <div className="flex flex-col justify-center xl:w-[70rem] items-center text-white  m-2 xl:mt-[2rem] ">
-          <div className="xl:hidden flex justify-center items-center   w-full">
-            <h1 className=" text-3xl font-semibold text-black my-2">
-              <Link to="/" className="text-[#ffb200] hover:shadow-lg">
-                Pikapak
-              </Link>
-            </h1>
-          </div>
-          <div className="xl:m-4">
+
+          <div className="w-full  xl:m-4">
+            <div className="flex justify-center items-center w-full">
+              <h1 className=" text-4xl font-semibold text-black  mb-4">
+                <Link to="/" className="text-[#ffb200] p-2 ">
+                  Pikapak
+                </Link>
+              </h1>
+            </div>
             <form
               onSubmit={handleSubmit}
-              className="w-full flex flex-col    rounded-xl shadown-xl p-8 xl:px-8  justify-center border-2 border-[#3C047B] border-solid shadow-xl"
+              className="box-border flex flex-col rounded-xl shadown-xl p-8 justify-center border-2 border-[#3C047B] border-solid m-4"
             >
               <div className="flex flex-wrap w-full xl:mb-4">
                 <div className="w-full xl:w-1/2 pr-2 xl:mb-0 mb-4">
-                  <label className="block text-black text-sm font-bold mb-2">
+                  <label className="block text-black text-sm font-bold mb-1 ">
                     Nombre
                   </label>
                   <input
@@ -130,13 +126,13 @@ function Registro() {
                     onChange={handleInputChange}
                   />
                   {formErrors.name && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="text-red-500 text-sm absolute xl:top-[30%] xl:left-[58.8%]">
                       {formErrors.name}
                     </p>
                   )}
                 </div>
-                <div className="w-full xl:w-1/2 xl:mb-0 mb-4">
-                  <label className="block text-sm font-bold mb-2 text-black">
+                <div className="w-full xl:w-1/2 xl:mb-0 mb-4 mt-4 xl:mt-0">
+                  <label className="block text-sm font-bold mb-1 text-black">
                     Apellido
                   </label>
                   <input
@@ -148,18 +144,18 @@ function Registro() {
                     onChange={handleInputChange}
                   />
                   {formErrors.surname && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="text-red-500 text-sm absolute xl:top-[30%] xl:left-[77.5%]">
                       {formErrors.surname}
                     </p>
                   )}
                 </div>
               </div>
 
-              <div className="flex flex-wrap w-full xl:mb-4">
-                <div className="flex w-full ">
+              <div className="flex flex-wrap w-full xl:mb-4 xl:mt-6">
+                <div className="flex w-full mt-4 xl:mt-0">
                   {!isLogin && (
                     <div className="w-full mr-2">
-                      <label className="block text-sm font-bold mb-2 text-black">
+                      <label className="block text-sm font-bold mb-1 text-black">
                         WhatsApp
                       </label>
                       <input
@@ -171,7 +167,7 @@ function Registro() {
                         onChange={handleInputChange}
                       />
                       {formErrors.whatsapp && (
-                        <p className="text-red-500 text-sm mt-1">
+                        <p className="text-red-500 text-sm relative xl:top-[46%] xl:left-[58.8%]">
                           {formErrors.whatsapp}
                         </p>
                       )}
@@ -181,7 +177,7 @@ function Registro() {
                     {/* Email Input */}
                     <div className="w-full">
                       <label
-                        className="block text-black text-sm font-bold mb-2 "
+                        className="block text-black text-sm font-bold mb-1 "
                         htmlFor="email"
                       >
                         Email
@@ -197,16 +193,16 @@ function Registro() {
                       />
 
                       {formErrors.email && (
-                        <p className="text-red-500 text-sm mt-1">
+                        <p className="text-red-500 text-sm absolute xl:top-[46%] xl:left-[77.8%]">
                           {formErrors.email}
                         </p>
                       )}
                     </div>
                   </div>
                 </div>
-                <div className="w-full mb-4">
+                <div className="w-full mb-4 mt-4 ">
                   <label
-                    className="block text-black text-sm font-bold mb-2 "
+                    className="block text-black text-sm font-bold mb-1 "
                     htmlFor="password"
                   >
                     Contraseña
@@ -222,20 +218,20 @@ function Registro() {
                   />
                   {/* Icono para mostrar/ocultar la contraseña */}
                   <span
-                    className=" absolute cursor-pointer text-gray-700 z-0 mt-2 ml-2"
+                    className="absolute cursor-pointer text-gray-700 z-0 mt-2 ml-2"
                     onClick={toggleShowPassword}
                   >
                     {!showPassword ? <FaEyeSlash /> : <FaEye />}
                   </span>
                   {formErrors.password && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="text-red-500 text-sm absolute xl:top-[61.5%] xl:left-[58.8%]">
                       {formErrors.password}
                     </p>
                   )}
                 </div>
-                <div className="w-full xl:mb-0 mb-4">
+                <div className="w-full xl:mb-0 mb-4 mt-4 xl:mt-0">
                   <label
-                    className="block text-black text-sm font-bold mb-2 xl:mb-2 "
+                    className="block text-black text-sm font-bold mb-2 xl:mb-1 xl:mt-6"
                     htmlFor="confirmPassword"
                   >
                     Confirmar Contraseña
@@ -257,7 +253,7 @@ function Registro() {
                     {!showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
                   </span>
                   {formErrors.confirmPassword && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="text-red-500 text-sm absolute xl:top-[77%] xl:left-[58.8%]">
                       {formErrors.confirmPassword}
                     </p>
                   )}
@@ -265,7 +261,7 @@ function Registro() {
               </div>
 
               {/* Submit Button */}
-              <div className="xl:mb-2 w-full flex-wrap flex justify-center ">
+              <div className="xl:mb-2 mt-4 w-full flex-wrap flex justify-center ">
                 <button
                   className="xl:w-1/2 bg-[#3C047B] text-pink-300 hover:bg-[#3C028B] hover:text-white font-sans text-white font-bold px-4 py-2 mb-4 xl:mb-0 rounded flex-wrap focus:outline-none focus:ring-2 focus:white hover:shadow-xl"
                   type="submit"
