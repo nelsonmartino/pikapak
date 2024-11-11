@@ -1,3 +1,3 @@
 {
-  "rewrites": [{ "source": "/users/update", "destination": "/index.html" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
